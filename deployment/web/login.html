@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            // Redirect to unsupported browser page if opened from browser that doesn't support async/arrow functions
+            try {
+                eval("async () => {}");
+            } catch (error) {
+                var homeUrl = window.location.origin + window.location.pathname;
+                var appUrl = homeUrl.slice(0, homeUrl.lastIndexOf("/") + 1);
+                window.location.replace(appUrl + "unsupported-browser.html");
+            }
+        </script>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>RapidGrant-Login</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="icon" href="unnamed.jpg" type="image/png" sizes="32x32">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="theme.compiled.css?637620623481388341">
+        <style>
+    .al-logo{
+        display: block;
+        /* margin: 40% auto;
+        width: 200px; */
+        height: 875px;
+    }
+             body {
+             /* background-image: url("https://i.imgur.com/dbRIaab.jpg"); */
+             background-image: url("Group508.png");
+                color: #555;
+                background-color: #fff;
+                font-family: "Open Sans",sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 1.42857;
+                background-attachment: fixed;
+                background-position: center bottom;
+                background-size: cover;
+            }
+
+.logo img{
+    margin: 0 auto;
+    width: 220px;
+    padding: 2rem 0;
+}
+.loginpage-formwrapper {
+    background: #ffffff;
+    border-radius: 45px;
+    border: 1px solid #9c9a9a;
+    /* margin-top: 6%; */
+    /* margin-left: 64%; */
+    margin: 0;
+    margin-right: 50px;
+    max-width: 30%;
+    overflow: hidden;
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%), 0 0 20px 0 rgb(0 0 0 / 19%);
+}
+#greet{
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    font-size: 20pt;
+    font-weight: 700;
+}
+.btn-login {
+    width: 88%;
+    background: linear-gradient(to top, #0577A9 , #31A6DB);
+    border-radius: 15px !important;
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    /*padding: 2rem;*/
+    margin-top: 1rem;
+    box-shadow: 10px 11px 21px -15px rgb(0 0 0 / 60%);
+    margin-bottom: 1rem;
+}
+.btn-lg {
+    width: 88%;
+    background: transparent;
+    border-radius: 15px !important;
+    font-size: 18px;
+    font-weight: 600;
+    color :#000000 !important;
+    text-transform: uppercase;
+    border: 1px solid #000000;
+   /* padding: 2rem;*/
+    /* margin-top: 1rem; */
+    margin-bottom: 2rem;
+    box-shadow: 10px 11px 21px -15px rgb(0 0 0 / 60%);
+}
+.btn:active .btn:focus {
+    background-color: #3E850E;
+    border-color: #3E850E;
+    background-color: #3E850E;
+}
+
+
+
+.btn-login:hover .btn-login:active{
+    background-color: #3E850E;
+    color: #ffffff;
+    border: unset;
+    border-color: #3E850E;
+    background-color: #3E850E;
+}
+
+.loginpage-form .form-group .inputwrapper .form-control {
+    border-width: 0 0 1px 0;
+    border-radius: unset;
+    margin-left: 6%;
+}
+.form-control:not([readonly]):focus {
+    border-color: #3E850E;
+}
+.loginpage-form .form-group .inputwrapper .form-control:focus ~ .glyphicon:before {
+    color: #646464;
+}
+.loginpage-form .form-group {
+    align-items: unset;
+    flex-direction: column;
+}
+/* .loginpage-form .form-group .inputwrapper .glyphicon {
+    top: 1.8rem;
+} */
+
+.loginpage-form{
+    margin-top: 1rem;
+}
+::placeholder{
+    color: #000000;
+}
+
+.welcome, .copyrights{
+    text-align: center;
+    color: #000000;
+    font-weight: 600;
+}
+.welcome{
+    font-size:12px
+}
+
+.btn-link,.loginpage-form .form-group .inputwrapper .glyphicon-eye-open:hover, .loginpage-form .form-group .inputwrapper .glyphicon-eye-close:hover {
+    color: #646464;
+}
+.btn.btn-link:hover {
+    border-color: transparent;
+    background-color: unset;
+    color: #3E850E;
+}
+.loginpage-form .form-group .control-label{
+    display:none
+}
+.inputwrapper img{
+    position: absolute;
+    top: 10px;
+}
+.inputwrapper input{
+    width: 87%;
+}
+.loginpage-form .form-group .inputwrapper .form-control {
+    padding: 15px 10px 15px 5px;
+    border-radius: 10px;
+    margin-top: 2%;
+}
+
+h6{
+        position: absolute;
+    bottom: -11px;
+    transform: translate(25%, 9px);
+    color: #ffffff;
+}
+.copyrights{
+    margin-top: 50px;
+    position: relative;
+    margin-top: 3rem;
+    font-size: 12px;
+}
+.copyrights img{
+    width: 100%;
+}
+.imgcenter{
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    height: 11vh;
+}
+.backimg {
+    background-image: url("resources/MOHBG.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.newuser{
+    float: left;
+    margin-left: 21%;
+}
+.register{
+    color: #E27A7A;
+    float: left;
+    margin-left: 2%;
+}
+.here{
+    float: left;
+    margin-left: 2%;
+}
+.form-control
+{
+  
+    /* border: 1px solid transparent; */
+    border-top: transparent  ;
+    border-left: transparent  ;
+    border-right: transparent  ;
+        border-bottom: 2px solid #006498  !important ;
+        border-radius: 0 !important;
+        background-color: transparent !important ;
+        width: 88% !important;
+}
+.form-control:not([readonly]):focus {
+    border-top: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+    /* border-bottom:#006498 !important; */
+}
+input::placeholder{
+    text-align: left;
+   
+}
+</style>
+    </head>
+
+    <body>
+       
+         <div class="container-fluid backimg ">
+          
+            
+            <!-- <div class="row">
+                 <div class="col-md-6">
+                    <img src="resources/MaskGroup.png" class="al-logo" alt="logo" />
+                </div> --> 
+                <div class="offset-md-7 col-md-4 loginpage-formwrapper">
+                    <div>
+                        <div style="padding: 20px;">
+                            <img src="logo2.png" class="imgcenter" alt="bg" />
+                        <h2 id="greet">WELCOME TO RAPID GRANT!</h2>
+                        <!-- <p class="welcome">Please login to your account</p> -->
+                        <form id="loginForm" class="loginpage-form" autocomplete="off">
+                            <div>
+                                <div id="loginMessage" class="alert alert-danger"></div>
+                                <div class="form-group">
+                                    <label class="control-label form-control" id="usernameLabel" for="usernameInput">User name</label>
+                                    <div class="inputwrapper">
+                                        <input
+                                            id="usernameInput"
+                                            class="form-control"
+                                            type="text"
+                                            placeholder="User name"
+                                            autocorrect="off"
+                                            autocapitalize="none"
+                                            autocomplete="off"
+                                        />
+                                        <span>
+                                            <img   src="lock 1.png" style="width: 4%; margin-top: 6%;
+                                            margin-left: 85%;"  >
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label form-control" id="passwordLabel" for="passwordInput">Password</label>
+                                    <div class="inputwrapper">
+                                        <input
+                                            id="passwordInput"
+                                            class="form-control"
+                                            type="password"
+                                            placeholder="Password"
+                                            autocorrect="off"
+                                            autocapitalize="none"
+                                            autocomplete="off"
+                                        />
+                                        <a style="color: #0e0f0f;float:right;margin-right:7%;margin-top: 3%;" href="http://moe.rapidgrant.net:80/link/ForgetPassword/">Forgot Password ?</a>
+                                        <span >
+                                        <!-- <img   src="eye 1.png" style="width: 4%; margin-top: 6%;
+                                        margin-left: 85%;" >-->
+                                         <span class="glyphicon glyphicon-eye-close"  style="margin-left: 85%;" onClick="togglePassword()"></span>
+                                    </span>
+                                </div>
+                                    </div>
+                                </div>
+                                <div class="text-center" style="font-size: 20px;">
+                                <button  id="loginButton" type="submit" class="btn btn-login">Log in with your Email ID</button>
+                              <div>
+                                <span class="newuser">New User?</span>
+                                <span  class="register"><a href="http://moe.rapidgrant.net/p/Register">Register</a></span>
+                                <span class="here">Here</span>
+                              </div> 
+                                </br>
+                                <div style="margin-top:1rem;">
+                                    <h4 class="" >OR</h4>
+                                </div>
+                                
+                            
+                               <button class = "btn-lg"   class="btn btn-login">LOG IN WITH 
+                                   <img style="height: 0%;margin-left: 1%;" src="singpass.png">
+                               </button>
+                              
+                                </div>
+                                
+                            </div>
+                        </form>
+                        </div>
+                        <!-- <div class="copyrights">
+                                    <img src="resources/grey.png" alt="bg" />
+                                    <h6>2019 Copyright Al Mashraf. All Rights Reserved</h6>
+                                </div> -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+            <script src="js/login_i18n.js?637620623481388341"></script>
+            <script src="js/login.js?637620623481388341"></script>
+            <script>
+                function togglePassword() {
+                    const icon = document.querySelector('[class*=glyphicon-eye]');
+                    if (icon.classList.contains('glyphicon-eye-close'))
+                        icon.classList.replace('glyphicon-eye-close', 'glyphicon-eye-open');
+                    else icon.classList.replace('glyphicon-eye-open', 'glyphicon-eye-close');
+    
+                    const input = document.querySelector('#passwordInput');
+                    if (input.type === 'password') input.type = 'text';
+                    else input.type = 'password';
+                }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,378 @@
+{
+  "RuntimeVersion": "9.0.5.17836",
+  "ProjectID": "cd610f2f-015c-4043-bc04-3b76cc8a5430",
+  "ProjectName": "RapidGrant",
+  "ModelVersion": "unversioned",
+  "Description": "",
+  "AdminUser": "MxAdmin",
+  "Roles": {
+    "8dd52bfa-6d7e-453b-b506-303c0a3d9567": {
+      "Name": "Administrator",
+      "ManageableRoles": [
+        "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
+        "53f5d6fa-6da9-4a71-b011-454ec052cce8",
+        "7441c8a6-fabc-4836-84d5-1f8f2902a49c",
+        "3f713255-685e-4649-a471-bc9eaa7d0053",
+        "fb27d527-806d-4e33-a1cd-685f5078df08",
+        "69464208-b204-411d-9867-7074db64987c",
+        "ad9a8c2e-f801-4d0a-aec6-354476d04e90",
+        "ee59467a-f389-450b-bcbf-1223aafaaa2a",
+        "7da6c9ea-960f-4dfa-ad83-f0b3af2252cf",
+        "a7c1f394-7917-411a-9173-93512aa76e24",
+        "f767d217-26dc-4bc3-84c0-fdbe32897d55",
+        "779f00c6-505c-491c-98a6-657027cacdc7",
+        "9f8684d9-3bf9-46c1-ad35-5a8a6433e0a6"
+      ]
+    },
+    "53f5d6fa-6da9-4a71-b011-454ec052cce8": {
+      "Name": "Board"
+    },
+    "7441c8a6-fabc-4836-84d5-1f8f2902a49c": {
+      "Name": "Applicant",
+      "ManageableRoles": [
+        "7441c8a6-fabc-4836-84d5-1f8f2902a49c",
+        "ad9a8c2e-f801-4d0a-aec6-354476d04e90"
+      ]
+    },
+    "3f713255-685e-4649-a471-bc9eaa7d0053": {
+      "Name": "GranteeManager"
+    },
+    "fb27d527-806d-4e33-a1cd-685f5078df08": {
+      "Name": "Admin"
+    },
+    "69464208-b204-411d-9867-7074db64987c": {
+      "Name": "GrantApplicationManager",
+      "ManageableRoles": [
+        "7441c8a6-fabc-4836-84d5-1f8f2902a49c",
+        "ad9a8c2e-f801-4d0a-aec6-354476d04e90"
+      ]
+    },
+    "ad9a8c2e-f801-4d0a-aec6-354476d04e90": {
+      "Name": "Pannel_Interviewers",
+      "ManageableRoles": [
+        "7441c8a6-fabc-4836-84d5-1f8f2902a49c",
+        "69464208-b204-411d-9867-7074db64987c",
+        "ad9a8c2e-f801-4d0a-aec6-354476d04e90"
+      ]
+    },
+    "ee59467a-f389-450b-bcbf-1223aafaaa2a": {
+      "Name": "Approving_Authority"
+    },
+    "7da6c9ea-960f-4dfa-ad83-f0b3af2252cf": {
+      "Name": "Finance_Administartor"
+    },
+    "a7c1f394-7917-411a-9173-93512aa76e24": {
+      "Name": "AnonymousUser"
+    },
+    "f767d217-26dc-4bc3-84c0-fdbe32897d55": {
+      "Name": "UserRole"
+    },
+    "779f00c6-505c-491c-98a6-657027cacdc7": {
+      "Name": "InvestigatingOfficer"
+    },
+    "9f8684d9-3bf9-46c1-ad35-5a8a6433e0a6": {
+      "Name": "GranteeManger_HeadQuarters"
+    }
+  },
+  "AdminRole": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
+  "Constants": [
+    {
+      "Name": "Atlas_Core.Atlas_Core_Version",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "3.0.0"
+    },
+    {
+      "Name": "Atlas_Web_Content.Atlas_Web_Content_Version",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "3.0.0"
+    },
+    {
+      "Name": "BizzomateTokenReplacer.LogNode",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "BizzomateTokenReplacer"
+    },
+    {
+      "Name": "CommunityCommons.MergeMultiplePdfs_MaxAtOnce",
+      "Type": "Integer",
+      "Description": "Restricted to 10 files at once for Mendix Cloud v4 compatibility. If you need to merge more than 10 files increase the number here. Setting the value to <=0 means unlimited.\r\n\r\nNote: We very strongly recommend to not increase the number for applications running in Mendix Cloud v4.",
+      "DefaultValue": "10"
+    },
+    {
+      "Name": "DataGrid.DataGrid_Version",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "1.1.3"
+    },
+    {
+      "Name": "DeepLink.IndexPage",
+      "Type": "String",
+      "Description": "The index page that a user will be redirected to when the deeplink request handler finishes. This pages should start the client system, which will trigger the user's home microflow, which will execute the pending link that the handler prepared. You can (for example) modify this to have deeplinks use a different styling from the rest of the system by loading a different index page.\r\nDefault: index.html",
+      "DefaultValue": "index.html"
+    },
+    {
+      "Name": "DeepLink.LoginLocation",
+      "Type": "String",
+      "Description": "If login is required, this constant defines where to use can enter his credentials. If empty, the default login page of the deeplink module (resources/login.html) is used. \r\n\r\nIf not empty, it is assumed that after login, the user will be redirected to the deeplink again. For this reason the provided url is appended with the original deeplink.\r\n\r\nFor example:\r\n'https://mxid.mendix.com/login?a=MyApp&f=true&cont='\r\nor\r\n'../sso/login?f=true&cont='\r\n\r\nDefault: empty",
+      "DefaultValue": ""
+    },
+    {
+      "Name": "DeepLink.RequestHandlerName",
+      "Type": "String",
+      "Description": "E.g RequesthandlerName 'link' will result in https://yourdomain.com/link/\r\n",
+      "DefaultValue": "link"
+    },
+    {
+      "Name": "EmailTemplate.EmailAddressSeparator",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": ","
+    },
+    {
+      "Name": "EmailTemplate.EmailLogRetention",
+      "Type": "Integer",
+      "Description": "The amount of days to preserve error messages.",
+      "DefaultValue": "30"
+    },
+    {
+      "Name": "EmailTemplate.EmailRetention",
+      "Type": "Integer",
+      "Description": "The amount of days to preserve emails which were sent.",
+      "DefaultValue": "30"
+    },
+    {
+      "Name": "EmailTemplate.LogNode",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "Email"
+    },
+    {
+      "Name": "EmailTemplate.SendingEnabled",
+      "Type": "Boolean",
+      "Description": "Sending emails is enabled by default. \r\nWhen setting this value to false emails won't be send. This is useful on test environments for example.",
+      "DefaultValue": "True"
+    },
+    {
+      "Name": "Encryption.EncryptionKey",
+      "Type": "String",
+      "Description": "This key will be used to encrypt and decrypt values.\r\nThe length of this key must be 16 characters.",
+      "DefaultValue": "A1B2C3D4E5F6G7H8"
+    },
+    {
+      "Name": "Encryption.EncryptionPrefix",
+      "Type": "String",
+      "Description": "Prefix for stored encrypted values.\r\nThis value is used to determine whether the value has been already encrypted.",
+      "DefaultValue": "{AES2}"
+    },
+    {
+      "Name": "Encryption.LogNode",
+      "Type": "String",
+      "Description": "Node which appears in log messages for this module.",
+      "DefaultValue": "Encryption"
+    },
+    {
+      "Name": "MendixSSO.AuthRequestExpiryDurationInMinutes",
+      "Type": "Integer",
+      "Description": "",
+      "DefaultValue": "60"
+    },
+    {
+      "Name": "MendixSSO.ConsentToDeleteIncompatibleUsers",
+      "Type": "Boolean",
+      "Description": "When your application contains SSO user objects based on a previous user entity and no customized user data has to be retained, you can choose to enable automatic deletion of the old user object  and provisioning of the new user object when that user logs in. Setting the default value of this constant to true will enable this.\r\n(Also read MendixSSO documentation, section \"Incompatible user data type\")\r\n\r\nNote: keep in mind that all your defined delete behaviors will trigger as well.",
+      "DefaultValue": "False"
+    },
+    {
+      "Name": "MendixSSO.DeleteTokenBatchSize",
+      "Type": "Integer",
+      "Description": "",
+      "DefaultValue": "10000"
+    },
+    {
+      "Name": "MendixSSO.EncryptionPrefix",
+      "Type": "String",
+      "Description": "Prefix for stored encrypted values.\r\nThis value is used to determine whether the value has been already encrypted.",
+      "DefaultValue": "{AES2}"
+    },
+    {
+      "Name": "MendixSSO.EnvironmentPassword",
+      "Type": "String",
+      "Description": "This is the password which is used to communicate with the Mendix SSO Provider. This password will be set automatically on deployment in the Mendix Cloud. ",
+      "DefaultValue": "<Password will be generated by the Mendix Cloud>"
+    },
+    {
+      "Name": "MendixSSO.EnvironmentUUID",
+      "Type": "String",
+      "Description": "This is the environment UUID which is used to communicate with the Mendix SSO Provider to identify this application. This UUID will be set automatically on deployment in the Mendix Cloud. ",
+      "DefaultValue": "<EnvironmentUUID will be generated by the Mendix Cloud>"
+    },
+    {
+      "Name": "MendixSSO.IndexPage",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "/index.html"
+    },
+    {
+      "Name": "MendixSSO.LogNode",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "MendixSSO"
+    },
+    {
+      "Name": "MendixSSO.MxID2_OpenIDPrefix",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "https://mxid2.mendixcloud.com/mxid2"
+    },
+    {
+      "Name": "MendixSSO.OpenIdConnectDiscoveryPath",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": ".well-known/openid-configuration"
+    },
+    {
+      "Name": "MendixSSO.OpenIdConnectProvider",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "https://sso.mendix.com"
+    },
+    {
+      "Name": "MendixSSO.OpenIdConnectScopes",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "openid mx:user:profile:v1:read offline_access"
+    },
+    {
+      "Name": "MendixSSO.RolesLocation",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "https://roles.mendix.com"
+    },
+    {
+      "Name": "MendixSSO.SSOEnabled",
+      "Type": "Boolean",
+      "Description": "Indicates whether MendixSSO will be enabled on startup, allowing app users to login with their Mendix account. The default value of this constant is 'false' for local deployments, as MendixSSO is a cloud product.\r\nThe value will be automatically set to 'true' during deployment in the Mendix Cloud. \r\n\r\nWhen enabled, Single Sign On will be initiated by navigating to \"<App URL>/openid/login\" or clicking the 'Mendix Account' button on the login page.",
+      "DefaultValue": "False"
+    },
+    {
+      "Name": "MendixSSO.SupportEmail",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "support@mendix.com"
+    },
+    {
+      "Name": "MendixSSO.SupportEmailSubject",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "SSO Error"
+    },
+    {
+      "Name": "MendixSSO.TokenEncryptionKey",
+      "Type": "String",
+      "Description": "This key will be used to encrypt and decrypt tokens.\r\nThe length of this key must be exactly 16 characters.\r\n\r\nFor local deployment change this value to some random 16 character string.",
+      "DefaultValue": "<TokenEncryptionKey will be generated by the Mendix Cloud>"
+    },
+    {
+      "Name": "MendixSSO.TokenExpiryInSeconds",
+      "Type": "Integer",
+      "Description": "30 days = 30 * 24 * 60*60 seonds\r\n\r\n2592000",
+      "DefaultValue": "2592000"
+    },
+    {
+      "Name": "MendixSSO.TokenValidatorMaxClockSkew",
+      "Type": "Integer",
+      "Description": "",
+      "DefaultValue": "60"
+    },
+    {
+      "Name": "MendixSSO.TryAgainText",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "Home"
+    },
+    {
+      "Name": "MendixSSO.Version",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "2.3.1-workflow-atlas3"
+    }
+  ],
+  "ScheduledEvents": [
+    {
+      "Name": "UGS.Scheduled_event_Remainder",
+      "Description": ""
+    },
+    {
+      "Name": "DeepLink.CleanUp",
+      "Description": "This event cleans up pending deeplinks that are older than the start of the previous day, that were never executed. This prevent stale links from piling up in your database."
+    },
+    {
+      "Name": "EmailTemplate.Cleanup",
+      "Description": ""
+    },
+    {
+      "Name": "EmailTemplate.SendQueuedEmails",
+      "Description": ""
+    },
+    {
+      "Name": "MendixSSO.DeleteExpiredTokens",
+      "Description": ""
+    },
+    {
+      "Name": "MendixSSO.SE_CleanupAuthRequest",
+      "Description": ""
+    }
+  ],
+  "Configuration": {
+    "SourceDatabaseType": "HSQLDB",
+    "SourceDatabaseName": "default",
+    "SourceBuiltInDatabasePath": "model/sampledata/data/database"
+  },
+  "DataBrokerConfiguration": {
+    "publishedServices": []
+  },
+  "RequestHandlers": [
+    {
+      "Name": "/api/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/link/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/ws/",
+      "DefaultEnabled": false,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/ws-doc/",
+      "DefaultEnabled": false,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/odata/",
+      "DefaultEnabled": false,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/odata-doc/",
+      "DefaultEnabled": false,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/api-doc/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    },
+    {
+      "Name": "/p/",
+      "DefaultEnabled": true,
+      "MatchExactly": false
+    }
+  ]
+}

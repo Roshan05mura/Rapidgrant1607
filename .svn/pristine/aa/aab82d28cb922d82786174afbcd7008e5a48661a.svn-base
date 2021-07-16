@@ -1,0 +1,327 @@
+// variables
+$dt-banner-text-color-dark:                            #555555;
+$dt-banner-text-color-light:                           #FFFFFF;
+$dt-banner-size-small:                                 60px;
+$dt-banner-siz-medium:                                 125px;
+$dt-banner-size-large:                                 250px;
+$navtopbar-fontsize:                                   18px;
+$navtopbar-bg-active:                                  transparent;
+$navtopbar-bg-hover:                                   transparent;
+
+
+.dt-dynamic-banner {
+    width: 100%;
+    overflow: hidden;
+
+    .mx-layoutgrid {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .no-gutters>.col, .no-gutters>[class*="col-"] {
+        padding-right: 0px;
+        padding-left: 0px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.dt-banner-large {
+    width: 100%;
+    min-height: $dt-banner-size-large;
+    height: $dt-banner-size-large;
+    margin: 0px;
+
+    > img {
+        width: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% $dt-banner-size-large, 0% $dt-banner-size-large);
+        z-index: 0;
+    }
+
+    .img-responsive {
+        width: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% $dt-banner-size-large, 0% $dt-banner-size-large);
+        z-index: 0;
+    }
+}
+
+.dt-banner-medium {
+    width: 100%;
+    min-height: $dt-banner-siz-medium;
+    height: $dt-banner-siz-medium;
+    margin: 0px;
+    z-index: 0;
+    
+    > img {
+        width: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% $dt-banner-siz-medium, 0% $dt-banner-siz-medium);
+        z-index: 0;
+    }
+
+    .img-responsive {
+        width: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% $dt-banner-siz-medium, 0% $dt-banner-siz-medium);
+        z-index: 0;
+    }
+}
+
+.dt-banner-small {
+    width: 100%;
+    min-height: $dt-banner-size-small;
+    height: $dt-banner-size-small;
+    margin: 0px;
+    z-index: 0;
+
+    > img {
+        width: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% $dt-banner-size-small, 0% $dt-banner-size-small);
+        z-index: 0;
+    }
+
+    .img-responsive {
+        width: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% $dt-banner-size-small, 0% $dt-banner-size-small);
+        z-index: 0;
+    }
+}
+
+.dt-banner-overlay {
+    position: absolute;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 15px;
+    padding-left: 15px;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    overflow-x: hidden;
+
+    .dt-logo {
+        margin-left: 35px;
+        margin-top: 10px;
+        padding: 0px;
+    }
+
+    .dt-menu {
+        display: block;
+        position: relative;
+
+        .mx-navbar {
+            @media (min-width: 1024px) {
+                &.dt-textcolor-light {
+                    ul.nav > li.mx-navbar-item > a {
+                        font-size: $navtopbar-fontsize;
+                        color: $dt-banner-text-color-light;
+                        background-color: $navtopbar-bg-active;
+                    }          
+                }
+            
+                &.dt-textcolor-dark {
+                    ul.nav > li.mx-navbar-item {
+                        a {
+                            font-size: $navtopbar-fontsize;
+                            color: $dt-banner-text-color-dark;
+                            background-color: $navtopbar-bg-active;
+
+                            &:visited {
+                                border: 2px solid red;
+                            }
+                        } 
+                    }
+                }
+            }
+        
+            @media (max-width: 1024px) {
+                &.dt-textcolor-light {
+                    ul.nav > li.mx-navbar-item > a {
+                        font-size: 0px;
+                        padding-right: 5px;
+                        padding-left: 5px;
+        
+                        span {
+                            font-size: $navtopbar-fontsize;
+                            color: $dt-banner-text-color-light;
+                            text-align: center;
+                            margin-right: 5px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+        
+                &.dt-textcolor-dark {
+                    ul.nav > li.mx-navbar-item > a {
+                        font-size: 0px;
+                        padding-right: 5px;
+                        padding-left: 5px;
+        
+                        span {
+                            font-size: $navtopbar-fontsize;
+                            color: $dt-banner-text-color-dark;
+                            text-align: center;
+                            margin-right: 5px;
+                            margin-left: 5px;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+
+    .dt-userprofile {
+        display: block;
+        position: relative;
+        margin-right: 50px;
+        margin-left: 50px;
+
+        .dt-userprofile-icon {
+            padding: 0px;
+
+            .mx-navbar {
+                &.dt-textcolor-light .glyphicon {
+                    color: $dt-banner-text-color-light;          
+                }
+                
+                &.dt-textcolor-dark .glyphicon {
+                    color: $dt-banner-text-color-dark;
+                }
+
+                ul.nav>li.mx-navbar-item>a {
+                    font-size: 0px;
+                    padding: 0px;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    text-align: center;
+                    background-color: $navtopbar-bg-active;
+
+                    span {
+                        font-size: $navtopbar-fontsize;
+                        text-align: center;
+                        margin-right: 10px;
+                        margin-left: 5px;
+                    }  
+                }
+            }
+        }
+
+        .dt-userprofile-text {
+            padding: 0px;
+            margin-left: 8px;
+
+            @media (min-width: 1024px) {
+                font-size: $navtopbar-fontsize;
+
+                .dt-textcolor-light {
+                    color: $dt-banner-text-color-light;          
+                }
+                
+                .dt-textcolor-dark {
+                    color: $dt-banner-text-color-dark;
+                }
+            }
+
+            @media (max-width: 1024px) {
+                font-size: 0px;
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+        }
+    }
+
+    .dt-pagetitle {
+        .dt-textcolor-light {
+            h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+                color: $dt-banner-text-color-light;
+                background-color:transparent;
+                margin: 0;
+                font-weight: normal;
+                line-height: 1.3;
+            }
+        }
+        
+        .dt-textcolor-dark {
+            h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+                color: $dt-banner-text-color-dark;
+                background-color:transparent;
+                margin: 0;
+                font-weight: normal;
+                line-height: 1.3;
+            }
+        }
+    }
+}
+
+.dt-config-button {
+    position: fixed;
+    top:  $dt-banner-size-small;
+    left: 100%;
+    margin-left: -35px;
+    margin-right: 0px;
+    width: 35px;
+    height: 38px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.3);
+    z-index: 9999;
+    background: #fff;
+    overflow: hidden;
+
+    .mx-button {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        color: #007bc0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:hover, &:active, &:visited {
+            background-color: inherit;
+        }
+    }
+}
+
+.modal-dialog.dt-user-profile-popup {
+    position: fixed;
+    top: $dt-banner-size-small !important;
+    left: 78% !important;
+    width: 20% !important;
+    height: 50% !important;
+
+    .form-control-static {
+        border-bottom: none;
+    }
+}
+
+.modal-dialog.dt-inline-configurator {
+    position: fixed;
+    top: $dt-banner-size-small !important;
+    left: 88% !important;
+    width: 10% !important;
+
+    + .mx-underlay {
+        position: fixed;
+        top: $dt-banner-size-large;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        opacity: 0.3;
+        background-color: #333;
+        border-top: 2px dashed $brand-primary;
+        padding-top: 2px;
+    }
+}
+
+.dt-textcolor-light {
+    color: $dt-banner-text-color-light;
+    background-color:transparent;
+}
+
+.dt-textcolor-dark {
+    color: $dt-banner-text-color-dark;
+    background-color:transparent;
+}

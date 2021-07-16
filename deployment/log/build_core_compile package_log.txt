@@ -1,0 +1,12 @@
+Buildfile: C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\build_core.xml
+
+compile:
+    [javac] Compiling 12 source files to C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\run\bin
+
+package:
+      [jar] Building jar: C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\bundles\project.jar
+
+BUILD SUCCESSFUL
+Total time: 14 seconds
+
+

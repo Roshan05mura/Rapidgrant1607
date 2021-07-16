@@ -1,0 +1,91 @@
+.widget-rating {
+  display: flex;
+  flex-direction: row;
+  /**
+  Defines each image/icon styles
+   */
+  /**
+  Styles when icon is selected in Studio/Studio Pro
+   */
+  /**
+  Style for the empty icon
+   */
+  /**
+  Style for the full icon
+   */
+  /**
+  Styles when image is selected in Studio/Studio Pro
+   */
+  /**
+  Style for the empty image
+   */
+  /**
+  Style for the full image
+   */
+}
+.widget-rating .rating-item {
+  cursor: pointer;
+  /**
+  Style when the item is disabled
+   */
+  /**
+  Style when mouse hovers the item
+   */
+}
+.widget-rating .rating-item.disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.widget-rating .rating-item:focus:not(:focus-visible) .rating-image, .widget-rating .rating-item:focus:not(:focus-visible) .rating-icon {
+  outline: none;
+}
+.widget-rating .rating-item:focus-visible .rating-image, .widget-rating .rating-item:focus-visible .rating-icon {
+  outline: 1px solid #0595db;
+}
+.widget-rating .rating-item .rating-item-hover .rating-icon-full.animate {
+  animation: none;
+}
+.widget-rating .rating-item .rating-item-hover .rating-image-full.animate {
+  animation: none;
+}
+.widget-rating .rating-icon {
+  font-size: 24px;
+  transform: scale(1);
+}
+.widget-rating .rating-icon-empty {
+  color: #CCC;
+}
+.widget-rating .rating-icon-full {
+  color: #FFA611;
+}
+.widget-rating .rating-icon-full.animate {
+  animation: stretch-bounce 0.5s ease-in-out;
+}
+.widget-rating .rating-image {
+  margin-right: 2px;
+  transform: scale(1);
+}
+.widget-rating .rating-image-full.animate {
+  animation: stretch-bounce 0.5s ease-in-out;
+}
+
+/**
+Animation when defining an item (Stretch and bounce)
+ */
+@-webkit-keyframes stretch-bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

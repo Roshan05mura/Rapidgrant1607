@@ -1,0 +1,166 @@
+@import "variables.scss";
+
+.mx-grid-pagingbar {
+    button {
+        min-width: unset !important;
+        color: #888888!important;
+        margin-right: unset;
+    }
+}
+.modal-content{
+    .close{
+        min-width: unset;
+    }
+}
+button {
+    min-width: 130px;
+    color: $white-color !important;
+    margin-right: 10px;
+    &:hover {
+        color: $white-color;
+    }
+    &.export{
+        background-color: $primary-dark!important;
+    }
+    .check{
+        background-color: $primary-dark;
+    }
+    &.submit,
+    &.proceed,
+    &.approve {
+        background-color: $approved!important;
+    }
+    &.return{
+        background-color: #004E7C !important ;
+    }
+    &.upload{
+        background-color: #1a691c !important;
+        &::before{
+           content: "\f093";
+           font-family: "Font Awesome 5 Pro";
+           padding-right: 5px;
+        }
+    }
+    &.hello{
+       &::before{
+          content: "\f0e8";
+          font-family: "Font Awesome 5 Pro";
+         
+          padding: 0px 5px;
+       }
+   }
+   
+    &.reject{
+        background-color: $rejected !important;
+    }
+    &.new{
+        background-color: #17a68b !important;
+        &::before {
+            content: "\f067";
+            font-family: "Font Awesome 5 Pro";
+            padding-right: 5px;
+        }
+    }
+    &.view {
+        background-color: $view-button !important;
+
+        &::before {
+            content: "\f06e";
+            font-family: "Font Awesome 5 Pro";
+            padding-right: 5px;
+        }
+    }
+
+    &.edit {
+        background-color: $dark-gold !important;
+        &::before {
+            content: "\f044";
+            font-family: "Font Awesome 5 Pro";
+            padding-right: 5px;
+        }
+    }
+
+    &.delete {
+        background-color: $delete-button !important;
+
+        &::before {
+            content: "\f1f8";
+            font-family: "Font Awesome 5 Pro";
+            padding-right: 5px;
+        }
+    }
+
+    &.delegate {
+        background-color: $primary-color !important;
+         &::before {
+             content: "\f503";
+             font-family: "Font Awesome 5 Pro";
+             padding-right: 5px;
+         }
+    }
+
+    &.next {
+        background-color: #365218 !important;
+         &::after {
+             content: "\f054";
+             font-family: "Font Awesome 5 Pro";
+             padding-left: 10px;
+         }
+    }
+
+    &.add {
+        background-color:#007123 !important;
+
+        &::before {
+            content: "\f067";
+            font-family: "Font Awesome 5 Pro";
+            padding-right: 5px;
+        }
+    }
+
+
+    &.cancel {
+        background-color: $rejected !important;
+        &::before{
+           content: "\f00d";
+            font-family: "Font Awesome 5 Pro";
+            padding-right: 5px; 
+        }
+    }
+
+    &.back {
+        background-color: $rejected !important;
+
+        &::before {
+            content: "\f053";
+            font-family: "Font Awesome 5 Pro";
+            padding-right: 5px;
+        }
+    }
+
+    &.draft {
+        background-color: #684833 !important;
+
+    }
+
+    &.save {
+        background-color: #151249 !important;
+         &::before {
+             content: "\f0c7";
+             font-family: "Font Awesome 5 Pro";
+             padding-right: 5px;
+         }
+    }
+
+    &.search{
+        background-color: #27a745 !important;
+        color: $white-color!important;
+       margin-right: 10px;
+        &::before {
+            content: "\f002";
+            font-family: "Font Awesome 5 Pro";
+            padding-right: 5px;
+        }
+    }
+
+}

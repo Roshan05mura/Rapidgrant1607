@@ -1,0 +1,180 @@
+//grade
+.review
+{
+    background-color: dimgrey;
+    //border:2px solid #fff;
+    border-radius: 5px;
+  
+    .icon{
+
+
+        span.fal{
+           font-size: 18pt;
+            width: 48px;
+            height: 48px;
+            color: #ffffff;
+            box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+            border-radius: 50px;
+            &.fa-check{
+                background-color:#008623;
+                padding:12px
+            }
+        }
+        }
+}
+.comment_area
+{
+    textarea
+    {
+         background-color:#DCDCDC;
+         border-radius:5px;
+
+    }
+}
+
+/*.fa-check:before {
+    content: "\f00c";
+    font-size: 19pt;
+    padding: 5px;
+    position: absolute;
+    color: #fff;
+}*/
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px dimgrey; 
+    border-radius: 0px;
+    background:dimgrey;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#c3c3c3; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:#DCDCDC; 
+  }
+  //Grid styles
+  
+.btn, .btn-default {
+    
+    border-color: #e7e7e9;
+    background-color: #999;
+}
+.eligibility-check-button{
+  .btn-default:hover,.btn-default:focus{
+    background-color: #0f1b6d !important;
+    color:#fff !important;
+  }
+}
+.btn,.btn-default:hover,.btn-default:focus,.btn-default:checked{
+  background-color: #999;
+}
+.form-bg{
+    background-color: #fff;
+    border:20px solid dimgrey !important;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.grantlist{
+
+    li{
+      //margin-bottom: 10px;
+      background-color: #fff;
+      border: #DCDCDC;
+      margin: 0px 10px 30px 10px;
+      padding: 20px;
+      
+      border-radius: 5px;
+    }
+  
+}
+//new checkbox
+
+
+
+//end checkbox
+.manual
+{
+  padding:20px;
+  border: 1px solid #DCDCDC;
+  min-height: 90vh;
+  background-color: #fff;
+  border-radius: 15px;
+  .head
+  {
+    color: #00008b;
+    font-size:25px;
+  }
+  .mx-templategrid .mx-templategrid-item.selected {
+    background-color:transparent !important;
+  }
+  .mx-templategrid .mx-templategrid-item:hover {
+    background-color: transparent !important;
+}
+}
+
+.register
+{
+  input{
+    border:1px solid blue;
+  }
+}
+.create_account{
+  background: url("web/Group508.png");
+  background-repeat: no-repeat;
+  // height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+//fund grid
+.fundpage{
+  .common_dashboard .mx-datagrid table th .mx-datagrid-head-caption {
+    font-size: 10pt;
+    font-weight: 800;
+    color: #000000;
+    text-align: center;
+}
+.common_dashboard .mx-grid table tbody tr td {
+  border: unset;
+  text-align: center;
+}
+}
+.heading_all{
+  color: rgb(0, 0, 139);
+    margin-left: 10px;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+//template grid
+
+//register page styles
+
+.register-page{
+  background-image: url("Group508.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-size: cover;
+
+    .row{
+      height:100%;
+    }
+    .dashoard_bg{
+      height:100%
+    }
+
+
+}
+.mx-window-body {
+  
+  overflow-x: hidden !important;
+}
