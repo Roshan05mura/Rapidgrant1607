@@ -35,7 +35,13 @@
       ]
     },
     "3f713255-685e-4649-a471-bc9eaa7d0053": {
-      "Name": "GranteeManager"
+      "Name": "GranteeManager",
+      "ManageableRoles": [
+        "7441c8a6-fabc-4836-84d5-1f8f2902a49c",
+        "3f713255-685e-4649-a471-bc9eaa7d0053",
+        "779f00c6-505c-491c-98a6-657027cacdc7",
+        "9f8684d9-3bf9-46c1-ad35-5a8a6433e0a6"
+      ]
     },
     "fb27d527-806d-4e33-a1cd-685f5078df08": {
       "Name": "Admin"
@@ -43,8 +49,19 @@
     "69464208-b204-411d-9867-7074db64987c": {
       "Name": "GrantApplicationManager",
       "ManageableRoles": [
+        "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
+        "53f5d6fa-6da9-4a71-b011-454ec052cce8",
         "7441c8a6-fabc-4836-84d5-1f8f2902a49c",
-        "ad9a8c2e-f801-4d0a-aec6-354476d04e90"
+        "3f713255-685e-4649-a471-bc9eaa7d0053",
+        "fb27d527-806d-4e33-a1cd-685f5078df08",
+        "69464208-b204-411d-9867-7074db64987c",
+        "ad9a8c2e-f801-4d0a-aec6-354476d04e90",
+        "ee59467a-f389-450b-bcbf-1223aafaaa2a",
+        "7da6c9ea-960f-4dfa-ad83-f0b3af2252cf",
+        "a7c1f394-7917-411a-9173-93512aa76e24",
+        "f767d217-26dc-4bc3-84c0-fdbe32897d55",
+        "779f00c6-505c-491c-98a6-657027cacdc7",
+        "9f8684d9-3bf9-46c1-ad35-5a8a6433e0a6"
       ]
     },
     "ad9a8c2e-f801-4d0a-aec6-354476d04e90": {
@@ -68,7 +85,11 @@
       "Name": "UserRole"
     },
     "779f00c6-505c-491c-98a6-657027cacdc7": {
-      "Name": "InvestigatingOfficer"
+      "Name": "InvestigatingOfficer",
+      "ManageableRoles": [
+        "7441c8a6-fabc-4836-84d5-1f8f2902a49c",
+        "779f00c6-505c-491c-98a6-657027cacdc7"
+      ]
     },
     "9f8684d9-3bf9-46c1-ad35-5a8a6433e0a6": {
       "Name": "GranteeManger_HeadQuarters"

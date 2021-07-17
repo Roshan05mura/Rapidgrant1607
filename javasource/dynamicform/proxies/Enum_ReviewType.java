@@ -8,7 +8,8 @@ public enum Enum_ReviewType
 {
 	Rating(new java.lang.String[][] { new java.lang.String[] { "en_US", "Rating" } }),
 	Interview(new java.lang.String[][] { new java.lang.String[] { "en_US", "Interview" } }),
-	Test(new java.lang.String[][] { new java.lang.String[] { "en_US", "Test" } });
+	Test(new java.lang.String[][] { new java.lang.String[] { "en_US", "Test" } }),
+	Contract_Generation(new java.lang.String[][] { new java.lang.String[] { "en_US", "Contract Generation" } });
 
 	private java.util.Map<java.lang.String, java.lang.String> captions;
 

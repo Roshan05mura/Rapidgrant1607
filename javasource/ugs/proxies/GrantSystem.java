@@ -44,7 +44,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 		ToAddress("ToAddress"),
 		Subject("Subject"),
 		PermanentID("PermanentID"),
-		ReviewType("ReviewType"),
+		RatingType("RatingType"),
 		OverAllRating("OverAllRating"),
 		ReviewComments("ReviewComments"),
 		TotalScore("TotalScore"),
@@ -66,22 +66,32 @@ public class GrantSystem extends system.proxies.WorkflowContext
 		TestScore("TestScore"),
 		WorkflowEnd("WorkflowEnd"),
 		Frequency("Frequency"),
-		Q1_Amount("Q1_Amount"),
-		Q2Amount("Q2Amount"),
-		Q3_Amount("Q3_Amount"),
-		Q4_Amount("Q4_Amount"),
+		ReviewType("ReviewType"),
+		Q5_Date("Q5_Date"),
 		Q1_Date("Q1_Date"),
 		Q2_Date("Q2_Date"),
 		Q3_Date("Q3_Date"),
 		Q4_Date("Q4_Date"),
 		FrequencyYear("FrequencyYear"),
+		TotalRequest("TotalRequest"),
+		AvailableRequest("AvailableRequest"),
+		FreuencyYears_Int("FreuencyYears_Int"),
+		FrequencyPeriod_Int("FrequencyPeriod_Int"),
+		Q6_Date("Q6_Date"),
+		Q7_Date("Q7_Date"),
+		Q8_Date("Q8_Date"),
+		Q9_Date("Q9_Date"),
+		Q10_Date("Q10_Date"),
+		Q11_Date("Q11_Date"),
+		Q12_Date("Q12_Date"),
+		Q1_Amount("Q1_Amount"),
 		Signature_GrantSystem_Clone("UGS.Signature_GrantSystem_Clone"),
 		GrantSystem_Aggrement_("UGS.GrantSystem_Aggrement_"),
 		GrantSystem_Printout("UGS.GrantSystem_Printout"),
 		Signature_GrantSystem_main("UGS.Signature_GrantSystem_main"),
 		Fundings_GrantSystem("UGS.Fundings_GrantSystem"),
 		History_GrantSystem("UGS.History_GrantSystem"),
-		Test_GrantSystem("UGS.Test_GrantSystem"),
+		Test_GrantSystem_Dummy("UGS.Test_GrantSystem_Dummy"),
 		Interview_GrantSystem("UGS.Interview_GrantSystem"),
 		GrantSystem_Organization("UGS.GrantSystem_Organization"),
 		ReviewForm_GrantSystem_CurrentReviewForm("UGS.ReviewForm_GrantSystem_CurrentReviewForm"),
@@ -1172,21 +1182,21 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	}
 
 	/**
-	 * Set value of ReviewType
-	 * @param reviewtype
+	 * Set value of RatingType
+	 * @param ratingtype
 	 */
-	public final ugs.proxies.Enum_ReviewTypes getReviewType()
+	public final ugs.proxies.Enum_ReviewTypes getRatingType()
 	{
-		return getReviewType(getContext());
+		return getRatingType(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of ReviewType
+	 * @return value of RatingType
 	 */
-	public final ugs.proxies.Enum_ReviewTypes getReviewType(com.mendix.systemwideinterfaces.core.IContext context)
+	public final ugs.proxies.Enum_ReviewTypes getRatingType(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		Object obj = getMendixObject().getValue(context, MemberNames.ReviewType.toString());
+		Object obj = getMendixObject().getValue(context, MemberNames.RatingType.toString());
 		if (obj == null)
 			return null;
 
@@ -1194,25 +1204,25 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	}
 
 	/**
-	 * Set value of ReviewType
-	 * @param reviewtype
+	 * Set value of RatingType
+	 * @param ratingtype
 	 */
-	public final void setReviewType(ugs.proxies.Enum_ReviewTypes reviewtype)
+	public final void setRatingType(ugs.proxies.Enum_ReviewTypes ratingtype)
 	{
-		setReviewType(getContext(), reviewtype);
+		setRatingType(getContext(), ratingtype);
 	}
 
 	/**
-	 * Set value of ReviewType
+	 * Set value of RatingType
 	 * @param context
-	 * @param reviewtype
+	 * @param ratingtype
 	 */
-	public final void setReviewType(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_ReviewTypes reviewtype)
+	public final void setRatingType(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_ReviewTypes ratingtype)
 	{
-		if (reviewtype != null)
-			getMendixObject().setValue(context, MemberNames.ReviewType.toString(), reviewtype.toString());
+		if (ratingtype != null)
+			getMendixObject().setValue(context, MemberNames.RatingType.toString(), ratingtype.toString());
 		else
-			getMendixObject().setValue(context, MemberNames.ReviewType.toString(), null);
+			getMendixObject().setValue(context, MemberNames.RatingType.toString(), null);
 	}
 
 	/**
@@ -1996,147 +2006,83 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	}
 
 	/**
-	 * @return value of Q1_Amount
+	 * Set value of ReviewType
+	 * @param reviewtype
 	 */
-	public final java.math.BigDecimal getQ1_Amount()
+	public final dynamicform.proxies.Enum_ReviewType getReviewType()
 	{
-		return getQ1_Amount(getContext());
+		return getReviewType(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of Q1_Amount
+	 * @return value of ReviewType
 	 */
-	public final java.math.BigDecimal getQ1_Amount(com.mendix.systemwideinterfaces.core.IContext context)
+	public final dynamicform.proxies.Enum_ReviewType getReviewType(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.math.BigDecimal) getMendixObject().getValue(context, MemberNames.Q1_Amount.toString());
+		Object obj = getMendixObject().getValue(context, MemberNames.ReviewType.toString());
+		if (obj == null)
+			return null;
+
+		return dynamicform.proxies.Enum_ReviewType.valueOf((java.lang.String) obj);
 	}
 
 	/**
-	 * Set value of Q1_Amount
-	 * @param q1_amount
+	 * Set value of ReviewType
+	 * @param reviewtype
 	 */
-	public final void setQ1_Amount(java.math.BigDecimal q1_amount)
+	public final void setReviewType(dynamicform.proxies.Enum_ReviewType reviewtype)
 	{
-		setQ1_Amount(getContext(), q1_amount);
+		setReviewType(getContext(), reviewtype);
 	}
 
 	/**
-	 * Set value of Q1_Amount
+	 * Set value of ReviewType
 	 * @param context
-	 * @param q1_amount
+	 * @param reviewtype
 	 */
-	public final void setQ1_Amount(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal q1_amount)
+	public final void setReviewType(com.mendix.systemwideinterfaces.core.IContext context, dynamicform.proxies.Enum_ReviewType reviewtype)
 	{
-		getMendixObject().setValue(context, MemberNames.Q1_Amount.toString(), q1_amount);
+		if (reviewtype != null)
+			getMendixObject().setValue(context, MemberNames.ReviewType.toString(), reviewtype.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.ReviewType.toString(), null);
 	}
 
 	/**
-	 * @return value of Q2Amount
+	 * @return value of Q5_Date
 	 */
-	public final java.math.BigDecimal getQ2Amount()
+	public final java.util.Date getQ5_Date()
 	{
-		return getQ2Amount(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of Q2Amount
-	 */
-	public final java.math.BigDecimal getQ2Amount(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.math.BigDecimal) getMendixObject().getValue(context, MemberNames.Q2Amount.toString());
-	}
-
-	/**
-	 * Set value of Q2Amount
-	 * @param q2amount
-	 */
-	public final void setQ2Amount(java.math.BigDecimal q2amount)
-	{
-		setQ2Amount(getContext(), q2amount);
-	}
-
-	/**
-	 * Set value of Q2Amount
-	 * @param context
-	 * @param q2amount
-	 */
-	public final void setQ2Amount(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal q2amount)
-	{
-		getMendixObject().setValue(context, MemberNames.Q2Amount.toString(), q2amount);
-	}
-
-	/**
-	 * @return value of Q3_Amount
-	 */
-	public final java.math.BigDecimal getQ3_Amount()
-	{
-		return getQ3_Amount(getContext());
+		return getQ5_Date(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of Q3_Amount
+	 * @return value of Q5_Date
 	 */
-	public final java.math.BigDecimal getQ3_Amount(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.util.Date getQ5_Date(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.math.BigDecimal) getMendixObject().getValue(context, MemberNames.Q3_Amount.toString());
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.Q5_Date.toString());
 	}
 
 	/**
-	 * Set value of Q3_Amount
-	 * @param q3_amount
+	 * Set value of Q5_Date
+	 * @param q5_date
 	 */
-	public final void setQ3_Amount(java.math.BigDecimal q3_amount)
+	public final void setQ5_Date(java.util.Date q5_date)
 	{
-		setQ3_Amount(getContext(), q3_amount);
+		setQ5_Date(getContext(), q5_date);
 	}
 
 	/**
-	 * Set value of Q3_Amount
+	 * Set value of Q5_Date
 	 * @param context
-	 * @param q3_amount
+	 * @param q5_date
 	 */
-	public final void setQ3_Amount(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal q3_amount)
+	public final void setQ5_Date(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date q5_date)
 	{
-		getMendixObject().setValue(context, MemberNames.Q3_Amount.toString(), q3_amount);
-	}
-
-	/**
-	 * @return value of Q4_Amount
-	 */
-	public final java.math.BigDecimal getQ4_Amount()
-	{
-		return getQ4_Amount(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of Q4_Amount
-	 */
-	public final java.math.BigDecimal getQ4_Amount(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.math.BigDecimal) getMendixObject().getValue(context, MemberNames.Q4_Amount.toString());
-	}
-
-	/**
-	 * Set value of Q4_Amount
-	 * @param q4_amount
-	 */
-	public final void setQ4_Amount(java.math.BigDecimal q4_amount)
-	{
-		setQ4_Amount(getContext(), q4_amount);
-	}
-
-	/**
-	 * Set value of Q4_Amount
-	 * @param context
-	 * @param q4_amount
-	 */
-	public final void setQ4_Amount(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal q4_amount)
-	{
-		getMendixObject().setValue(context, MemberNames.Q4_Amount.toString(), q4_amount);
+		getMendixObject().setValue(context, MemberNames.Q5_Date.toString(), q5_date);
 	}
 
 	/**
@@ -2284,9 +2230,10 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	}
 
 	/**
-	 * @return value of FrequencyYear
+	 * Set value of FrequencyYear
+	 * @param frequencyyear
 	 */
-	public final java.lang.String getFrequencyYear()
+	public final ugs.proxies.Enum_Yearly getFrequencyYear()
 	{
 		return getFrequencyYear(getContext());
 	}
@@ -2295,16 +2242,20 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @return value of FrequencyYear
 	 */
-	public final java.lang.String getFrequencyYear(com.mendix.systemwideinterfaces.core.IContext context)
+	public final ugs.proxies.Enum_Yearly getFrequencyYear(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.FrequencyYear.toString());
+		Object obj = getMendixObject().getValue(context, MemberNames.FrequencyYear.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_Yearly.valueOf((java.lang.String) obj);
 	}
 
 	/**
 	 * Set value of FrequencyYear
 	 * @param frequencyyear
 	 */
-	public final void setFrequencyYear(java.lang.String frequencyyear)
+	public final void setFrequencyYear(ugs.proxies.Enum_Yearly frequencyyear)
 	{
 		setFrequencyYear(getContext(), frequencyyear);
 	}
@@ -2314,9 +2265,444 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @param frequencyyear
 	 */
-	public final void setFrequencyYear(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String frequencyyear)
+	public final void setFrequencyYear(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_Yearly frequencyyear)
 	{
-		getMendixObject().setValue(context, MemberNames.FrequencyYear.toString(), frequencyyear);
+		if (frequencyyear != null)
+			getMendixObject().setValue(context, MemberNames.FrequencyYear.toString(), frequencyyear.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.FrequencyYear.toString(), null);
+	}
+
+	/**
+	 * @return value of TotalRequest
+	 */
+	public final java.lang.Integer getTotalRequest()
+	{
+		return getTotalRequest(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of TotalRequest
+	 */
+	public final java.lang.Integer getTotalRequest(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.TotalRequest.toString());
+	}
+
+	/**
+	 * Set value of TotalRequest
+	 * @param totalrequest
+	 */
+	public final void setTotalRequest(java.lang.Integer totalrequest)
+	{
+		setTotalRequest(getContext(), totalrequest);
+	}
+
+	/**
+	 * Set value of TotalRequest
+	 * @param context
+	 * @param totalrequest
+	 */
+	public final void setTotalRequest(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer totalrequest)
+	{
+		getMendixObject().setValue(context, MemberNames.TotalRequest.toString(), totalrequest);
+	}
+
+	/**
+	 * @return value of AvailableRequest
+	 */
+	public final java.lang.Integer getAvailableRequest()
+	{
+		return getAvailableRequest(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of AvailableRequest
+	 */
+	public final java.lang.Integer getAvailableRequest(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.AvailableRequest.toString());
+	}
+
+	/**
+	 * Set value of AvailableRequest
+	 * @param availablerequest
+	 */
+	public final void setAvailableRequest(java.lang.Integer availablerequest)
+	{
+		setAvailableRequest(getContext(), availablerequest);
+	}
+
+	/**
+	 * Set value of AvailableRequest
+	 * @param context
+	 * @param availablerequest
+	 */
+	public final void setAvailableRequest(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer availablerequest)
+	{
+		getMendixObject().setValue(context, MemberNames.AvailableRequest.toString(), availablerequest);
+	}
+
+	/**
+	 * @return value of FreuencyYears_Int
+	 */
+	public final java.lang.Integer getFreuencyYears_Int()
+	{
+		return getFreuencyYears_Int(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of FreuencyYears_Int
+	 */
+	public final java.lang.Integer getFreuencyYears_Int(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.FreuencyYears_Int.toString());
+	}
+
+	/**
+	 * Set value of FreuencyYears_Int
+	 * @param freuencyyears_int
+	 */
+	public final void setFreuencyYears_Int(java.lang.Integer freuencyyears_int)
+	{
+		setFreuencyYears_Int(getContext(), freuencyyears_int);
+	}
+
+	/**
+	 * Set value of FreuencyYears_Int
+	 * @param context
+	 * @param freuencyyears_int
+	 */
+	public final void setFreuencyYears_Int(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer freuencyyears_int)
+	{
+		getMendixObject().setValue(context, MemberNames.FreuencyYears_Int.toString(), freuencyyears_int);
+	}
+
+	/**
+	 * @return value of FrequencyPeriod_Int
+	 */
+	public final java.lang.Integer getFrequencyPeriod_Int()
+	{
+		return getFrequencyPeriod_Int(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of FrequencyPeriod_Int
+	 */
+	public final java.lang.Integer getFrequencyPeriod_Int(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.FrequencyPeriod_Int.toString());
+	}
+
+	/**
+	 * Set value of FrequencyPeriod_Int
+	 * @param frequencyperiod_int
+	 */
+	public final void setFrequencyPeriod_Int(java.lang.Integer frequencyperiod_int)
+	{
+		setFrequencyPeriod_Int(getContext(), frequencyperiod_int);
+	}
+
+	/**
+	 * Set value of FrequencyPeriod_Int
+	 * @param context
+	 * @param frequencyperiod_int
+	 */
+	public final void setFrequencyPeriod_Int(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer frequencyperiod_int)
+	{
+		getMendixObject().setValue(context, MemberNames.FrequencyPeriod_Int.toString(), frequencyperiod_int);
+	}
+
+	/**
+	 * @return value of Q6_Date
+	 */
+	public final java.lang.String getQ6_Date()
+	{
+		return getQ6_Date(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Q6_Date
+	 */
+	public final java.lang.String getQ6_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q6_Date.toString());
+	}
+
+	/**
+	 * Set value of Q6_Date
+	 * @param q6_date
+	 */
+	public final void setQ6_Date(java.lang.String q6_date)
+	{
+		setQ6_Date(getContext(), q6_date);
+	}
+
+	/**
+	 * Set value of Q6_Date
+	 * @param context
+	 * @param q6_date
+	 */
+	public final void setQ6_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q6_date)
+	{
+		getMendixObject().setValue(context, MemberNames.Q6_Date.toString(), q6_date);
+	}
+
+	/**
+	 * @return value of Q7_Date
+	 */
+	public final java.lang.String getQ7_Date()
+	{
+		return getQ7_Date(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Q7_Date
+	 */
+	public final java.lang.String getQ7_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q7_Date.toString());
+	}
+
+	/**
+	 * Set value of Q7_Date
+	 * @param q7_date
+	 */
+	public final void setQ7_Date(java.lang.String q7_date)
+	{
+		setQ7_Date(getContext(), q7_date);
+	}
+
+	/**
+	 * Set value of Q7_Date
+	 * @param context
+	 * @param q7_date
+	 */
+	public final void setQ7_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q7_date)
+	{
+		getMendixObject().setValue(context, MemberNames.Q7_Date.toString(), q7_date);
+	}
+
+	/**
+	 * @return value of Q8_Date
+	 */
+	public final java.lang.String getQ8_Date()
+	{
+		return getQ8_Date(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Q8_Date
+	 */
+	public final java.lang.String getQ8_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q8_Date.toString());
+	}
+
+	/**
+	 * Set value of Q8_Date
+	 * @param q8_date
+	 */
+	public final void setQ8_Date(java.lang.String q8_date)
+	{
+		setQ8_Date(getContext(), q8_date);
+	}
+
+	/**
+	 * Set value of Q8_Date
+	 * @param context
+	 * @param q8_date
+	 */
+	public final void setQ8_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q8_date)
+	{
+		getMendixObject().setValue(context, MemberNames.Q8_Date.toString(), q8_date);
+	}
+
+	/**
+	 * @return value of Q9_Date
+	 */
+	public final java.lang.String getQ9_Date()
+	{
+		return getQ9_Date(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Q9_Date
+	 */
+	public final java.lang.String getQ9_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q9_Date.toString());
+	}
+
+	/**
+	 * Set value of Q9_Date
+	 * @param q9_date
+	 */
+	public final void setQ9_Date(java.lang.String q9_date)
+	{
+		setQ9_Date(getContext(), q9_date);
+	}
+
+	/**
+	 * Set value of Q9_Date
+	 * @param context
+	 * @param q9_date
+	 */
+	public final void setQ9_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q9_date)
+	{
+		getMendixObject().setValue(context, MemberNames.Q9_Date.toString(), q9_date);
+	}
+
+	/**
+	 * @return value of Q10_Date
+	 */
+	public final java.lang.String getQ10_Date()
+	{
+		return getQ10_Date(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Q10_Date
+	 */
+	public final java.lang.String getQ10_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q10_Date.toString());
+	}
+
+	/**
+	 * Set value of Q10_Date
+	 * @param q10_date
+	 */
+	public final void setQ10_Date(java.lang.String q10_date)
+	{
+		setQ10_Date(getContext(), q10_date);
+	}
+
+	/**
+	 * Set value of Q10_Date
+	 * @param context
+	 * @param q10_date
+	 */
+	public final void setQ10_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q10_date)
+	{
+		getMendixObject().setValue(context, MemberNames.Q10_Date.toString(), q10_date);
+	}
+
+	/**
+	 * @return value of Q11_Date
+	 */
+	public final java.lang.String getQ11_Date()
+	{
+		return getQ11_Date(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Q11_Date
+	 */
+	public final java.lang.String getQ11_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q11_Date.toString());
+	}
+
+	/**
+	 * Set value of Q11_Date
+	 * @param q11_date
+	 */
+	public final void setQ11_Date(java.lang.String q11_date)
+	{
+		setQ11_Date(getContext(), q11_date);
+	}
+
+	/**
+	 * Set value of Q11_Date
+	 * @param context
+	 * @param q11_date
+	 */
+	public final void setQ11_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q11_date)
+	{
+		getMendixObject().setValue(context, MemberNames.Q11_Date.toString(), q11_date);
+	}
+
+	/**
+	 * @return value of Q12_Date
+	 */
+	public final java.lang.String getQ12_Date()
+	{
+		return getQ12_Date(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Q12_Date
+	 */
+	public final java.lang.String getQ12_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q12_Date.toString());
+	}
+
+	/**
+	 * Set value of Q12_Date
+	 * @param q12_date
+	 */
+	public final void setQ12_Date(java.lang.String q12_date)
+	{
+		setQ12_Date(getContext(), q12_date);
+	}
+
+	/**
+	 * Set value of Q12_Date
+	 * @param context
+	 * @param q12_date
+	 */
+	public final void setQ12_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q12_date)
+	{
+		getMendixObject().setValue(context, MemberNames.Q12_Date.toString(), q12_date);
+	}
+
+	/**
+	 * @return value of Q1_Amount
+	 */
+	public final java.math.BigDecimal getQ1_Amount()
+	{
+		return getQ1_Amount(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Q1_Amount
+	 */
+	public final java.math.BigDecimal getQ1_Amount(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.math.BigDecimal) getMendixObject().getValue(context, MemberNames.Q1_Amount.toString());
+	}
+
+	/**
+	 * Set value of Q1_Amount
+	 * @param q1_amount
+	 */
+	public final void setQ1_Amount(java.math.BigDecimal q1_amount)
+	{
+		setQ1_Amount(getContext(), q1_amount);
+	}
+
+	/**
+	 * Set value of Q1_Amount
+	 * @param context
+	 * @param q1_amount
+	 */
+	public final void setQ1_Amount(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal q1_amount)
+	{
+		getMendixObject().setValue(context, MemberNames.Q1_Amount.toString(), q1_amount);
 	}
 
 	/**
@@ -2578,46 +2964,46 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	}
 
 	/**
-	 * @return value of Test_GrantSystem
+	 * @return value of Test_GrantSystem_Dummy
 	 */
-	public final ugs.proxies.Test getTest_GrantSystem() throws com.mendix.core.CoreException
+	public final ugs.proxies.Test getTest_GrantSystem_Dummy() throws com.mendix.core.CoreException
 	{
-		return getTest_GrantSystem(getContext());
+		return getTest_GrantSystem_Dummy(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of Test_GrantSystem
+	 * @return value of Test_GrantSystem_Dummy
 	 */
-	public final ugs.proxies.Test getTest_GrantSystem(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	public final ugs.proxies.Test getTest_GrantSystem_Dummy(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
 		ugs.proxies.Test result = null;
-		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Test_GrantSystem.toString());
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Test_GrantSystem_Dummy.toString());
 		if (identifier != null)
 			result = ugs.proxies.Test.load(context, identifier);
 		return result;
 	}
 
 	/**
-	 * Set value of Test_GrantSystem
-	 * @param test_grantsystem
+	 * Set value of Test_GrantSystem_Dummy
+	 * @param test_grantsystem_dummy
 	 */
-	public final void setTest_GrantSystem(ugs.proxies.Test test_grantsystem)
+	public final void setTest_GrantSystem_Dummy(ugs.proxies.Test test_grantsystem_dummy)
 	{
-		setTest_GrantSystem(getContext(), test_grantsystem);
+		setTest_GrantSystem_Dummy(getContext(), test_grantsystem_dummy);
 	}
 
 	/**
-	 * Set value of Test_GrantSystem
+	 * Set value of Test_GrantSystem_Dummy
 	 * @param context
-	 * @param test_grantsystem
+	 * @param test_grantsystem_dummy
 	 */
-	public final void setTest_GrantSystem(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Test test_grantsystem)
+	public final void setTest_GrantSystem_Dummy(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Test test_grantsystem_dummy)
 	{
-		if (test_grantsystem == null)
-			getMendixObject().setValue(context, MemberNames.Test_GrantSystem.toString(), null);
+		if (test_grantsystem_dummy == null)
+			getMendixObject().setValue(context, MemberNames.Test_GrantSystem_Dummy.toString(), null);
 		else
-			getMendixObject().setValue(context, MemberNames.Test_GrantSystem.toString(), test_grantsystem.getMendixObject().getId());
+			getMendixObject().setValue(context, MemberNames.Test_GrantSystem_Dummy.toString(), test_grantsystem_dummy.getMendixObject().getId());
 	}
 
 	/**

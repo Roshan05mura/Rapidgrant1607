@@ -7,7 +7,8 @@ package ugs.proxies;
 public enum Enum_Fund
 {
 	Awarded(new java.lang.String[][] { new java.lang.String[] { "en_US", "Awarded" } }),
-	Paid(new java.lang.String[][] { new java.lang.String[] { "en_US", "Paid" } });
+	Paid(new java.lang.String[][] { new java.lang.String[] { "en_US", "Paid" } }),
+	Payment_In_progress(new java.lang.String[][] { new java.lang.String[] { "en_US", "Payment In progress" } });
 
 	private java.util.Map<java.lang.String, java.lang.String> captions;
 

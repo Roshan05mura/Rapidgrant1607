@@ -600,7 +600,18 @@ background-repeat: no-repeat;
 .mx-dataview-controls {
     border-top: 1px solid transparent
 }
-
+//for rapid grant
+.mx-datagrid table th .mx-datagrid-head-caption {
+    font-size: 10pt;
+    font-weight: 800;
+    //color: #000000;
+    text-align: center;
+}
+.mx-grid table tbody tr td {
+    border: unset;
+    text-align: center;
+  }
+//for rapid grant
 .mx-compound-control button {
     margin-left: 0;
     border: 1px solid transparent;
@@ -649,7 +660,7 @@ background-repeat: no-repeat;
     .mx-grid{
         background-color: #eeeeee;
         padding: 15px;
-        box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+       // box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom-left-radius: 10px;

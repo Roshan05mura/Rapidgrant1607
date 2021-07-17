@@ -1,6 +1,13 @@
 //grade
 .review
 {
+  
+  background-color: dimgrey;
+  //border:2px solid #fff;
+  border-radius: 5px;
+  min-height: 90vh;
+
+
   .review-table{
     table.mx-table > tbody > tr > td {
       padding: 2px 2px 2px 8px !important;
@@ -14,10 +21,6 @@
     color:#fff!important;
 }}
 
-    background-color: dimgrey;
-    //border:2px solid #fff;
-    border-radius: 5px;
-    min-height: 90vh;
 
     .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a, .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a:hover, .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a:focus {
   
@@ -128,6 +131,24 @@
 //end checkbox
 .manual
 {
+  //new
+  .mx-grid{
+    background-color: #eeeeee;
+    padding: 15px;
+  }
+
+  .mx-datagrid table th .mx-datagrid-head-caption {
+    font-size: 10pt;
+    font-weight: 800;
+    //color: #000000;
+    text-align: center;
+}
+ .mx-grid table tbody tr td {
+  border: unset;
+  text-align: center;
+}
+
+//news
   padding:20px;
   border: 1px solid #DCDCDC;
   min-height: 90vh;
@@ -164,7 +185,7 @@
   .common_dashboard .mx-datagrid table th .mx-datagrid-head-caption {
     font-size: 10pt;
     font-weight: 800;
-    color: #000000;
+   // color: #000000;
     text-align: center;
 }
 .common_dashboard .mx-grid table tbody tr td {

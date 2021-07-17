@@ -25,6 +25,8 @@ public class Fundings
 		Description("Description"),
 		Fundings_Status("Fundings_Status"),
 		Date("Date"),
+		AvailableAmounts("AvailableAmounts"),
+		RequestedAmount("RequestedAmount"),
 		Fundings_GrantSystem("UGS.Fundings_GrantSystem");
 
 		private java.lang.String metaName;
@@ -306,6 +308,78 @@ public class Fundings
 	public final void setDate(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date date)
 	{
 		getMendixObject().setValue(context, MemberNames.Date.toString(), date);
+	}
+
+	/**
+	 * @return value of AvailableAmounts
+	 */
+	public final java.math.BigDecimal getAvailableAmounts()
+	{
+		return getAvailableAmounts(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of AvailableAmounts
+	 */
+	public final java.math.BigDecimal getAvailableAmounts(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.math.BigDecimal) getMendixObject().getValue(context, MemberNames.AvailableAmounts.toString());
+	}
+
+	/**
+	 * Set value of AvailableAmounts
+	 * @param availableamounts
+	 */
+	public final void setAvailableAmounts(java.math.BigDecimal availableamounts)
+	{
+		setAvailableAmounts(getContext(), availableamounts);
+	}
+
+	/**
+	 * Set value of AvailableAmounts
+	 * @param context
+	 * @param availableamounts
+	 */
+	public final void setAvailableAmounts(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal availableamounts)
+	{
+		getMendixObject().setValue(context, MemberNames.AvailableAmounts.toString(), availableamounts);
+	}
+
+	/**
+	 * @return value of RequestedAmount
+	 */
+	public final java.math.BigDecimal getRequestedAmount()
+	{
+		return getRequestedAmount(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of RequestedAmount
+	 */
+	public final java.math.BigDecimal getRequestedAmount(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.math.BigDecimal) getMendixObject().getValue(context, MemberNames.RequestedAmount.toString());
+	}
+
+	/**
+	 * Set value of RequestedAmount
+	 * @param requestedamount
+	 */
+	public final void setRequestedAmount(java.math.BigDecimal requestedamount)
+	{
+		setRequestedAmount(getContext(), requestedamount);
+	}
+
+	/**
+	 * Set value of RequestedAmount
+	 * @param context
+	 * @param requestedamount
+	 */
+	public final void setRequestedAmount(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal requestedamount)
+	{
+		getMendixObject().setValue(context, MemberNames.RequestedAmount.toString(), requestedamount);
 	}
 
 	/**

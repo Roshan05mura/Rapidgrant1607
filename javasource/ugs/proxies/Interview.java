@@ -28,6 +28,7 @@ public class Interview
 		ChairpersonApproved("ChairpersonApproved"),
 		InterviewerAprroved("InterviewerAprroved"),
 		GrantSystem_Allinterviews("UGS.GrantSystem_Allinterviews"),
+		Activity_Interview("UGS.Activity_Interview"),
 		Interview_GrantSystem("UGS.Interview_GrantSystem"),
 		Interview_applicant("UGS.Interview_applicant"),
 		Interview_ChiarPerson("UGS.Interview_ChiarPerson"),
@@ -419,6 +420,49 @@ public class Interview
 			getMendixObject().setValue(context, MemberNames.GrantSystem_Allinterviews.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.GrantSystem_Allinterviews.toString(), grantsystem_allinterviews.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of Activity_Interview
+	 */
+	public final ugs.proxies.Activity getActivity_Interview() throws com.mendix.core.CoreException
+	{
+		return getActivity_Interview(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Activity_Interview
+	 */
+	public final ugs.proxies.Activity getActivity_Interview(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.Activity result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Activity_Interview.toString());
+		if (identifier != null)
+			result = ugs.proxies.Activity.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of Activity_Interview
+	 * @param activity_interview
+	 */
+	public final void setActivity_Interview(ugs.proxies.Activity activity_interview)
+	{
+		setActivity_Interview(getContext(), activity_interview);
+	}
+
+	/**
+	 * Set value of Activity_Interview
+	 * @param context
+	 * @param activity_interview
+	 */
+	public final void setActivity_Interview(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Activity activity_interview)
+	{
+		if (activity_interview == null)
+			getMendixObject().setValue(context, MemberNames.Activity_Interview.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.Activity_Interview.toString(), activity_interview.getMendixObject().getId());
 	}
 
 	/**

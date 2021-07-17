@@ -24,6 +24,9 @@ public class ReviewForm
 		Main("Main"),
 		RatingType("RatingType"),
 		Comments("Comments"),
+		Average_Score("Average_Score"),
+		ReviewType("ReviewType"),
+		NumericalScoreAsEnum("NumericalScoreAsEnum"),
 		ReviewForm_GrantSystem_CurrentReviewForm("UGS.ReviewForm_GrantSystem_CurrentReviewForm"),
 		ReviewForm_GrantSystem_PastReviewForms("UGS.ReviewForm_GrantSystem_PastReviewForms"),
 		ReviewForm_WorkflowRoles("UGS.ReviewForm_WorkflowRoles"),
@@ -272,6 +275,130 @@ public class ReviewForm
 	public final void setComments(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String comments)
 	{
 		getMendixObject().setValue(context, MemberNames.Comments.toString(), comments);
+	}
+
+	/**
+	 * @return value of Average_Score
+	 */
+	public final java.lang.Integer getAverage_Score()
+	{
+		return getAverage_Score(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Average_Score
+	 */
+	public final java.lang.Integer getAverage_Score(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.Average_Score.toString());
+	}
+
+	/**
+	 * Set value of Average_Score
+	 * @param average_score
+	 */
+	public final void setAverage_Score(java.lang.Integer average_score)
+	{
+		setAverage_Score(getContext(), average_score);
+	}
+
+	/**
+	 * Set value of Average_Score
+	 * @param context
+	 * @param average_score
+	 */
+	public final void setAverage_Score(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer average_score)
+	{
+		getMendixObject().setValue(context, MemberNames.Average_Score.toString(), average_score);
+	}
+
+	/**
+	 * Set value of ReviewType
+	 * @param reviewtype
+	 */
+	public final dynamicform.proxies.Enum_ReviewType getReviewType()
+	{
+		return getReviewType(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ReviewType
+	 */
+	public final dynamicform.proxies.Enum_ReviewType getReviewType(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.ReviewType.toString());
+		if (obj == null)
+			return null;
+
+		return dynamicform.proxies.Enum_ReviewType.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of ReviewType
+	 * @param reviewtype
+	 */
+	public final void setReviewType(dynamicform.proxies.Enum_ReviewType reviewtype)
+	{
+		setReviewType(getContext(), reviewtype);
+	}
+
+	/**
+	 * Set value of ReviewType
+	 * @param context
+	 * @param reviewtype
+	 */
+	public final void setReviewType(com.mendix.systemwideinterfaces.core.IContext context, dynamicform.proxies.Enum_ReviewType reviewtype)
+	{
+		if (reviewtype != null)
+			getMendixObject().setValue(context, MemberNames.ReviewType.toString(), reviewtype.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.ReviewType.toString(), null);
+	}
+
+	/**
+	 * Set value of NumericalScoreAsEnum
+	 * @param numericalscoreasenum
+	 */
+	public final ugs.proxies.Enum_score getNumericalScoreAsEnum()
+	{
+		return getNumericalScoreAsEnum(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of NumericalScoreAsEnum
+	 */
+	public final ugs.proxies.Enum_score getNumericalScoreAsEnum(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.NumericalScoreAsEnum.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_score.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of NumericalScoreAsEnum
+	 * @param numericalscoreasenum
+	 */
+	public final void setNumericalScoreAsEnum(ugs.proxies.Enum_score numericalscoreasenum)
+	{
+		setNumericalScoreAsEnum(getContext(), numericalscoreasenum);
+	}
+
+	/**
+	 * Set value of NumericalScoreAsEnum
+	 * @param context
+	 * @param numericalscoreasenum
+	 */
+	public final void setNumericalScoreAsEnum(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_score numericalscoreasenum)
+	{
+		if (numericalscoreasenum != null)
+			getMendixObject().setValue(context, MemberNames.NumericalScoreAsEnum.toString(), numericalscoreasenum.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.NumericalScoreAsEnum.toString(), null);
 	}
 
 	/**

@@ -24,8 +24,9 @@ Evicted C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\use
 Evicted C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\commons-email-1.4.jar by C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\commons-email-1.5.jar.
 Evicted C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\oauth2-oidc-sdk-8.29.jar by C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\oauth2-oidc-sdk-8.36.2.jar.
 Evicted C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\fontbox-2.0.13.jar by C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\fontbox-2.0.23.jar.
-[rtlauncher:container$] INFO Container start took 6456. Ready to accept admin requests.
-Jul 16, 2021 8:02:19 PM org.hsqldb.persist.Logger logInfoEvent
+[rtlauncher:container$] INFO Container start took 4303. Ready to accept admin requests.
+Jul 17, 2021 2:08:18 PM org.hsqldb.persist.Logger logInfoEvent
 INFO: Database closed
+
 
 

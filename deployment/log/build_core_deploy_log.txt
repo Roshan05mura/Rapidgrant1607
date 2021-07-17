@@ -6,6 +6,6 @@ deploy:
      [copy] Copying 47 files to C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\resources
 
 BUILD SUCCESSFUL
-Total time: 2 seconds
+Total time: 1 second
 
 

@@ -24,7 +24,10 @@ public class Test
 		Cutoff("Cutoff"),
 		Score("Score"),
 		Main("Main"),
-		Test_GrantSystem("UGS.Test_GrantSystem");
+		Remarks("Remarks"),
+		Test_GrantSystem_assigned("UGS.Test_GrantSystem_assigned"),
+		Test_Activity("UGS.Test_Activity"),
+		Test_GrantSystem_Dummy("UGS.Test_GrantSystem_Dummy");
 
 		private java.lang.String metaName;
 
@@ -264,46 +267,168 @@ public class Test
 	}
 
 	/**
-	 * @return value of Test_GrantSystem
+	 * @return value of Remarks
 	 */
-	public final ugs.proxies.GrantSystem getTest_GrantSystem() throws com.mendix.core.CoreException
+	public final java.lang.String getRemarks()
 	{
-		return getTest_GrantSystem(getContext());
+		return getRemarks(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of Test_GrantSystem
+	 * @return value of Remarks
 	 */
-	public final ugs.proxies.GrantSystem getTest_GrantSystem(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	public final java.lang.String getRemarks(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Remarks.toString());
+	}
+
+	/**
+	 * Set value of Remarks
+	 * @param remarks
+	 */
+	public final void setRemarks(java.lang.String remarks)
+	{
+		setRemarks(getContext(), remarks);
+	}
+
+	/**
+	 * Set value of Remarks
+	 * @param context
+	 * @param remarks
+	 */
+	public final void setRemarks(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String remarks)
+	{
+		getMendixObject().setValue(context, MemberNames.Remarks.toString(), remarks);
+	}
+
+	/**
+	 * @return value of Test_GrantSystem_assigned
+	 */
+	public final ugs.proxies.GrantSystem getTest_GrantSystem_assigned() throws com.mendix.core.CoreException
+	{
+		return getTest_GrantSystem_assigned(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Test_GrantSystem_assigned
+	 */
+	public final ugs.proxies.GrantSystem getTest_GrantSystem_assigned(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
 		ugs.proxies.GrantSystem result = null;
-		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Test_GrantSystem.toString());
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Test_GrantSystem_assigned.toString());
 		if (identifier != null)
 			result = ugs.proxies.GrantSystem.load(context, identifier);
 		return result;
 	}
 
 	/**
-	 * Set value of Test_GrantSystem
-	 * @param test_grantsystem
+	 * Set value of Test_GrantSystem_assigned
+	 * @param test_grantsystem_assigned
 	 */
-	public final void setTest_GrantSystem(ugs.proxies.GrantSystem test_grantsystem)
+	public final void setTest_GrantSystem_assigned(ugs.proxies.GrantSystem test_grantsystem_assigned)
 	{
-		setTest_GrantSystem(getContext(), test_grantsystem);
+		setTest_GrantSystem_assigned(getContext(), test_grantsystem_assigned);
 	}
 
 	/**
-	 * Set value of Test_GrantSystem
+	 * Set value of Test_GrantSystem_assigned
 	 * @param context
-	 * @param test_grantsystem
+	 * @param test_grantsystem_assigned
 	 */
-	public final void setTest_GrantSystem(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.GrantSystem test_grantsystem)
+	public final void setTest_GrantSystem_assigned(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.GrantSystem test_grantsystem_assigned)
 	{
-		if (test_grantsystem == null)
-			getMendixObject().setValue(context, MemberNames.Test_GrantSystem.toString(), null);
+		if (test_grantsystem_assigned == null)
+			getMendixObject().setValue(context, MemberNames.Test_GrantSystem_assigned.toString(), null);
 		else
-			getMendixObject().setValue(context, MemberNames.Test_GrantSystem.toString(), test_grantsystem.getMendixObject().getId());
+			getMendixObject().setValue(context, MemberNames.Test_GrantSystem_assigned.toString(), test_grantsystem_assigned.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of Test_Activity
+	 */
+	public final ugs.proxies.Activity getTest_Activity() throws com.mendix.core.CoreException
+	{
+		return getTest_Activity(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Test_Activity
+	 */
+	public final ugs.proxies.Activity getTest_Activity(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.Activity result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Test_Activity.toString());
+		if (identifier != null)
+			result = ugs.proxies.Activity.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of Test_Activity
+	 * @param test_activity
+	 */
+	public final void setTest_Activity(ugs.proxies.Activity test_activity)
+	{
+		setTest_Activity(getContext(), test_activity);
+	}
+
+	/**
+	 * Set value of Test_Activity
+	 * @param context
+	 * @param test_activity
+	 */
+	public final void setTest_Activity(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Activity test_activity)
+	{
+		if (test_activity == null)
+			getMendixObject().setValue(context, MemberNames.Test_Activity.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.Test_Activity.toString(), test_activity.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of Test_GrantSystem_Dummy
+	 */
+	public final ugs.proxies.GrantSystem getTest_GrantSystem_Dummy() throws com.mendix.core.CoreException
+	{
+		return getTest_GrantSystem_Dummy(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Test_GrantSystem_Dummy
+	 */
+	public final ugs.proxies.GrantSystem getTest_GrantSystem_Dummy(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.GrantSystem result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Test_GrantSystem_Dummy.toString());
+		if (identifier != null)
+			result = ugs.proxies.GrantSystem.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of Test_GrantSystem_Dummy
+	 * @param test_grantsystem_dummy
+	 */
+	public final void setTest_GrantSystem_Dummy(ugs.proxies.GrantSystem test_grantsystem_dummy)
+	{
+		setTest_GrantSystem_Dummy(getContext(), test_grantsystem_dummy);
+	}
+
+	/**
+	 * Set value of Test_GrantSystem_Dummy
+	 * @param context
+	 * @param test_grantsystem_dummy
+	 */
+	public final void setTest_GrantSystem_Dummy(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.GrantSystem test_grantsystem_dummy)
+	{
+		if (test_grantsystem_dummy == null)
+			getMendixObject().setValue(context, MemberNames.Test_GrantSystem_Dummy.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.Test_GrantSystem_Dummy.toString(), test_grantsystem_dummy.getMendixObject().getId());
 	}
 
 	/**
