@@ -822,17 +822,17 @@ public class Microflows
 		IMendixObject result = (IMendixObject)Core.microflowCall("UGS.DS_AssignInterviewObject").withParams(params).execute(context);
 		return result == null ? null : ugs.proxies.Interview.initialize(context, result);
 	}
-	public static java.util.List<administration.proxies.Account> dS_Auto_OrganisationName(IContext context, ugs.proxies.SignUp _signUp)
+	public static java.util.List<ugs.proxies.Organization> dS_Auto_OrganisationName(IContext context, ugs.proxies.SignUp _signUp)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("SignUp", _signUp == null ? null : _signUp.getMendixObject());
 		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.DS_Auto_OrganisationName").withParams(params).execute(context);
-		java.util.List<administration.proxies.Account> result = null;
+		java.util.List<ugs.proxies.Organization> result = null;
 		if (objs != null)
 		{
 			result = new java.util.ArrayList<>();
 			for (IMendixObject obj : objs)
-				result.add(administration.proxies.Account.initialize(context, obj));
+				result.add(ugs.proxies.Organization.initialize(context, obj));
 		}
 		return result;
 	}
@@ -1229,6 +1229,12 @@ public class Microflows
 		params.put("ReviewQ", _reviewQ == null ? null : _reviewQ.getMendixObject());
 		params.put("ReviewForm", _reviewForm == null ? null : _reviewForm.getMendixObject());
 		Core.microflowCall("UGS.OCH_One").withParams(params).execute(context);
+	}
+	public static void oCH_OrgSignup(IContext context, ugs.proxies.SignUp _signUp)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("SignUp", _signUp == null ? null : _signUp.getMendixObject());
+		Core.microflowCall("UGS.OCH_OrgSignup").withParams(params).execute(context);
 	}
 	public static void oCH_OtherQuestion(IContext context, ugs.proxies.ReviewQ _reviewForm)
 	{

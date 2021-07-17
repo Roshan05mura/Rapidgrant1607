@@ -1,12 +1,16 @@
 Buildfile: C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\build_core.xml
 
 compile:
-    [javac] Compiling 1 source file to C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\run\bin
+    [javac] Compiling 499 source files to C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\run\bin
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: C:\Users\girid\Documents\Mendix\RapidGrant-main\javasource\mendixsso\implementation\utils\MendixUtils.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
 
 package:
       [jar] Building jar: C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\bundles\project.jar
 
 BUILD SUCCESSFUL
-Total time: 4 seconds
+Total time: 19 seconds
 
 

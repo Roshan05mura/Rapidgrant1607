@@ -24,9 +24,16 @@ Evicted C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\use
 Evicted C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\commons-email-1.4.jar by C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\commons-email-1.5.jar.
 Evicted C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\oauth2-oidc-sdk-8.29.jar by C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\oauth2-oidc-sdk-8.36.2.jar.
 Evicted C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\fontbox-2.0.13.jar by C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib\fontbox-2.0.23.jar.
-[rtlauncher:container$] INFO Container start took 4303. Ready to accept admin requests.
-Jul 17, 2021 2:08:18 PM org.hsqldb.persist.Logger logInfoEvent
+[rtlauncher:container$] INFO Container start took 5929. Ready to accept admin requests.
+Jul 17, 2021 3:27:47 PM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose start
+Jul 17, 2021 3:27:47 PM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose synched
+Jul 17, 2021 3:27:48 PM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose script done
+Jul 17, 2021 3:27:48 PM org.hsqldb.persist.Logger logInfoEvent
+INFO: checkpointClose end
+Jul 17, 2021 3:34:32 PM org.hsqldb.persist.Logger logInfoEvent
 INFO: Database closed
-
 
 

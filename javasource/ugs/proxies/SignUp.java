@@ -27,6 +27,7 @@ public class SignUp
 		MobileNumber("MobileNumber"),
 		Role("Role"),
 		OrganisationName("OrganisationName"),
+		SignUp_Organization("UGS.SignUp_Organization"),
 		SignUp_Account("UGS.SignUp_Account");
 
 		private java.lang.String metaName;
@@ -372,6 +373,49 @@ public class SignUp
 	public final void setOrganisationName(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String organisationname)
 	{
 		getMendixObject().setValue(context, MemberNames.OrganisationName.toString(), organisationname);
+	}
+
+	/**
+	 * @return value of SignUp_Organization
+	 */
+	public final ugs.proxies.Organization getSignUp_Organization() throws com.mendix.core.CoreException
+	{
+		return getSignUp_Organization(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of SignUp_Organization
+	 */
+	public final ugs.proxies.Organization getSignUp_Organization(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.Organization result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.SignUp_Organization.toString());
+		if (identifier != null)
+			result = ugs.proxies.Organization.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of SignUp_Organization
+	 * @param signup_organization
+	 */
+	public final void setSignUp_Organization(ugs.proxies.Organization signup_organization)
+	{
+		setSignUp_Organization(getContext(), signup_organization);
+	}
+
+	/**
+	 * Set value of SignUp_Organization
+	 * @param context
+	 * @param signup_organization
+	 */
+	public final void setSignUp_Organization(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Organization signup_organization)
+	{
+		if (signup_organization == null)
+			getMendixObject().setValue(context, MemberNames.SignUp_Organization.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.SignUp_Organization.toString(), signup_organization.getMendixObject().getId());
 	}
 
 	/**
