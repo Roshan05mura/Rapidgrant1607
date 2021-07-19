@@ -13,7 +13,7 @@
 <mapEntry key="MX_INSTALL_PATH" value="C:/Program Files/Mendix/9.3.0.22930"/>
 <mapEntry key="MXCONSOLE_BASE_PATH" value="C:/Users/girid/Documents/Mendix/RapidGrant-main/deployment"/>
 <mapEntry key="MXCONSOLE_RUNTIME_PATH" value="C:/Program Files/Mendix/9.3.0.22930/runtime"/>
-<mapEntry key="MXCONSOLE_RUNTIME_PORT" value="80"/>
+<mapEntry key="MXCONSOLE_RUNTIME_PORT" value="8080"/>
 <mapEntry key="MXCONSOLE_RUNTIME_LISTEN_ADDRESSES" value="*"/>
 <mapEntry key="MXCONSOLE_SERVER_URL" value="http://127.0.0.1:8091/"/>
 </mapAttribute>

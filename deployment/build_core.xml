@@ -18,7 +18,6 @@
         <exclude name="**/*.template" />
       </fileset>
     </copy>
-    <unzip src="C:\Users\girid\Documents\Mendix\RapidGrant-main\data-snapshot.zip" dest="${deployment}" />
     <copy todir="${model}/lib/userlib" overwrite="true">
       <fileset dir="userlib" />
     </copy>

@@ -98,6 +98,30 @@
   "AdminRole": "8dd52bfa-6d7e-453b-b506-303c0a3d9567",
   "Constants": [
     {
+      "Name": "UGS.DatasetId",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "a09fdd7a-7a68-4896-bad5-ddc72c69659c"
+    },
+    {
+      "Name": "UGS.EmbedUrl",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "https://app.powerbi.com/reportEmbed?reportId=7af06b49-9a57-4417-a70d-5cd45bf27025&groupId=de269c15-9734-4c19-9f22-197daa76a74e&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLUlORElBLUNFTlRSQUwtQS1QUklNQVJZLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJtb2Rlcm5FbWJlZCI6dHJ1ZSwiY2VydGlmaWVkVGVsZW1ldHJ5RW1iZWQiOnRydWUsInVzYWdlTWV0cmljc1ZOZXh0Ijp0cnVlfX0%3d"
+    },
+    {
+      "Name": "UGS.GroupId",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "de269c15-9734-4c19-9f22-197daa76a74e"
+    },
+    {
+      "Name": "UGS.ReportId",
+      "Type": "String",
+      "Description": "",
+      "DefaultValue": "7af06b49-9a57-4417-a70d-5cd45bf27025"
+    },
+    {
       "Name": "Atlas_Core.Atlas_Core_Version",
       "Type": "String",
       "Description": "",
@@ -377,7 +401,7 @@
     },
     {
       "Name": "/odata/",
-      "DefaultEnabled": false,
+      "DefaultEnabled": true,
       "MatchExactly": false
     },
     {

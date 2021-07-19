@@ -33,10 +33,10 @@ public class Account extends system.proxies.User
 		GrantSystem_CurrentHoldingAccount("UGS.GrantSystem_CurrentHoldingAccount"),
 		Interview_applicant("UGS.Interview_applicant"),
 		Interview_ChiarPerson("UGS.Interview_ChiarPerson"),
-		interview_PanelInterviewer("UGS.interview_PanelInterviewer"),
-		CaseMangement_CurrentHoldingAccount("UGS.CaseMangement_CurrentHoldingAccount"),
 		Workflow_Account("UGS.Workflow_Account"),
 		Account_Organization("Administration.Account_Organization"),
+		Account_Profile_2("Administration.Account_Profile_2"),
+		Account_SelectInterviewers("Administration.Account_SelectInterviewers"),
 		EmailAccount_Account("IMAP_POP3_email.EmailAccount_Account"),
 		UserRoles("System.UserRoles"),
 		User_Language("System.User_Language"),
@@ -466,92 +466,6 @@ public class Account extends system.proxies.User
 	}
 
 	/**
-	 * @return value of interview_PanelInterviewer
-	 */
-	public final ugs.proxies.Interview getinterview_PanelInterviewer() throws com.mendix.core.CoreException
-	{
-		return getinterview_PanelInterviewer(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of interview_PanelInterviewer
-	 */
-	public final ugs.proxies.Interview getinterview_PanelInterviewer(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		ugs.proxies.Interview result = null;
-		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.interview_PanelInterviewer.toString());
-		if (identifier != null)
-			result = ugs.proxies.Interview.load(context, identifier);
-		return result;
-	}
-
-	/**
-	 * Set value of interview_PanelInterviewer
-	 * @param interview_panelinterviewer
-	 */
-	public final void setinterview_PanelInterviewer(ugs.proxies.Interview interview_panelinterviewer)
-	{
-		setinterview_PanelInterviewer(getContext(), interview_panelinterviewer);
-	}
-
-	/**
-	 * Set value of interview_PanelInterviewer
-	 * @param context
-	 * @param interview_panelinterviewer
-	 */
-	public final void setinterview_PanelInterviewer(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Interview interview_panelinterviewer)
-	{
-		if (interview_panelinterviewer == null)
-			getMendixObject().setValue(context, MemberNames.interview_PanelInterviewer.toString(), null);
-		else
-			getMendixObject().setValue(context, MemberNames.interview_PanelInterviewer.toString(), interview_panelinterviewer.getMendixObject().getId());
-	}
-
-	/**
-	 * @return value of CaseMangement_CurrentHoldingAccount
-	 */
-	public final ugs.proxies.CaseMangement getCaseMangement_CurrentHoldingAccount() throws com.mendix.core.CoreException
-	{
-		return getCaseMangement_CurrentHoldingAccount(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of CaseMangement_CurrentHoldingAccount
-	 */
-	public final ugs.proxies.CaseMangement getCaseMangement_CurrentHoldingAccount(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		ugs.proxies.CaseMangement result = null;
-		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.CaseMangement_CurrentHoldingAccount.toString());
-		if (identifier != null)
-			result = ugs.proxies.CaseMangement.load(context, identifier);
-		return result;
-	}
-
-	/**
-	 * Set value of CaseMangement_CurrentHoldingAccount
-	 * @param casemangement_currentholdingaccount
-	 */
-	public final void setCaseMangement_CurrentHoldingAccount(ugs.proxies.CaseMangement casemangement_currentholdingaccount)
-	{
-		setCaseMangement_CurrentHoldingAccount(getContext(), casemangement_currentholdingaccount);
-	}
-
-	/**
-	 * Set value of CaseMangement_CurrentHoldingAccount
-	 * @param context
-	 * @param casemangement_currentholdingaccount
-	 */
-	public final void setCaseMangement_CurrentHoldingAccount(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.CaseMangement casemangement_currentholdingaccount)
-	{
-		if (casemangement_currentholdingaccount == null)
-			getMendixObject().setValue(context, MemberNames.CaseMangement_CurrentHoldingAccount.toString(), null);
-		else
-			getMendixObject().setValue(context, MemberNames.CaseMangement_CurrentHoldingAccount.toString(), casemangement_currentholdingaccount.getMendixObject().getId());
-	}
-
-	/**
 	 * @return value of Workflow_Account
 	 */
 	public final ugs.proxies.Workflow getWorkflow_Account() throws com.mendix.core.CoreException
@@ -635,6 +549,95 @@ public class Account extends system.proxies.User
 			getMendixObject().setValue(context, MemberNames.Account_Organization.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.Account_Organization.toString(), account_organization.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of Account_Profile_2
+	 */
+	public final ugs.proxies.Profile getAccount_Profile_2() throws com.mendix.core.CoreException
+	{
+		return getAccount_Profile_2(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Account_Profile_2
+	 */
+	public final ugs.proxies.Profile getAccount_Profile_2(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.Profile result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Account_Profile_2.toString());
+		if (identifier != null)
+			result = ugs.proxies.Profile.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of Account_Profile_2
+	 * @param account_profile_2
+	 */
+	public final void setAccount_Profile_2(ugs.proxies.Profile account_profile_2)
+	{
+		setAccount_Profile_2(getContext(), account_profile_2);
+	}
+
+	/**
+	 * Set value of Account_Profile_2
+	 * @param context
+	 * @param account_profile_2
+	 */
+	public final void setAccount_Profile_2(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Profile account_profile_2)
+	{
+		if (account_profile_2 == null)
+			getMendixObject().setValue(context, MemberNames.Account_Profile_2.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.Account_Profile_2.toString(), account_profile_2.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of Account_SelectInterviewers
+	 */
+	public final java.util.List<ugs.proxies.Interview> getAccount_SelectInterviewers() throws com.mendix.core.CoreException
+	{
+		return getAccount_SelectInterviewers(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Account_SelectInterviewers
+	 */
+	@SuppressWarnings("unchecked")
+	public final java.util.List<ugs.proxies.Interview> getAccount_SelectInterviewers(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		java.util.List<ugs.proxies.Interview> result = new java.util.ArrayList<ugs.proxies.Interview>();
+		Object valueObject = getMendixObject().getValue(context, MemberNames.Account_SelectInterviewers.toString());
+		if (valueObject == null)
+			return result;
+		for (com.mendix.systemwideinterfaces.core.IMendixObject mendixObject : com.mendix.core.Core.retrieveIdList(context, (java.util.List<com.mendix.systemwideinterfaces.core.IMendixIdentifier>) valueObject))
+			result.add(ugs.proxies.Interview.initialize(context, mendixObject));
+		return result;
+	}
+
+	/**
+	 * Set value of Account_SelectInterviewers
+	 * @param account_selectinterviewers
+	 */
+	public final void setAccount_SelectInterviewers(java.util.List<ugs.proxies.Interview> account_selectinterviewers)
+	{
+		setAccount_SelectInterviewers(getContext(), account_selectinterviewers);
+	}
+
+	/**
+	 * Set value of Account_SelectInterviewers
+	 * @param context
+	 * @param account_selectinterviewers
+	 */
+	public final void setAccount_SelectInterviewers(com.mendix.systemwideinterfaces.core.IContext context, java.util.List<ugs.proxies.Interview> account_selectinterviewers)
+	{
+		java.util.List<com.mendix.systemwideinterfaces.core.IMendixIdentifier> identifiers = new java.util.ArrayList<com.mendix.systemwideinterfaces.core.IMendixIdentifier>();
+		for (ugs.proxies.Interview proxyObject : account_selectinterviewers)
+			identifiers.add(proxyObject.getMendixObject().getId());
+		getMendixObject().setValue(context, MemberNames.Account_SelectInterviewers.toString(), identifiers);
 	}
 
 	/**

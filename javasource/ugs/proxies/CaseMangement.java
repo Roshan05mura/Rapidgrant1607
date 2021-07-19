@@ -43,6 +43,8 @@ public class CaseMangement
 		Submit("Submit"),
 		SubmitGM("SubmitGM"),
 		Phase("Phase"),
+		Remarks("Remarks"),
+		StatusApplicant("StatusApplicant"),
 		CaseMangement_GrantSystem("UGS.CaseMangement_GrantSystem"),
 		FileDocument_CaseMangement("UGS.FileDocument_CaseMangement"),
 		Applicant_Case("UGS.Applicant_Case"),
@@ -1023,6 +1025,86 @@ public class CaseMangement
 			getMendixObject().setValue(context, MemberNames.Phase.toString(), phase.toString());
 		else
 			getMendixObject().setValue(context, MemberNames.Phase.toString(), null);
+	}
+
+	/**
+	 * @return value of Remarks
+	 */
+	public final java.lang.String getRemarks()
+	{
+		return getRemarks(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Remarks
+	 */
+	public final java.lang.String getRemarks(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Remarks.toString());
+	}
+
+	/**
+	 * Set value of Remarks
+	 * @param remarks
+	 */
+	public final void setRemarks(java.lang.String remarks)
+	{
+		setRemarks(getContext(), remarks);
+	}
+
+	/**
+	 * Set value of Remarks
+	 * @param context
+	 * @param remarks
+	 */
+	public final void setRemarks(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String remarks)
+	{
+		getMendixObject().setValue(context, MemberNames.Remarks.toString(), remarks);
+	}
+
+	/**
+	 * Set value of StatusApplicant
+	 * @param statusapplicant
+	 */
+	public final ugs.proxies.Enum_CaseStatusApplicant getStatusApplicant()
+	{
+		return getStatusApplicant(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of StatusApplicant
+	 */
+	public final ugs.proxies.Enum_CaseStatusApplicant getStatusApplicant(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.StatusApplicant.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_CaseStatusApplicant.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of StatusApplicant
+	 * @param statusapplicant
+	 */
+	public final void setStatusApplicant(ugs.proxies.Enum_CaseStatusApplicant statusapplicant)
+	{
+		setStatusApplicant(getContext(), statusapplicant);
+	}
+
+	/**
+	 * Set value of StatusApplicant
+	 * @param context
+	 * @param statusapplicant
+	 */
+	public final void setStatusApplicant(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_CaseStatusApplicant statusapplicant)
+	{
+		if (statusapplicant != null)
+			getMendixObject().setValue(context, MemberNames.StatusApplicant.toString(), statusapplicant.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.StatusApplicant.toString(), null);
 	}
 
 	/**

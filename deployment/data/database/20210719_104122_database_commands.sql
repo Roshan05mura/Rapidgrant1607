@@ -1,22 +1,22 @@
-ALTER TABLE "ugs$form" RENAME TO "528d8964bb9e4ab0b17d25dc93ea74f5";
+ALTER TABLE "ugs$form" RENAME TO "1a1c3194b51740e2adb3df93e8a5ba70";
 DROP SEQUENCE "ugs$form_reference_no_mxseq";
 ALTER TABLE "ugs$applicant_account" DROP CONSTRAINT "uniq_ugs$applicant_account_ugs$formid";
 DROP INDEX "idx_ugs$applicant_account_administration$account_ugs$form";
-ALTER TABLE "ugs$applicant_account" RENAME TO "c88f7e1e4fff4a3c9f89e4157fc2e9e1";
+ALTER TABLE "ugs$applicant_account" RENAME TO "fafaab0b0e364db29eb4069bbf1deaf6";
 ALTER TABLE "ugs$applicant_eligibility_grantsystem" DROP CONSTRAINT "uniq_ugs$applicant_eligibility_grantsystem_ugs$eligibilityid";
 DROP INDEX "idx_ugs$applicant_eligibility_grantsystem_ugs$grantsystem_ugs$eligibility";
-ALTER TABLE "ugs$applicant_eligibility_grantsystem" RENAME TO "e332867caad948cd8380218c5fcf2a2b";
+ALTER TABLE "ugs$applicant_eligibility_grantsystem" RENAME TO "68340748bda94cd1a1c25083251de788";
 ALTER TABLE "ugs$reviewform_grantsystem" DROP CONSTRAINT "uniq_ugs$reviewform_grantsystem_ugs$reviewformid";
 DROP INDEX "idx_ugs$reviewform_grantsystem_ugs$grantsystem_ugs$reviewform";
 ALTER TABLE "ugs$signature_grantsystem" DROP CONSTRAINT "uniq_ugs$signature_grantsystem_ugs$grantsystemid";
 ALTER TABLE "ugs$signature_grantsystem" DROP CONSTRAINT "uniq_ugs$signature_grantsystem_ugs$signatureid";
 DROP INDEX "idx_ugs$signature_grantsystem_ugs$grantsystem_ugs$signature";
 ALTER TABLE "dynamicform$document_doc" DROP CONSTRAINT "uniq_dynamicform$document_doc_dynamicform$docid";
-ALTER TABLE "ugs$commonfileds" RENAME TO "0e81f2730c0149d3979936a5869e581c";
+ALTER TABLE "ugs$commonfileds" RENAME TO "e5fae972967a446094b7650a01023f10";
 ALTER TABLE "ugs$history_form" DROP CONSTRAINT "uniq_ugs$history_form_ugs$historyid";
 ALTER TABLE "ugs$history_form" DROP CONSTRAINT "uniq_ugs$history_form_ugs$formid";
 DROP INDEX "idx_ugs$history_form_ugs$form_ugs$history";
-ALTER TABLE "ugs$history_form" RENAME TO "7db303c0b78e4ed8a50173c6856bfd53";
+ALTER TABLE "ugs$history_form" RENAME TO "ff10055724974a9296f327dc7627d9e1";
 ALTER TABLE "ugs$reviewform" RENAME TO "ugs$reviewq";
 ALTER TABLE "ugs$reviewform_grantsystem" RENAME TO "ugs$reviewq_grantsystem";
 ALTER TABLE "ugs$signature_grantsystem" RENAME TO "ugs$signature_grantsystem_clone";
@@ -703,6 +703,9 @@ ALTER TABLE "ugs$grantsystem" ADD "availableblc" DECIMAL(28, 8) NULL;
 UPDATE "ugs$grantsystem"
  SET "availableblc" = 0;
 ALTER TABLE "ugs$grantsystem" ADD "frequencyyear" VARCHAR_IGNORECASE(2) NULL;
+ALTER TABLE "ugs$grantsystem" ADD "eligibiltyanonymous" BOOLEAN NULL;
+UPDATE "ugs$grantsystem"
+ SET "eligibiltyanonymous" = false;
 ALTER TABLE "ugs$grantsystem" ADD "availablerequest" INT NULL;
 UPDATE "ugs$grantsystem"
  SET "availablerequest" = 0;
@@ -722,10 +725,12 @@ UPDATE "ugs$grantsystem"
  SET "totalrequest" = 0;
 ALTER TABLE "ugs$grantsystem" ADD "q9_date" VARCHAR_IGNORECASE(200) NULL;
 ALTER TABLE "ugs$grantsystem" ADD "requesteddate" TIMESTAMP NULL;
+ALTER TABLE "ugs$grantsystem" ADD "modeoftranscation" VARCHAR_IGNORECASE(13) NULL;
 ALTER TABLE "ugs$grantsystem" ADD "q10_date" VARCHAR_IGNORECASE(200) NULL;
 ALTER TABLE "ugs$grantsystem" ADD "noofrequest" INT NULL;
 UPDATE "ugs$grantsystem"
  SET "noofrequest" = 0;
+ALTER TABLE "ugs$grantsystem" ADD "remarks" VARCHAR_IGNORECASE(2147483647) NULL;
 ALTER TABLE "ugs$grantsystem" ADD "testscore" VARCHAR_IGNORECASE(200) NULL;
 UPDATE "ugs$grantsystem"
  SET "testscore" = 'Not Taken';
@@ -782,6 +787,22 @@ INSERT INTO "mendixsystem$attribute" ("id",
 'q6_date', 
 30, 
 200, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('77ad27da-a9d6-421d-88d6-76f505863d49', 
+'ba9d4296-9a81-4e9d-af93-a6f38307e8d2', 
+'Remarks', 
+'remarks', 
+30, 
+0, 
 '', 
 false);
 INSERT INTO "mendixsystem$attribute" ("id", 
@@ -857,6 +878,15 @@ UPDATE "mendixsystem$attribute"
 "default_value" = 'Initial Screening', 
 "is_auto_number" = false
  WHERE "id" = '970d84ce-5727-4942-964b-8c4a06393f7e';
+UPDATE "mendixsystem$attribute"
+ SET "entity_id" = 'ba9d4296-9a81-4e9d-af93-a6f38307e8d2', 
+"attribute_name" = 'Full_discription', 
+"column_name" = 'full_discription', 
+"type" = 30, 
+"length" = 0, 
+"default_value" = '', 
+"is_auto_number" = false
+ WHERE "id" = '218d58ab-e682-4373-8de6-ee74d1b912e7';
 INSERT INTO "mendixsystem$attribute" ("id", 
 "entity_id", 
 "attribute_name", 
@@ -1017,6 +1047,22 @@ INSERT INTO "mendixsystem$attribute" ("id",
 0, 
 '0', 
 false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('2a769c39-e4e5-45ba-b3d3-42cac2a8541a', 
+'ba9d4296-9a81-4e9d-af93-a6f38307e8d2', 
+'ModeOfTranscation', 
+'modeoftranscation', 
+40, 
+13, 
+'', 
+false);
 UPDATE "mendixsystem$attribute"
  SET "entity_id" = 'ba9d4296-9a81-4e9d-af93-a6f38307e8d2', 
 "attribute_name" = 'Limit2', 
@@ -1050,6 +1096,22 @@ INSERT INTO "mendixsystem$attribute" ("id",
 30, 
 200, 
 '', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('25bced78-5481-4482-a640-b8346e1c9b88', 
+'ba9d4296-9a81-4e9d-af93-a6f38307e8d2', 
+'EligibiltyAnonymous', 
+'eligibiltyanonymous', 
+10, 
+0, 
+'false', 
 false);
 INSERT INTO "mendixsystem$attribute" ("id", 
 "entity_id", 
@@ -3636,6 +3698,41 @@ INSERT INTO "mendixsystem$unique_constraint" ("name",
  VALUES ('uniq_dynamicform$status_workflowroles_dynamicform$statusid', 
 '7abfeefe-3474-4b79-b22e-99eac6f78905', 
 '673b6baa-bc39-35c3-a26f-edae46499204');
+CREATE TABLE "administration$account_profile_2" (
+	"administration$accountid" BIGINT NOT NULL,
+	"ugs$profileid" BIGINT NOT NULL,
+	PRIMARY KEY("administration$accountid","ugs$profileid"),
+	CONSTRAINT "uniq_administration$account_profile_2_ugs$profileid" UNIQUE ("ugs$profileid"),
+	CONSTRAINT "uniq_administration$account_profile_2_administration$accountid" UNIQUE ("administration$accountid"));
+CREATE INDEX "idx_administration$account_profile_2_ugs$profile_administration$account" ON "administration$account_profile_2" ("ugs$profileid" ASC,"administration$accountid" ASC);
+INSERT INTO "mendixsystem$association" ("id", 
+"association_name", 
+"table_name", 
+"parent_entity_id", 
+"child_entity_id", 
+"parent_column_name", 
+"child_column_name", 
+"index_name")
+ VALUES ('9a01f359-c91a-4bd5-89a1-f9afaadee3ec', 
+'Administration.Account_Profile_2', 
+'administration$account_profile_2', 
+'3078a23e-13b2-4a9b-84e4-2881fdee53c6', 
+'3902c8b9-1511-4498-b799-34a6f531ef0a', 
+'administration$accountid', 
+'ugs$profileid', 
+'idx_administration$account_profile_2_ugs$profile_administration$account');
+INSERT INTO "mendixsystem$unique_constraint" ("name", 
+"table_id", 
+"column_id")
+ VALUES ('uniq_administration$account_profile_2_ugs$profileid', 
+'9a01f359-c91a-4bd5-89a1-f9afaadee3ec', 
+'6cf612cd-a53d-3865-85b8-686b9e3f169c');
+INSERT INTO "mendixsystem$unique_constraint" ("name", 
+"table_id", 
+"column_id")
+ VALUES ('uniq_administration$account_profile_2_administration$accountid', 
+'9a01f359-c91a-4bd5-89a1-f9afaadee3ec', 
+'2426c63e-0c98-3f7a-85f2-4f3383adaab1');
 CREATE TABLE "administration$account_organization" (
 	"administration$accountid" BIGINT NOT NULL,
 	"ugs$organizationid" BIGINT NOT NULL,
@@ -4217,6 +4314,105 @@ INSERT INTO "mendixsystem$unique_constraint" ("name",
  VALUES ('uniq_imap_pop3_email$emailmessage_emailaccount_imap_pop3_email$emailmessageid', 
 '40deb171-2732-4daf-8754-3bcdf7cc2ff2', 
 '7bffbe69-bdf9-30a5-b2cf-3ae227d4d1bf');
+CREATE TABLE "ugs$profile" (
+	"id" BIGINT NOT NULL,
+	"address" VARCHAR_IGNORECASE(200) NULL,
+	"phonenumber" BIGINT NULL,
+	"country" VARCHAR_IGNORECASE(200) NULL,
+	PRIMARY KEY("id"));
+INSERT INTO "mendixsystem$entity" ("id", 
+"entity_name", 
+"table_name", 
+"remote", 
+"remote_primary_key")
+ VALUES ('3902c8b9-1511-4498-b799-34a6f531ef0a', 
+'UGS.Profile', 
+'ugs$profile', 
+false, 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('4f33e512-d47f-49aa-a45d-cd66dec2b0cb', 
+'3902c8b9-1511-4498-b799-34a6f531ef0a', 
+'Address', 
+'address', 
+30, 
+200, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('0982944c-7ade-474d-b880-fe8ea970f437', 
+'3902c8b9-1511-4498-b799-34a6f531ef0a', 
+'PhoneNumber', 
+'phonenumber', 
+4, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('2adeacc5-583b-4676-ae9c-334f25f61846', 
+'3902c8b9-1511-4498-b799-34a6f531ef0a', 
+'Country', 
+'country', 
+30, 
+200, 
+'', 
+false);
+CREATE TABLE "ugs$profile_profileimage" (
+	"ugs$profileid" BIGINT NOT NULL,
+	"ugs$profileimageid" BIGINT NOT NULL,
+	PRIMARY KEY("ugs$profileid","ugs$profileimageid"),
+	CONSTRAINT "uniq_ugs$profile_profileimage_ugs$profileimageid" UNIQUE ("ugs$profileimageid"),
+	CONSTRAINT "uniq_ugs$profile_profileimage_ugs$profileid" UNIQUE ("ugs$profileid"));
+CREATE INDEX "idx_ugs$profile_profileimage_ugs$profileimage_ugs$profile" ON "ugs$profile_profileimage" ("ugs$profileimageid" ASC,"ugs$profileid" ASC);
+INSERT INTO "mendixsystem$association" ("id", 
+"association_name", 
+"table_name", 
+"parent_entity_id", 
+"child_entity_id", 
+"parent_column_name", 
+"child_column_name", 
+"index_name")
+ VALUES ('70510fc6-3254-4c3a-8b81-dc607a37d879', 
+'UGS.Profile_ProfileImage', 
+'ugs$profile_profileimage', 
+'3902c8b9-1511-4498-b799-34a6f531ef0a', 
+'effb3c4e-4fe1-446e-a45b-be3714d88f83', 
+'ugs$profileid', 
+'ugs$profileimageid', 
+'idx_ugs$profile_profileimage_ugs$profileimage_ugs$profile');
+INSERT INTO "mendixsystem$unique_constraint" ("name", 
+"table_id", 
+"column_id")
+ VALUES ('uniq_ugs$profile_profileimage_ugs$profileimageid', 
+'70510fc6-3254-4c3a-8b81-dc607a37d879', 
+'3531d67b-3a59-3e6e-aa29-6343f6d459fb');
+INSERT INTO "mendixsystem$unique_constraint" ("name", 
+"table_id", 
+"column_id")
+ VALUES ('uniq_ugs$profile_profileimage_ugs$profileid', 
+'70510fc6-3254-4c3a-8b81-dc607a37d879', 
+'398c8bdc-a51a-342e-9794-ea88fec3c578');
 CREATE TABLE "xlsreport$mxcolumn" (
 	"id" BIGINT NOT NULL,
 	"dataaggregate" BOOLEAN NULL,
@@ -4349,6 +4545,138 @@ INSERT INTO "mendixsystem$attribute" ("id",
 'objectattribute', 
 30, 
 200, 
+'', 
+false);
+CREATE TABLE "ugs$powerbi_tokens" (
+	"id" BIGINT NOT NULL,
+	"accesstoken" VARCHAR_IGNORECASE(2147483647) NULL,
+	"refno" VARCHAR_IGNORECASE(2147483647) NULL,
+	"embedurl" VARCHAR_IGNORECASE(2147483647) NULL,
+	"reportid" VARCHAR_IGNORECASE(2147483647) NULL,
+	"datasetid" VARCHAR_IGNORECASE(2147483647) NULL,
+	"groupid" VARCHAR_IGNORECASE(2147483647) NULL,
+	"embedtoken" VARCHAR_IGNORECASE(2147483647) NULL,
+	PRIMARY KEY("id"));
+INSERT INTO "mendixsystem$entity" ("id", 
+"entity_name", 
+"table_name", 
+"remote", 
+"remote_primary_key")
+ VALUES ('091b788e-5ca2-47cd-af38-1b0fa3443c21', 
+'UGS.PowerBI_Tokens', 
+'ugs$powerbi_tokens', 
+false, 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('8e6b0835-ce9d-4960-9212-0c2bf070df5a', 
+'091b788e-5ca2-47cd-af38-1b0fa3443c21', 
+'AccessToken', 
+'accesstoken', 
+30, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('435383ef-8f17-4e26-84bf-8af646cf7cac', 
+'091b788e-5ca2-47cd-af38-1b0fa3443c21', 
+'RefNo', 
+'refno', 
+30, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('8a6d5995-994e-456e-a8a9-0b6d80313243', 
+'091b788e-5ca2-47cd-af38-1b0fa3443c21', 
+'EmbedUrl', 
+'embedurl', 
+30, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('d3895be0-468c-438c-9541-17d732d9dcdf', 
+'091b788e-5ca2-47cd-af38-1b0fa3443c21', 
+'ReportId', 
+'reportid', 
+30, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('adbeec75-f88a-4849-b986-3ae080988480', 
+'091b788e-5ca2-47cd-af38-1b0fa3443c21', 
+'DataSetId', 
+'datasetid', 
+30, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('6b0d2ac0-a8f1-4d82-b11f-f8f7dcf902e0', 
+'091b788e-5ca2-47cd-af38-1b0fa3443c21', 
+'GroupId', 
+'groupid', 
+30, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('03742c38-0ca6-44fd-ab44-2d00dffbb11a', 
+'091b788e-5ca2-47cd-af38-1b0fa3443c21', 
+'EmbedToken', 
+'embedtoken', 
+30, 
+0, 
 '', 
 false);
 CREATE TABLE "xlsreport$mxsheet" (
@@ -6006,6 +6334,21 @@ INSERT INTO "mendixsystem$unique_constraint" ("name",
  VALUES ('uniq_xlsreport$mxdata_mxcellstyle_xlsreport$mxdataid', 
 'ec3ac610-bf2b-4abd-98e5-99a883e287b9', 
 'f44e7794-10a5-3b3b-846a-7574a864e3f9');
+CREATE TABLE "ugs$profileimage" (
+	"id" BIGINT NOT NULL,
+	PRIMARY KEY("id"));
+INSERT INTO "mendixsystem$entity" ("id", 
+"entity_name", 
+"table_name", 
+"superentity_id", 
+"remote", 
+"remote_primary_key")
+ VALUES ('effb3c4e-4fe1-446e-a45b-be3714d88f83', 
+'UGS.ProfileImage', 
+'ugs$profileimage', 
+'37827192-315d-4ab6-85b8-f626f866ea76', 
+false, 
+false);
 CREATE TABLE "xlsreport$mxrowsettings" (
 	"id" BIGINT NOT NULL,
 	"rowheight" INT NULL,
@@ -7533,28 +7876,30 @@ Through this grant, we are supporting your organization’s efforts to complete 
 false);
 CREATE TABLE "ugs$casemangement" (
 	"id" BIGINT NOT NULL,
-	"status" VARCHAR_IGNORECASE(17) NULL,
 	"return_gmhq" VARCHAR_IGNORECASE(31) NULL,
 	"ref_no" BIGINT NULL,
 	"dynamic" BOOLEAN NULL,
 	"currentorder" INT NULL,
 	"phase" VARCHAR_IGNORECASE(16) NULL,
 	"casestatement" VARCHAR_IGNORECASE(500) NULL,
-	"amount" BIGINT NULL,
-	"request" BOOLEAN NULL,
 	"history" VARCHAR_IGNORECASE(200) NULL,
-	"enddate" TIMESTAMP NULL,
 	"casetypesgm" VARCHAR_IGNORECASE(37) NULL,
-	"finace_comments" VARCHAR_IGNORECASE(200) NULL,
 	"investigationofficer_comments" VARCHAR_IGNORECASE(200) NULL,
-	"studyphase" BOOLEAN NULL,
 	"casetypes" VARCHAR_IGNORECASE(18) NULL,
 	"startdate" TIMESTAMP NULL,
 	"gm_comments" VARCHAR_IGNORECASE(200) NULL,
+	"remarks" VARCHAR_IGNORECASE(300) NULL,
+	"forwardstatus" VARCHAR_IGNORECASE(29) NULL,
+	"status" VARCHAR_IGNORECASE(17) NULL,
+	"amount" BIGINT NULL,
+	"request" BOOLEAN NULL,
+	"enddate" TIMESTAMP NULL,
+	"finace_comments" VARCHAR_IGNORECASE(200) NULL,
+	"studyphase" BOOLEAN NULL,
 	"gm_hqcomments" VARCHAR_IGNORECASE(200) NULL,
 	"submit" BOOLEAN NULL,
 	"submitgm" BOOLEAN NULL,
-	"forwardstatus" VARCHAR_IGNORECASE(29) NULL,
+	"statusapplicant" VARCHAR_IGNORECASE(19) NULL,
 	"return_fa" VARCHAR_IGNORECASE(23) NULL,
 	"system$owner" BIGINT NULL,
 	PRIMARY KEY("id"));
@@ -7569,22 +7914,6 @@ INSERT INTO "mendixsystem$entity" ("id",
 'UGS.CaseMangement', 
 'ugs$casemangement', 
 false, 
-false);
-INSERT INTO "mendixsystem$attribute" ("id", 
-"entity_id", 
-"attribute_name", 
-"column_name", 
-"type", 
-"length", 
-"default_value", 
-"is_auto_number")
- VALUES ('c3db2a78-4e85-4d5d-9c6a-02c828764445', 
-'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
-'Status', 
-'status', 
-40, 
-17, 
-'', 
 false);
 INSERT INTO "mendixsystem$attribute" ("id", 
 "entity_id", 
@@ -7698,60 +8027,12 @@ INSERT INTO "mendixsystem$attribute" ("id",
 "length", 
 "default_value", 
 "is_auto_number")
- VALUES ('29b2b8ae-3842-4102-82b6-1ef80520256a', 
-'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
-'Amount', 
-'amount', 
-4, 
-0, 
-'0', 
-false);
-INSERT INTO "mendixsystem$attribute" ("id", 
-"entity_id", 
-"attribute_name", 
-"column_name", 
-"type", 
-"length", 
-"default_value", 
-"is_auto_number")
- VALUES ('a97d22dc-7304-4d6a-96e5-f0dba90f254f', 
-'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
-'Request', 
-'request', 
-10, 
-0, 
-'false', 
-false);
-INSERT INTO "mendixsystem$attribute" ("id", 
-"entity_id", 
-"attribute_name", 
-"column_name", 
-"type", 
-"length", 
-"default_value", 
-"is_auto_number")
  VALUES ('1dddc9f6-9f79-4079-b9ed-107e805a7712', 
 'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
 'History', 
 'history', 
 30, 
 200, 
-'', 
-false);
-INSERT INTO "mendixsystem$attribute" ("id", 
-"entity_id", 
-"attribute_name", 
-"column_name", 
-"type", 
-"length", 
-"default_value", 
-"is_auto_number")
- VALUES ('52c2a827-2bec-41d0-8841-ac074bc5f45b', 
-'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
-'EndDate', 
-'enddate', 
-20, 
-0, 
 '', 
 false);
 INSERT INTO "mendixsystem$attribute" ("id", 
@@ -7778,22 +8059,6 @@ INSERT INTO "mendixsystem$attribute" ("id",
 "length", 
 "default_value", 
 "is_auto_number")
- VALUES ('2f9d7b9c-2a72-45f2-a99a-9bd5eadc9cc5', 
-'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
-'Finace_Comments', 
-'finace_comments', 
-30, 
-200, 
-'', 
-false);
-INSERT INTO "mendixsystem$attribute" ("id", 
-"entity_id", 
-"attribute_name", 
-"column_name", 
-"type", 
-"length", 
-"default_value", 
-"is_auto_number")
  VALUES ('73c9c047-a82e-44f8-b405-c775b9e420ad', 
 'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
 'InvestigationOfficer_Comments', 
@@ -7801,22 +8066,6 @@ INSERT INTO "mendixsystem$attribute" ("id",
 30, 
 200, 
 '', 
-false);
-INSERT INTO "mendixsystem$attribute" ("id", 
-"entity_id", 
-"attribute_name", 
-"column_name", 
-"type", 
-"length", 
-"default_value", 
-"is_auto_number")
- VALUES ('76952cb8-bf16-4996-a774-922f589921e0', 
-'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
-'StudyPhase', 
-'studyphase', 
-10, 
-0, 
-'false', 
 false);
 INSERT INTO "mendixsystem$attribute" ("id", 
 "entity_id", 
@@ -7874,6 +8123,134 @@ INSERT INTO "mendixsystem$attribute" ("id",
 "length", 
 "default_value", 
 "is_auto_number")
+ VALUES ('91d1f716-4ad0-4fc1-9378-207038df4872', 
+'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
+'Remarks', 
+'remarks', 
+30, 
+300, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('fd20a1d0-5e88-41ad-ba69-fe916baae941', 
+'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
+'ForwardStatus', 
+'forwardstatus', 
+40, 
+29, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('c3db2a78-4e85-4d5d-9c6a-02c828764445', 
+'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
+'Status', 
+'status', 
+40, 
+17, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('29b2b8ae-3842-4102-82b6-1ef80520256a', 
+'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
+'Amount', 
+'amount', 
+4, 
+0, 
+'0', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('a97d22dc-7304-4d6a-96e5-f0dba90f254f', 
+'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
+'Request', 
+'request', 
+10, 
+0, 
+'false', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('52c2a827-2bec-41d0-8841-ac074bc5f45b', 
+'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
+'EndDate', 
+'enddate', 
+20, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('2f9d7b9c-2a72-45f2-a99a-9bd5eadc9cc5', 
+'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
+'Finace_Comments', 
+'finace_comments', 
+30, 
+200, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('76952cb8-bf16-4996-a774-922f589921e0', 
+'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
+'StudyPhase', 
+'studyphase', 
+10, 
+0, 
+'false', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
  VALUES ('7eda7500-c0e2-4ac8-aca2-97ad91f9d2f1', 
 'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
 'GM_HQComments', 
@@ -7922,12 +8299,12 @@ INSERT INTO "mendixsystem$attribute" ("id",
 "length", 
 "default_value", 
 "is_auto_number")
- VALUES ('fd20a1d0-5e88-41ad-ba69-fe916baae941', 
+ VALUES ('fb4bfa0a-10eb-4a57-a26e-55efc618c0f4', 
 'f4a695f5-122b-46a4-9acd-8cf14e8ba8ef', 
-'ForwardStatus', 
-'forwardstatus', 
+'StatusApplicant', 
+'statusapplicant', 
 40, 
-29, 
+19, 
 '', 
 false);
 INSERT INTO "mendixsystem$attribute" ("id", 
@@ -8065,11 +8442,11 @@ INSERT INTO "mendixsystem$unique_constraint" ("name",
  VALUES ('uniq_ugs$casemangement_currentholdingaccount_ugs$casemangementid', 
 '54775414-fa6c-4c32-bfb6-5ace71e00e2d', 
 '9d34d512-5d08-3928-a97d-ff80017f1e96');
-DROP TABLE "528d8964bb9e4ab0b17d25dc93ea74f5";
-DROP TABLE "c88f7e1e4fff4a3c9f89e4157fc2e9e1";
-DROP TABLE "e332867caad948cd8380218c5fcf2a2b";
-DROP TABLE "0e81f2730c0149d3979936a5869e581c";
-DROP TABLE "7db303c0b78e4ed8a50173c6856bfd53";
+DROP TABLE "1a1c3194b51740e2adb3df93e8a5ba70";
+DROP TABLE "fafaab0b0e364db29eb4069bbf1deaf6";
+DROP TABLE "68340748bda94cd1a1c25083251de788";
+DROP TABLE "e5fae972967a446094b7650a01023f10";
+DROP TABLE "ff10055724974a9296f327dc7627d9e1";
 UPDATE "mendixsystem$version"
  SET "versionnumber" = '4.2', 
-"lastsyncdate" = '20210717 15:27:49';
+"lastsyncdate" = '20210719 10:41:22';

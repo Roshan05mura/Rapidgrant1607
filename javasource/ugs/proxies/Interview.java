@@ -27,12 +27,15 @@ public class Interview
 		EmptyC("EmptyC"),
 		ChairpersonApproved("ChairpersonApproved"),
 		InterviewerAprroved("InterviewerAprroved"),
+		Agenda("Agenda"),
+		TypeOfMeeting("TypeOfMeeting"),
 		GrantSystem_Allinterviews("UGS.GrantSystem_Allinterviews"),
 		Activity_Interview("UGS.Activity_Interview"),
 		Interview_GrantSystem("UGS.Interview_GrantSystem"),
 		Interview_applicant("UGS.Interview_applicant"),
 		Interview_ChiarPerson("UGS.Interview_ChiarPerson"),
-		interview_PanelInterviewer("UGS.interview_PanelInterviewer");
+		interview_PanelInterviewer("UGS.interview_PanelInterviewer"),
+		Account_SelectInterviewers("Administration.Account_SelectInterviewers");
 
 		private java.lang.String metaName;
 
@@ -380,6 +383,86 @@ public class Interview
 	}
 
 	/**
+	 * @return value of Agenda
+	 */
+	public final java.lang.String getAgenda()
+	{
+		return getAgenda(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Agenda
+	 */
+	public final java.lang.String getAgenda(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Agenda.toString());
+	}
+
+	/**
+	 * Set value of Agenda
+	 * @param agenda
+	 */
+	public final void setAgenda(java.lang.String agenda)
+	{
+		setAgenda(getContext(), agenda);
+	}
+
+	/**
+	 * Set value of Agenda
+	 * @param context
+	 * @param agenda
+	 */
+	public final void setAgenda(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String agenda)
+	{
+		getMendixObject().setValue(context, MemberNames.Agenda.toString(), agenda);
+	}
+
+	/**
+	 * Set value of TypeOfMeeting
+	 * @param typeofmeeting
+	 */
+	public final ugs.proxies.Enum_TypeOfMeeting getTypeOfMeeting()
+	{
+		return getTypeOfMeeting(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of TypeOfMeeting
+	 */
+	public final ugs.proxies.Enum_TypeOfMeeting getTypeOfMeeting(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.TypeOfMeeting.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_TypeOfMeeting.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of TypeOfMeeting
+	 * @param typeofmeeting
+	 */
+	public final void setTypeOfMeeting(ugs.proxies.Enum_TypeOfMeeting typeofmeeting)
+	{
+		setTypeOfMeeting(getContext(), typeofmeeting);
+	}
+
+	/**
+	 * Set value of TypeOfMeeting
+	 * @param context
+	 * @param typeofmeeting
+	 */
+	public final void setTypeOfMeeting(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_TypeOfMeeting typeofmeeting)
+	{
+		if (typeofmeeting != null)
+			getMendixObject().setValue(context, MemberNames.TypeOfMeeting.toString(), typeofmeeting.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.TypeOfMeeting.toString(), null);
+	}
+
+	/**
 	 * @return value of GrantSystem_Allinterviews
 	 */
 	public final ugs.proxies.GrantSystem getGrantSystem_Allinterviews() throws com.mendix.core.CoreException
@@ -635,6 +718,52 @@ public class Interview
 			getMendixObject().setValue(context, MemberNames.interview_PanelInterviewer.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.interview_PanelInterviewer.toString(), interview_panelinterviewer.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of Account_SelectInterviewers
+	 */
+	public final java.util.List<administration.proxies.Account> getAccount_SelectInterviewers() throws com.mendix.core.CoreException
+	{
+		return getAccount_SelectInterviewers(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Account_SelectInterviewers
+	 */
+	@SuppressWarnings("unchecked")
+	public final java.util.List<administration.proxies.Account> getAccount_SelectInterviewers(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		java.util.List<administration.proxies.Account> result = new java.util.ArrayList<administration.proxies.Account>();
+		Object valueObject = getMendixObject().getValue(context, MemberNames.Account_SelectInterviewers.toString());
+		if (valueObject == null)
+			return result;
+		for (com.mendix.systemwideinterfaces.core.IMendixObject mendixObject : com.mendix.core.Core.retrieveIdList(context, (java.util.List<com.mendix.systemwideinterfaces.core.IMendixIdentifier>) valueObject))
+			result.add(administration.proxies.Account.initialize(context, mendixObject));
+		return result;
+	}
+
+	/**
+	 * Set value of Account_SelectInterviewers
+	 * @param account_selectinterviewers
+	 */
+	public final void setAccount_SelectInterviewers(java.util.List<administration.proxies.Account> account_selectinterviewers)
+	{
+		setAccount_SelectInterviewers(getContext(), account_selectinterviewers);
+	}
+
+	/**
+	 * Set value of Account_SelectInterviewers
+	 * @param context
+	 * @param account_selectinterviewers
+	 */
+	public final void setAccount_SelectInterviewers(com.mendix.systemwideinterfaces.core.IContext context, java.util.List<administration.proxies.Account> account_selectinterviewers)
+	{
+		java.util.List<com.mendix.systemwideinterfaces.core.IMendixIdentifier> identifiers = new java.util.ArrayList<com.mendix.systemwideinterfaces.core.IMendixIdentifier>();
+		for (administration.proxies.Account proxyObject : account_selectinterviewers)
+			identifiers.add(proxyObject.getMendixObject().getId());
+		getMendixObject().setValue(context, MemberNames.Account_SelectInterviewers.toString(), identifiers);
 	}
 
 	/**

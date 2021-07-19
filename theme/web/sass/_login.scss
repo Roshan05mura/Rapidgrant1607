@@ -2,6 +2,19 @@
 .review
 {
   
+  .list_review{
+    .mx-listview  {
+      ul{
+      li{
+      
+      padding:0px !important;
+      
+      
+    }
+  }
+  }
+  }
+  
   background-color: dimgrey;
   //border:2px solid #fff;
   border-radius: 5px;
@@ -131,8 +144,31 @@
 //end checkbox
 .manual
 {
+  
+  .comment_area
+{
+    textarea,textarea:focus, textarea:checked
+    {
+         background-color:rgb(192, 192, 192);
+         border-radius:20px;
+         border:1px solid gray;
+
+    }
+}
+  .form-control{
+    // box-shadow: 7px 0px 5px -3px rgba(184, 184, 184, 0.92);
+    border: 1px solid transparent;
+    border-bottom: 1px solid #006293;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 4px 0
+}
+  .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a, .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a:hover, .mx-tabcontainer .mx-tabcontainer-tabs > li.active > a:focus {
+  
+    border-bottom: 7px solid rgb(230, 116, 135) !important;
+}
   //new
-  .mx-grid{
+  .mx-datagrid{
     background-color: #eeeeee;
     padding: 15px;
   }
@@ -222,4 +258,52 @@
 .mx-window-body {
   
   overflow-x: hidden !important;
+}
+
+
+//review page styles
+
+.review-left-pane{
+  .mx-groupbox-body{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #eee;
+    border: 1px solid gray;
+
+
+    ul{
+      li{
+        
+
+        padding:0 !important;
+        border: none !important;
+        background-color: #eee !important;
+
+        input{
+          border: none !important;
+          text-align: center;
+        }
+        label{
+          color: #000 !important;
+        }
+        .mx-datepicker{
+          button{
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+.select2-container--default .select2-selection--single {
+  background-color: #fff;
+   border:none !important; 
+   border-radius:0px !important; 
+  border-bottom: 1px solid #006293!important;
+}
+.create_box{
+@media only screen and (min-device-width: 950px) and (min-device-width: 1024px) {
+
+  height:620px !important;
+}
 }

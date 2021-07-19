@@ -410,6 +410,20 @@ public class Microflows
 		}
 		return result;
 	}
+	public static java.util.List<dynamicform.proxies.Document> dS_GetALLDocuments_Review(IContext context, ugs.proxies.GrantSystem _grantSystem)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
+		java.util.List<IMendixObject> objs = Core.microflowCall("DynamicForm.DS_GetALLDocuments_Review").withParams(params).execute(context);
+		java.util.List<dynamicform.proxies.Document> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(dynamicform.proxies.Document.initialize(context, obj));
+		}
+		return result;
+	}
 	public static java.util.List<dynamicform.proxies.WorkflowRoles> dS_GetCurrWF(IContext context, dynamicform.proxies.Template _template)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();

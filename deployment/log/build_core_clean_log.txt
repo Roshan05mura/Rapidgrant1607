@@ -3,6 +3,6 @@ Buildfile: C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\build_core
 clean:
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 1 second
 
 

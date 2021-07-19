@@ -2,11 +2,10 @@ Buildfile: C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\build_core
 
 deploy:
      [copy] Copying 41 files to C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment
-    [unzip] Expanding: C:\Users\girid\Documents\Mendix\RapidGrant-main\data-snapshot.zip into C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment
      [copy] Copying 225 files to C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\lib\userlib
      [copy] Copying 47 files to C:\Users\girid\Documents\Mendix\RapidGrant-main\deployment\model\resources
 
 BUILD SUCCESSFUL
-Total time: 2 seconds
+Total time: 1 second
 
 

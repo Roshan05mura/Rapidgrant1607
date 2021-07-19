@@ -71,6 +71,9 @@ public class Image extends system.proxies.FileDocument
 		if (com.mendix.core.Core.isSubClassOf("Administration.Profile", mendixObject.getType()))
 			return administration.proxies.Profile.initialize(context, mendixObject);
 
+		if (com.mendix.core.Core.isSubClassOf("UGS.ProfileImage", mendixObject.getType()))
+			return ugs.proxies.ProfileImage.initialize(context, mendixObject);
+
 		if (com.mendix.core.Core.isSubClassOf("UGS.Signature", mendixObject.getType()))
 			return ugs.proxies.Signature.initialize(context, mendixObject);
 

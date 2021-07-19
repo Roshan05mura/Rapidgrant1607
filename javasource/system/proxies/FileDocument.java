@@ -90,6 +90,9 @@ public class FileDocument
 		if (com.mendix.core.Core.isSubClassOf("UGS.ExcelExport", mendixObject.getType()))
 			return ugs.proxies.ExcelExport.initialize(context, mendixObject);
 
+		if (com.mendix.core.Core.isSubClassOf("UGS.FAQ", mendixObject.getType()))
+			return ugs.proxies.FAQ.initialize(context, mendixObject);
+
 		if (com.mendix.core.Core.isSubClassOf("UGS.FileDocument", mendixObject.getType()))
 			return ugs.proxies.FileDocument.initialize(context, mendixObject);
 

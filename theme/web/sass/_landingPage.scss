@@ -330,3 +330,79 @@
         display: none !important;
     }
 }
+
+//case management styles
+
+.listview-with-search{
+    ul{
+        li{
+            background:none;
+        }
+    }
+    .mx-listview-searchbar{
+        width: 40%;
+        margin-left: auto;
+        button{
+            min-width: 20px;
+        }
+    }
+}
+
+// review page styles
+
+.review-left-pane {
+    .mx-groupbox{
+        h4{
+            color: #00008b;
+            
+            .glyphicon-minus{
+                margin-top:none ;
+                font-size: 20px;
+                padding: 6px 6px 6px 5px;
+                background: #00008b;
+                color: #fff;
+                border-radius: 50%;
+            
+            }
+            .glyphicon-plus{
+                font-size: 20px;
+                padding: 4px 8px 9px 9px;
+                background: #00008b;
+                color: #fff;
+                border-radius: 50%;
+            }
+        }
+    }
+    .mx-groupbox-body{
+        .form-group{
+            input[type=radio]:checked:disabled:after{
+                background-color: blue !important;
+            }
+        }
+    }
+}
+
+.review-right-pane{
+    .mx-groupbox{
+        h4{
+            color: #00008b;
+            
+            .glyphicon-minus{
+                margin-top:none ;
+                font-size: 20px;
+                padding: 6px 6px 6px 5px;
+                background: #00008b;
+                color: #fff;
+                border-radius: 50%;
+            
+            }
+            .glyphicon-plus{
+                font-size: 20px;
+                padding: 4px 8px 9px 9px;
+                background: #00008b;
+                color: #fff;
+                border-radius: 50%;
+            }
+        }
+    }
+}

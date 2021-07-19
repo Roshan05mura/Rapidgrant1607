@@ -85,6 +85,10 @@ public class GrantSystem extends system.proxies.WorkflowContext
 		Q11_Date("Q11_Date"),
 		Q12_Date("Q12_Date"),
 		Q1_Amount("Q1_Amount"),
+		ModeOfTranscation("ModeOfTranscation"),
+		Remarks("Remarks"),
+		EligibiltyAnonymous("EligibiltyAnonymous"),
+		Review_view_type("Review_view_type"),
 		Signature_GrantSystem_Clone("UGS.Signature_GrantSystem_Clone"),
 		GrantSystem_Aggrement_("UGS.GrantSystem_Aggrement_"),
 		GrantSystem_Printout("UGS.GrantSystem_Printout"),
@@ -104,6 +108,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 		GrantSystem_ApplicantAccount("UGS.GrantSystem_ApplicantAccount"),
 		GrantSystem_WorkflowRolesDummy("UGS.GrantSystem_WorkflowRolesDummy"),
 		GrantSystem_TemplateDummy("UGS.GrantSystem_TemplateDummy"),
+		GrantSystem_UserRole("UGS.GrantSystem_UserRole"),
 		ApplicationForm_GrantSystem("DynamicForm.ApplicationForm_GrantSystem"),
 		WorkflowInstance_WorkflowContext("System.WorkflowInstance_WorkflowContext");
 
@@ -2420,7 +2425,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	/**
 	 * @return value of Q6_Date
 	 */
-	public final java.lang.String getQ6_Date()
+	public final java.util.Date getQ6_Date()
 	{
 		return getQ6_Date(getContext());
 	}
@@ -2429,16 +2434,16 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @return value of Q6_Date
 	 */
-	public final java.lang.String getQ6_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.util.Date getQ6_Date(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q6_Date.toString());
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.Q6_Date.toString());
 	}
 
 	/**
 	 * Set value of Q6_Date
 	 * @param q6_date
 	 */
-	public final void setQ6_Date(java.lang.String q6_date)
+	public final void setQ6_Date(java.util.Date q6_date)
 	{
 		setQ6_Date(getContext(), q6_date);
 	}
@@ -2448,7 +2453,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @param q6_date
 	 */
-	public final void setQ6_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q6_date)
+	public final void setQ6_Date(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date q6_date)
 	{
 		getMendixObject().setValue(context, MemberNames.Q6_Date.toString(), q6_date);
 	}
@@ -2456,7 +2461,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	/**
 	 * @return value of Q7_Date
 	 */
-	public final java.lang.String getQ7_Date()
+	public final java.util.Date getQ7_Date()
 	{
 		return getQ7_Date(getContext());
 	}
@@ -2465,16 +2470,16 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @return value of Q7_Date
 	 */
-	public final java.lang.String getQ7_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.util.Date getQ7_Date(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q7_Date.toString());
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.Q7_Date.toString());
 	}
 
 	/**
 	 * Set value of Q7_Date
 	 * @param q7_date
 	 */
-	public final void setQ7_Date(java.lang.String q7_date)
+	public final void setQ7_Date(java.util.Date q7_date)
 	{
 		setQ7_Date(getContext(), q7_date);
 	}
@@ -2484,7 +2489,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @param q7_date
 	 */
-	public final void setQ7_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q7_date)
+	public final void setQ7_Date(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date q7_date)
 	{
 		getMendixObject().setValue(context, MemberNames.Q7_Date.toString(), q7_date);
 	}
@@ -2492,7 +2497,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	/**
 	 * @return value of Q8_Date
 	 */
-	public final java.lang.String getQ8_Date()
+	public final java.util.Date getQ8_Date()
 	{
 		return getQ8_Date(getContext());
 	}
@@ -2501,16 +2506,16 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @return value of Q8_Date
 	 */
-	public final java.lang.String getQ8_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.util.Date getQ8_Date(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q8_Date.toString());
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.Q8_Date.toString());
 	}
 
 	/**
 	 * Set value of Q8_Date
 	 * @param q8_date
 	 */
-	public final void setQ8_Date(java.lang.String q8_date)
+	public final void setQ8_Date(java.util.Date q8_date)
 	{
 		setQ8_Date(getContext(), q8_date);
 	}
@@ -2520,7 +2525,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @param q8_date
 	 */
-	public final void setQ8_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q8_date)
+	public final void setQ8_Date(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date q8_date)
 	{
 		getMendixObject().setValue(context, MemberNames.Q8_Date.toString(), q8_date);
 	}
@@ -2528,7 +2533,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	/**
 	 * @return value of Q9_Date
 	 */
-	public final java.lang.String getQ9_Date()
+	public final java.util.Date getQ9_Date()
 	{
 		return getQ9_Date(getContext());
 	}
@@ -2537,16 +2542,16 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @return value of Q9_Date
 	 */
-	public final java.lang.String getQ9_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.util.Date getQ9_Date(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q9_Date.toString());
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.Q9_Date.toString());
 	}
 
 	/**
 	 * Set value of Q9_Date
 	 * @param q9_date
 	 */
-	public final void setQ9_Date(java.lang.String q9_date)
+	public final void setQ9_Date(java.util.Date q9_date)
 	{
 		setQ9_Date(getContext(), q9_date);
 	}
@@ -2556,7 +2561,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @param q9_date
 	 */
-	public final void setQ9_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q9_date)
+	public final void setQ9_Date(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date q9_date)
 	{
 		getMendixObject().setValue(context, MemberNames.Q9_Date.toString(), q9_date);
 	}
@@ -2564,7 +2569,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	/**
 	 * @return value of Q10_Date
 	 */
-	public final java.lang.String getQ10_Date()
+	public final java.util.Date getQ10_Date()
 	{
 		return getQ10_Date(getContext());
 	}
@@ -2573,16 +2578,16 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @return value of Q10_Date
 	 */
-	public final java.lang.String getQ10_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.util.Date getQ10_Date(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q10_Date.toString());
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.Q10_Date.toString());
 	}
 
 	/**
 	 * Set value of Q10_Date
 	 * @param q10_date
 	 */
-	public final void setQ10_Date(java.lang.String q10_date)
+	public final void setQ10_Date(java.util.Date q10_date)
 	{
 		setQ10_Date(getContext(), q10_date);
 	}
@@ -2592,7 +2597,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @param q10_date
 	 */
-	public final void setQ10_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q10_date)
+	public final void setQ10_Date(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date q10_date)
 	{
 		getMendixObject().setValue(context, MemberNames.Q10_Date.toString(), q10_date);
 	}
@@ -2600,7 +2605,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	/**
 	 * @return value of Q11_Date
 	 */
-	public final java.lang.String getQ11_Date()
+	public final java.util.Date getQ11_Date()
 	{
 		return getQ11_Date(getContext());
 	}
@@ -2609,16 +2614,16 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @return value of Q11_Date
 	 */
-	public final java.lang.String getQ11_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.util.Date getQ11_Date(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q11_Date.toString());
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.Q11_Date.toString());
 	}
 
 	/**
 	 * Set value of Q11_Date
 	 * @param q11_date
 	 */
-	public final void setQ11_Date(java.lang.String q11_date)
+	public final void setQ11_Date(java.util.Date q11_date)
 	{
 		setQ11_Date(getContext(), q11_date);
 	}
@@ -2628,7 +2633,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @param q11_date
 	 */
-	public final void setQ11_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q11_date)
+	public final void setQ11_Date(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date q11_date)
 	{
 		getMendixObject().setValue(context, MemberNames.Q11_Date.toString(), q11_date);
 	}
@@ -2636,7 +2641,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	/**
 	 * @return value of Q12_Date
 	 */
-	public final java.lang.String getQ12_Date()
+	public final java.util.Date getQ12_Date()
 	{
 		return getQ12_Date(getContext());
 	}
@@ -2645,16 +2650,16 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @return value of Q12_Date
 	 */
-	public final java.lang.String getQ12_Date(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.util.Date getQ12_Date(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Q12_Date.toString());
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.Q12_Date.toString());
 	}
 
 	/**
 	 * Set value of Q12_Date
 	 * @param q12_date
 	 */
-	public final void setQ12_Date(java.lang.String q12_date)
+	public final void setQ12_Date(java.util.Date q12_date)
 	{
 		setQ12_Date(getContext(), q12_date);
 	}
@@ -2664,7 +2669,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	 * @param context
 	 * @param q12_date
 	 */
-	public final void setQ12_Date(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String q12_date)
+	public final void setQ12_Date(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date q12_date)
 	{
 		getMendixObject().setValue(context, MemberNames.Q12_Date.toString(), q12_date);
 	}
@@ -2703,6 +2708,166 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	public final void setQ1_Amount(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal q1_amount)
 	{
 		getMendixObject().setValue(context, MemberNames.Q1_Amount.toString(), q1_amount);
+	}
+
+	/**
+	 * Set value of ModeOfTranscation
+	 * @param modeoftranscation
+	 */
+	public final ugs.proxies.Enum_ModeOfTranscation getModeOfTranscation()
+	{
+		return getModeOfTranscation(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ModeOfTranscation
+	 */
+	public final ugs.proxies.Enum_ModeOfTranscation getModeOfTranscation(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.ModeOfTranscation.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_ModeOfTranscation.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of ModeOfTranscation
+	 * @param modeoftranscation
+	 */
+	public final void setModeOfTranscation(ugs.proxies.Enum_ModeOfTranscation modeoftranscation)
+	{
+		setModeOfTranscation(getContext(), modeoftranscation);
+	}
+
+	/**
+	 * Set value of ModeOfTranscation
+	 * @param context
+	 * @param modeoftranscation
+	 */
+	public final void setModeOfTranscation(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_ModeOfTranscation modeoftranscation)
+	{
+		if (modeoftranscation != null)
+			getMendixObject().setValue(context, MemberNames.ModeOfTranscation.toString(), modeoftranscation.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.ModeOfTranscation.toString(), null);
+	}
+
+	/**
+	 * @return value of Remarks
+	 */
+	public final java.lang.String getRemarks()
+	{
+		return getRemarks(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Remarks
+	 */
+	public final java.lang.String getRemarks(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Remarks.toString());
+	}
+
+	/**
+	 * Set value of Remarks
+	 * @param remarks
+	 */
+	public final void setRemarks(java.lang.String remarks)
+	{
+		setRemarks(getContext(), remarks);
+	}
+
+	/**
+	 * Set value of Remarks
+	 * @param context
+	 * @param remarks
+	 */
+	public final void setRemarks(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String remarks)
+	{
+		getMendixObject().setValue(context, MemberNames.Remarks.toString(), remarks);
+	}
+
+	/**
+	 * @return value of EligibiltyAnonymous
+	 */
+	public final java.lang.Boolean getEligibiltyAnonymous()
+	{
+		return getEligibiltyAnonymous(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of EligibiltyAnonymous
+	 */
+	public final java.lang.Boolean getEligibiltyAnonymous(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.EligibiltyAnonymous.toString());
+	}
+
+	/**
+	 * Set value of EligibiltyAnonymous
+	 * @param eligibiltyanonymous
+	 */
+	public final void setEligibiltyAnonymous(java.lang.Boolean eligibiltyanonymous)
+	{
+		setEligibiltyAnonymous(getContext(), eligibiltyanonymous);
+	}
+
+	/**
+	 * Set value of EligibiltyAnonymous
+	 * @param context
+	 * @param eligibiltyanonymous
+	 */
+	public final void setEligibiltyAnonymous(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean eligibiltyanonymous)
+	{
+		getMendixObject().setValue(context, MemberNames.EligibiltyAnonymous.toString(), eligibiltyanonymous);
+	}
+
+	/**
+	 * Set value of Review_view_type
+	 * @param review_view_type
+	 */
+	public final ugs.proxies.Enum_ReviewViewType getReview_view_type()
+	{
+		return getReview_view_type(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Review_view_type
+	 */
+	public final ugs.proxies.Enum_ReviewViewType getReview_view_type(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.Review_view_type.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_ReviewViewType.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of Review_view_type
+	 * @param review_view_type
+	 */
+	public final void setReview_view_type(ugs.proxies.Enum_ReviewViewType review_view_type)
+	{
+		setReview_view_type(getContext(), review_view_type);
+	}
+
+	/**
+	 * Set value of Review_view_type
+	 * @param context
+	 * @param review_view_type
+	 */
+	public final void setReview_view_type(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_ReviewViewType review_view_type)
+	{
+		if (review_view_type != null)
+			getMendixObject().setValue(context, MemberNames.Review_view_type.toString(), review_view_type.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.Review_view_type.toString(), null);
 	}
 
 	/**
@@ -3529,6 +3694,49 @@ public class GrantSystem extends system.proxies.WorkflowContext
 			getMendixObject().setValue(context, MemberNames.GrantSystem_TemplateDummy.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.GrantSystem_TemplateDummy.toString(), grantsystem_templatedummy.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of GrantSystem_UserRole
+	 */
+	public final system.proxies.UserRole getGrantSystem_UserRole() throws com.mendix.core.CoreException
+	{
+		return getGrantSystem_UserRole(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of GrantSystem_UserRole
+	 */
+	public final system.proxies.UserRole getGrantSystem_UserRole(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		system.proxies.UserRole result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.GrantSystem_UserRole.toString());
+		if (identifier != null)
+			result = system.proxies.UserRole.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of GrantSystem_UserRole
+	 * @param grantsystem_userrole
+	 */
+	public final void setGrantSystem_UserRole(system.proxies.UserRole grantsystem_userrole)
+	{
+		setGrantSystem_UserRole(getContext(), grantsystem_userrole);
+	}
+
+	/**
+	 * Set value of GrantSystem_UserRole
+	 * @param context
+	 * @param grantsystem_userrole
+	 */
+	public final void setGrantSystem_UserRole(com.mendix.systemwideinterfaces.core.IContext context, system.proxies.UserRole grantsystem_userrole)
+	{
+		if (grantsystem_userrole == null)
+			getMendixObject().setValue(context, MemberNames.GrantSystem_UserRole.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.GrantSystem_UserRole.toString(), grantsystem_userrole.getMendixObject().getId());
 	}
 
 	/**

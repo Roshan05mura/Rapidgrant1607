@@ -6,7 +6,6 @@ package ugs.proxies;
 
 public enum Enum_ReturnGM_HQ
 {
-	ReturnToApplicant(new java.lang.String[][] { new java.lang.String[] { "en_US", "Applicant" } }),
 	ReturnToGM(new java.lang.String[][] { new java.lang.String[] { "en_US", "GranteeManger" } }),
 	Return_To_Investigating_Officer(new java.lang.String[][] { new java.lang.String[] { "en_US", "Investigating Officer" } });
 
