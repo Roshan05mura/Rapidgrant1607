@@ -20,7 +20,8 @@ public class Count
 	 */
 	public enum MemberNames
 	{
-		count("count");
+		count("count"),
+		GrantSystem_Count("UGS.GrantSystem_Count");
 
 		private java.lang.String metaName;
 
@@ -149,6 +150,49 @@ public class Count
 	public final void setcount(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer count)
 	{
 		getMendixObject().setValue(context, MemberNames.count.toString(), count);
+	}
+
+	/**
+	 * @return value of GrantSystem_Count
+	 */
+	public final ugs.proxies.GrantSystem getGrantSystem_Count() throws com.mendix.core.CoreException
+	{
+		return getGrantSystem_Count(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of GrantSystem_Count
+	 */
+	public final ugs.proxies.GrantSystem getGrantSystem_Count(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.GrantSystem result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.GrantSystem_Count.toString());
+		if (identifier != null)
+			result = ugs.proxies.GrantSystem.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of GrantSystem_Count
+	 * @param grantsystem_count
+	 */
+	public final void setGrantSystem_Count(ugs.proxies.GrantSystem grantsystem_count)
+	{
+		setGrantSystem_Count(getContext(), grantsystem_count);
+	}
+
+	/**
+	 * Set value of GrantSystem_Count
+	 * @param context
+	 * @param grantsystem_count
+	 */
+	public final void setGrantSystem_Count(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.GrantSystem grantsystem_count)
+	{
+		if (grantsystem_count == null)
+			getMendixObject().setValue(context, MemberNames.GrantSystem_Count.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.GrantSystem_Count.toString(), grantsystem_count.getMendixObject().getId());
 	}
 
 	/**

@@ -6,7 +6,7 @@ package ugs.proxies;
 
 public enum Enum_ReturnGM_HQ
 {
-	ReturnToGM(new java.lang.String[][] { new java.lang.String[] { "en_US", "GranteeManger" } }),
+	ReturnToGM(new java.lang.String[][] { new java.lang.String[] { "en_US", "GrantAppManger" } }),
 	Return_To_Investigating_Officer(new java.lang.String[][] { new java.lang.String[] { "en_US", "Investigating Officer" } });
 
 	private java.util.Map<java.lang.String, java.lang.String> captions;

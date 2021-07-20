@@ -39,9 +39,9 @@
     background: #ffffff;
     border-radius: 45px;
     border: 1px solid #9c9a9a;
-    /* margin-top: 6%; */
+    margin-top: 6%;
     /* margin-left: 64%; */
-    margin: 0;
+    /* margin: 0; */
     margin-right: 50px;
     max-width: 30%;
     overflow: hidden;
@@ -181,7 +181,7 @@ h6{
 .backimg {
     background-image: url("resources/MOHBG.png");
     background-repeat: no-repeat;
-    height: 100vh;
+    /* height: 100vh; */
     background-size: cover;
     background-position: center;
 
@@ -223,6 +223,33 @@ h6{
 input::placeholder{
     text-align: left;
    
+}
+@media (max-width:1280px){
+    .imgcenter {
+    height: 60px;
+}
+#greet {
+    font-size: 14pt;
+}
+.form-group{
+    margin-bottom: 0;
+}
+.new-register p{
+    font-size: 12pt;
+}
+.btn-login {
+    font-size: 18px;
+}
+.btn-lg {
+    font-size: 16px;
+    margin-bottom: 1.2rem;
+}
+.or{
+    font-size: 14px;
+}
+.loginpage-formwrapper {
+margin: 4% 5% 0 0;
+}
 }
 </style>
     </head>
@@ -275,7 +302,7 @@ input::placeholder{
                                             autocapitalize="none"
                                             autocomplete="off"
                                         />
-                                        <a style="color: #0e0f0f;float:right;margin-right:7%;margin-top: 3%;" href="http://moe.rapidgrant.net:80/link/ForgetPassword/">Forgot Password ?</a>
+                                        <a style="color: #0e0f0f;float:right;margin-right:7%;margin-top: 3%;" href="https://moe.rapidgrant.net/link/RecoverPassword/">Forgot Password ?</a>
                                         <span >
                                         <!-- <img   src="eye 1.png" style="width: 4%; margin-top: 6%;
                                         margin-left: 85%;" >-->
@@ -286,14 +313,14 @@ input::placeholder{
                                 </div>
                                 <div class="text-center" style="font-size: 20px;">
                                 <button  id="loginButton" type="submit" class="btn btn-login">Log in with your Email ID</button>
-                              <div>
-                                <span class="newuser">New User?</span>
+                              <div class="new-register">
+                                  <p>New User ?<a href="http://moe.rapidgrant.net/p/Register">&nbsp;Register</a>&nbsp;Here</p>
+                                <!-- <span class="newuser">New User?</span>
                                 <span  class="register"><a href="http://moe.rapidgrant.net/p/Register">Register</a></span>
-                                <span class="here">Here</span>
+                                <span class="here">Here</span> -->
                               </div> 
-                                </br>
                                 <div style="margin-top:1rem;">
-                                    <h4 class="" >OR</h4>
+                                    <h4 class="or" >OR</h4>
                                 </div>
                                 
                             

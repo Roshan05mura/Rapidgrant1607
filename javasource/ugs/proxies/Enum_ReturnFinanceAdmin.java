@@ -7,7 +7,7 @@ package ugs.proxies;
 public enum Enum_ReturnFinanceAdmin
 {
 	ReturnToApplicant(new java.lang.String[][] { new java.lang.String[] { "en_US", "Applicant" } }),
-	Return_To_GranteeManger(new java.lang.String[][] { new java.lang.String[] { "en_US", "GranteeManger" } });
+	Return_To_GranteeManger(new java.lang.String[][] { new java.lang.String[] { "en_US", "GrantAppManger" } });
 
 	private java.util.Map<java.lang.String, java.lang.String> captions;
 

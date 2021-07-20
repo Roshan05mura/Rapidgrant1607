@@ -29,6 +29,8 @@ public class Interview
 		InterviewerAprroved("InterviewerAprroved"),
 		Agenda("Agenda"),
 		TypeOfMeeting("TypeOfMeeting"),
+		JsonString("JsonString"),
+		Interviewers("Interviewers"),
 		GrantSystem_Allinterviews("UGS.GrantSystem_Allinterviews"),
 		Activity_Interview("UGS.Activity_Interview"),
 		Interview_GrantSystem("UGS.Interview_GrantSystem"),
@@ -460,6 +462,78 @@ public class Interview
 			getMendixObject().setValue(context, MemberNames.TypeOfMeeting.toString(), typeofmeeting.toString());
 		else
 			getMendixObject().setValue(context, MemberNames.TypeOfMeeting.toString(), null);
+	}
+
+	/**
+	 * @return value of JsonString
+	 */
+	public final java.lang.String getJsonString()
+	{
+		return getJsonString(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of JsonString
+	 */
+	public final java.lang.String getJsonString(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.JsonString.toString());
+	}
+
+	/**
+	 * Set value of JsonString
+	 * @param jsonstring
+	 */
+	public final void setJsonString(java.lang.String jsonstring)
+	{
+		setJsonString(getContext(), jsonstring);
+	}
+
+	/**
+	 * Set value of JsonString
+	 * @param context
+	 * @param jsonstring
+	 */
+	public final void setJsonString(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String jsonstring)
+	{
+		getMendixObject().setValue(context, MemberNames.JsonString.toString(), jsonstring);
+	}
+
+	/**
+	 * @return value of Interviewers
+	 */
+	public final java.lang.String getInterviewers()
+	{
+		return getInterviewers(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Interviewers
+	 */
+	public final java.lang.String getInterviewers(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Interviewers.toString());
+	}
+
+	/**
+	 * Set value of Interviewers
+	 * @param interviewers
+	 */
+	public final void setInterviewers(java.lang.String interviewers)
+	{
+		setInterviewers(getContext(), interviewers);
+	}
+
+	/**
+	 * Set value of Interviewers
+	 * @param context
+	 * @param interviewers
+	 */
+	public final void setInterviewers(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String interviewers)
+	{
+		getMendixObject().setValue(context, MemberNames.Interviewers.toString(), interviewers);
 	}
 
 	/**

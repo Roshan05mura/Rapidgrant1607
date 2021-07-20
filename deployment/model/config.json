@@ -6,7 +6,7 @@
     "DatabaseHost": "",
     "DatabaseUserName": "",
     "DatabaseUseIntegratedSecurity": "False",
-    "ApplicationRootUrl": "http://localhost:8080",
+    "ApplicationRootUrl": "http://localhost",
     "ScheduledEventExecution": "Specified",
     "MyScheduledEvents": "UGS.Scheduled_event_Remainder,DeepLink.CleanUp,EmailTemplate.Cleanup,MendixSSO.DeleteExpiredTokens,MendixSSO.SE_CleanupAuthRequest"
   },

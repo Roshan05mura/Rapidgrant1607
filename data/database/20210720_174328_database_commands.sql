@@ -1,0 +1,105 @@
+ALTER TABLE "ugs$organization" ADD "primaryaddress" VARCHAR_IGNORECASE(2147483647) NULL;
+ALTER TABLE "ugs$organization" ADD "coordinator" VARCHAR_IGNORECASE(200) NULL;
+ALTER TABLE "ugs$organization" ADD "contactnumber" INT NULL;
+ALTER TABLE "ugs$organization" ADD "keypeople" VARCHAR_IGNORECASE(200) NULL;
+ALTER TABLE "ugs$organization" ADD "bankaccount" BIGINT NULL;
+ALTER TABLE "ugs$organization" ADD "primaryemail" VARCHAR_IGNORECASE(200) NULL;
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('5eb4a64a-6ea3-4a16-bf5a-45964990665f', 
+'09d4ff91-0f1b-4f3e-ba3f-5afcb2d0fcbe', 
+'KeyPeople', 
+'keypeople', 
+30, 
+200, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('3e0845f7-c85a-48ee-b52a-3901ba8ef573', 
+'09d4ff91-0f1b-4f3e-ba3f-5afcb2d0fcbe', 
+'PrimaryAddress', 
+'primaryaddress', 
+30, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('e52c7f29-cbc6-438b-a0f4-5175ac4b706e', 
+'09d4ff91-0f1b-4f3e-ba3f-5afcb2d0fcbe', 
+'ContactNumber', 
+'contactnumber', 
+3, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('3c379a14-36ae-439a-937a-c866f89f96db', 
+'09d4ff91-0f1b-4f3e-ba3f-5afcb2d0fcbe', 
+'PrimaryEmail', 
+'primaryemail', 
+30, 
+200, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('e27505d9-4961-4e12-b58e-c9123be80844', 
+'09d4ff91-0f1b-4f3e-ba3f-5afcb2d0fcbe', 
+'BankAccount', 
+'bankaccount', 
+4, 
+0, 
+'', 
+false);
+INSERT INTO "mendixsystem$attribute" ("id", 
+"entity_id", 
+"attribute_name", 
+"column_name", 
+"type", 
+"length", 
+"default_value", 
+"is_auto_number")
+ VALUES ('7bbd99fd-89ff-4b4f-a173-11729354ff57', 
+'09d4ff91-0f1b-4f3e-ba3f-5afcb2d0fcbe', 
+'Coordinator', 
+'coordinator', 
+30, 
+200, 
+'', 
+false);
+UPDATE "mendixsystem$version"
+ SET "versionnumber" = '4.2', 
+"lastsyncdate" = '20210720 17:43:28';

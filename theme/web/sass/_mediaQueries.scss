@@ -27,3 +27,36 @@
         }
     }
 }
+
+//additional styling for register page
+
+.sign-up-page{
+    .form-group{
+        margin-bottom: 5px !important;
+    }
+    @include for-size(desktop-up){
+        .form-group{
+            margin-bottom: 20px !important;
+        }
+        .register-box{
+            padding: 30px 40px !important;
+            margin-bottom: 50px;
+        }
+    }
+}
+.clockpicker-am-pm-block{
+    .clockpicker-button{
+      min-width: 20px !important;
+      background-color: #001a47;
+      padding: 5px;
+    }
+  }
+  
+  .clockpicker{
+    .input-group-addon{
+      border: none !important;
+      background: transparent !important;
+      border-radius: 0px !important;
+      border-bottom: 1px solid #11145b !important ;
+    }
+  }

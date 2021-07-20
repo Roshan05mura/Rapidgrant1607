@@ -33,7 +33,9 @@ public class Root
 		_odata_context("_odata_context"),
 		Token("Token"),
 		TokenId("TokenId"),
-		Expiration("Expiration");
+		Expiration("Expiration"),
+		Title("Title"),
+		Root_JsonString("UGS.Root_JsonString");
 
 		private java.lang.String metaName;
 
@@ -622,6 +624,85 @@ public class Root
 	public final void setExpiration(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date expiration)
 	{
 		getMendixObject().setValue(context, MemberNames.Expiration.toString(), expiration);
+	}
+
+	/**
+	 * @return value of Title
+	 */
+	public final java.lang.String getTitle()
+	{
+		return getTitle(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Title
+	 */
+	public final java.lang.String getTitle(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Title.toString());
+	}
+
+	/**
+	 * Set value of Title
+	 * @param title
+	 */
+	public final void setTitle(java.lang.String title)
+	{
+		setTitle(getContext(), title);
+	}
+
+	/**
+	 * Set value of Title
+	 * @param context
+	 * @param title
+	 */
+	public final void setTitle(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String title)
+	{
+		getMendixObject().setValue(context, MemberNames.Title.toString(), title);
+	}
+
+	/**
+	 * @return value of Root_JsonString
+	 */
+	public final ugs.proxies.JsonString getRoot_JsonString() throws com.mendix.core.CoreException
+	{
+		return getRoot_JsonString(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Root_JsonString
+	 */
+	public final ugs.proxies.JsonString getRoot_JsonString(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.JsonString result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Root_JsonString.toString());
+		if (identifier != null)
+			result = ugs.proxies.JsonString.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of Root_JsonString
+	 * @param root_jsonstring
+	 */
+	public final void setRoot_JsonString(ugs.proxies.JsonString root_jsonstring)
+	{
+		setRoot_JsonString(getContext(), root_jsonstring);
+	}
+
+	/**
+	 * Set value of Root_JsonString
+	 * @param context
+	 * @param root_jsonstring
+	 */
+	public final void setRoot_JsonString(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.JsonString root_jsonstring)
+	{
+		if (root_jsonstring == null)
+			getMendixObject().setValue(context, MemberNames.Root_JsonString.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.Root_JsonString.toString(), root_jsonstring.getMendixObject().getId());
 	}
 
 	/**

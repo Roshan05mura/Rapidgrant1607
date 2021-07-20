@@ -89,6 +89,8 @@ public class GrantSystem extends system.proxies.WorkflowContext
 		Remarks("Remarks"),
 		EligibiltyAnonymous("EligibiltyAnonymous"),
 		Review_view_type("Review_view_type"),
+		ContractSigned("ContractSigned"),
+		FromFunds("FromFunds"),
 		Signature_GrantSystem_Clone("UGS.Signature_GrantSystem_Clone"),
 		GrantSystem_Aggrement_("UGS.GrantSystem_Aggrement_"),
 		GrantSystem_Printout("UGS.GrantSystem_Printout"),
@@ -100,6 +102,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 		GrantSystem_Organization("UGS.GrantSystem_Organization"),
 		ReviewForm_GrantSystem_CurrentReviewForm("UGS.ReviewForm_GrantSystem_CurrentReviewForm"),
 		Voucher_GrantSystem("UGS.Voucher_GrantSystem"),
+		ProgressUpdate_GrantSystem("UGS.ProgressUpdate_GrantSystem"),
 		GrantSystem_WorkflowUserTask("UGS.GrantSystem_WorkflowUserTask"),
 		GrantSystem_AllWorkflowUserTask("UGS.GrantSystem_AllWorkflowUserTask"),
 		GrantSystem_EmailTemplate("UGS.GrantSystem_EmailTemplate"),
@@ -109,6 +112,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 		GrantSystem_WorkflowRolesDummy("UGS.GrantSystem_WorkflowRolesDummy"),
 		GrantSystem_TemplateDummy("UGS.GrantSystem_TemplateDummy"),
 		GrantSystem_UserRole("UGS.GrantSystem_UserRole"),
+		GrantSystem_Count("UGS.GrantSystem_Count"),
 		ApplicationForm_GrantSystem("DynamicForm.ApplicationForm_GrantSystem"),
 		WorkflowInstance_WorkflowContext("System.WorkflowInstance_WorkflowContext");
 
@@ -2871,6 +2875,78 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	}
 
 	/**
+	 * @return value of ContractSigned
+	 */
+	public final java.lang.Boolean getContractSigned()
+	{
+		return getContractSigned(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ContractSigned
+	 */
+	public final java.lang.Boolean getContractSigned(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.ContractSigned.toString());
+	}
+
+	/**
+	 * Set value of ContractSigned
+	 * @param contractsigned
+	 */
+	public final void setContractSigned(java.lang.Boolean contractsigned)
+	{
+		setContractSigned(getContext(), contractsigned);
+	}
+
+	/**
+	 * Set value of ContractSigned
+	 * @param context
+	 * @param contractsigned
+	 */
+	public final void setContractSigned(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean contractsigned)
+	{
+		getMendixObject().setValue(context, MemberNames.ContractSigned.toString(), contractsigned);
+	}
+
+	/**
+	 * @return value of FromFunds
+	 */
+	public final java.lang.Boolean getFromFunds()
+	{
+		return getFromFunds(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of FromFunds
+	 */
+	public final java.lang.Boolean getFromFunds(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.FromFunds.toString());
+	}
+
+	/**
+	 * Set value of FromFunds
+	 * @param fromfunds
+	 */
+	public final void setFromFunds(java.lang.Boolean fromfunds)
+	{
+		setFromFunds(getContext(), fromfunds);
+	}
+
+	/**
+	 * Set value of FromFunds
+	 * @param context
+	 * @param fromfunds
+	 */
+	public final void setFromFunds(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean fromfunds)
+	{
+		getMendixObject().setValue(context, MemberNames.FromFunds.toString(), fromfunds);
+	}
+
+	/**
 	 * @return value of Signature_GrantSystem_Clone
 	 */
 	public final ugs.proxies.Signature getSignature_GrantSystem_Clone() throws com.mendix.core.CoreException
@@ -3344,6 +3420,49 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	}
 
 	/**
+	 * @return value of ProgressUpdate_GrantSystem
+	 */
+	public final ugs.proxies.ProgressUpdate getProgressUpdate_GrantSystem() throws com.mendix.core.CoreException
+	{
+		return getProgressUpdate_GrantSystem(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ProgressUpdate_GrantSystem
+	 */
+	public final ugs.proxies.ProgressUpdate getProgressUpdate_GrantSystem(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.ProgressUpdate result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.ProgressUpdate_GrantSystem.toString());
+		if (identifier != null)
+			result = ugs.proxies.ProgressUpdate.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of ProgressUpdate_GrantSystem
+	 * @param progressupdate_grantsystem
+	 */
+	public final void setProgressUpdate_GrantSystem(ugs.proxies.ProgressUpdate progressupdate_grantsystem)
+	{
+		setProgressUpdate_GrantSystem(getContext(), progressupdate_grantsystem);
+	}
+
+	/**
+	 * Set value of ProgressUpdate_GrantSystem
+	 * @param context
+	 * @param progressupdate_grantsystem
+	 */
+	public final void setProgressUpdate_GrantSystem(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.ProgressUpdate progressupdate_grantsystem)
+	{
+		if (progressupdate_grantsystem == null)
+			getMendixObject().setValue(context, MemberNames.ProgressUpdate_GrantSystem.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.ProgressUpdate_GrantSystem.toString(), progressupdate_grantsystem.getMendixObject().getId());
+	}
+
+	/**
 	 * @return value of GrantSystem_WorkflowUserTask
 	 */
 	public final system.proxies.WorkflowUserTask getGrantSystem_WorkflowUserTask() throws com.mendix.core.CoreException
@@ -3737,6 +3856,49 @@ public class GrantSystem extends system.proxies.WorkflowContext
 			getMendixObject().setValue(context, MemberNames.GrantSystem_UserRole.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.GrantSystem_UserRole.toString(), grantsystem_userrole.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of GrantSystem_Count
+	 */
+	public final dynamicform.proxies.Count getGrantSystem_Count() throws com.mendix.core.CoreException
+	{
+		return getGrantSystem_Count(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of GrantSystem_Count
+	 */
+	public final dynamicform.proxies.Count getGrantSystem_Count(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		dynamicform.proxies.Count result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.GrantSystem_Count.toString());
+		if (identifier != null)
+			result = dynamicform.proxies.Count.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of GrantSystem_Count
+	 * @param grantsystem_count
+	 */
+	public final void setGrantSystem_Count(dynamicform.proxies.Count grantsystem_count)
+	{
+		setGrantSystem_Count(getContext(), grantsystem_count);
+	}
+
+	/**
+	 * Set value of GrantSystem_Count
+	 * @param context
+	 * @param grantsystem_count
+	 */
+	public final void setGrantSystem_Count(com.mendix.systemwideinterfaces.core.IContext context, dynamicform.proxies.Count grantsystem_count)
+	{
+		if (grantsystem_count == null)
+			getMendixObject().setValue(context, MemberNames.GrantSystem_Count.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.GrantSystem_Count.toString(), grantsystem_count.getMendixObject().getId());
 	}
 
 	/**

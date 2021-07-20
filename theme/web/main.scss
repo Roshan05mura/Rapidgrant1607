@@ -10,7 +10,7 @@
 @import "variables.scss";
 @import "buttons.scss";
 
-  
+
 .mx-scrollcontainer-top{
         box-shadow: 1px 3px 4px #d2d2d2;
         padding: 5px;
@@ -1437,6 +1437,44 @@ font-size: 18px;
       }
     }
   }
+h2.mx-groupbox-header{
+    font-size: 16px!important;
+}
 
+@media(max-width:1280px) {
+    button {
+        min-width: 100px;
+    }
 
+    .mx-scrollcontainer-left {
+        width: 107px!important;
 
+        li {
+            text-align: center;
+
+            span {
+                font-size: 8.5pt !important;
+                font-weight: 600 !important;
+            }
+
+            img {
+                width: 55px;
+            }
+        }
+    }
+
+    .mx-datagrid table th {
+        padding: 16px 5px 16px 5px;
+    }
+    .common_dashboard .mx-datagrid table th .mx-datagrid-head-caption {
+        font-size: 9pt;
+        font-weight: 600;
+    }
+}
+.header-fund{
+    margin-bottom: 1.5rem;
+    .mx-groupbox h4 {
+        color: #ffffff;
+        font-size: 16px;
+    }
+}

@@ -27,6 +27,7 @@ public class ReviewForm
 		Average_Score("Average_Score"),
 		ReviewType("ReviewType"),
 		NumericalScoreAsEnum("NumericalScoreAsEnum"),
+		EmptyC("EmptyC"),
 		ReviewForm_GrantSystem_CurrentReviewForm("UGS.ReviewForm_GrantSystem_CurrentReviewForm"),
 		ReviewForm_GrantSystem_PastReviewForms("UGS.ReviewForm_GrantSystem_PastReviewForms"),
 		ReviewForm_WorkflowRoles("UGS.ReviewForm_WorkflowRoles"),
@@ -399,6 +400,42 @@ public class ReviewForm
 			getMendixObject().setValue(context, MemberNames.NumericalScoreAsEnum.toString(), numericalscoreasenum.toString());
 		else
 			getMendixObject().setValue(context, MemberNames.NumericalScoreAsEnum.toString(), null);
+	}
+
+	/**
+	 * @return value of EmptyC
+	 */
+	public final java.lang.String getEmptyC()
+	{
+		return getEmptyC(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of EmptyC
+	 */
+	public final java.lang.String getEmptyC(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.EmptyC.toString());
+	}
+
+	/**
+	 * Set value of EmptyC
+	 * @param emptyc
+	 */
+	public final void setEmptyC(java.lang.String emptyc)
+	{
+		setEmptyC(getContext(), emptyc);
+	}
+
+	/**
+	 * Set value of EmptyC
+	 * @param context
+	 * @param emptyc
+	 */
+	public final void setEmptyC(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String emptyc)
+	{
+		getMendixObject().setValue(context, MemberNames.EmptyC.toString(), emptyc);
 	}
 
 	/**

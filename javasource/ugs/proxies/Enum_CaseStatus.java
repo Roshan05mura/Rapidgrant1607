@@ -12,7 +12,8 @@ public enum Enum_CaseStatus
 	_return(new java.lang.String[][] { new java.lang.String[] { "en_US", "return" } }),
 	Forwarded_to_FA(new java.lang.String[][] { new java.lang.String[] { "en_US", "Forwarded_to_FA" } }),
 	Forwarded_to_IO(new java.lang.String[][] { new java.lang.String[] { "en_US", "Forwarded_to_IO" } }),
-	Forwarded_to_GMHQ(new java.lang.String[][] { new java.lang.String[] { "en_US", "Forwarded_to_GMHQ" } });
+	Forwarded_to_GMHQ(new java.lang.String[][] { new java.lang.String[] { "en_US", "Forwarded_to_GMHQ" } }),
+	Draft(new java.lang.String[][] { new java.lang.String[] { "en_US", "Draft" } });
 
 	private java.util.Map<java.lang.String, java.lang.String> captions;
 

@@ -24,6 +24,7 @@ public class Profile
 		Address("Address"),
 		Country("Country"),
 		Profile_ProfileImage("UGS.Profile_ProfileImage"),
+		Profile_Organization("UGS.Profile_Organization"),
 		Account_Profile_2("Administration.Account_Profile_2");
 
 		private java.lang.String metaName;
@@ -268,6 +269,49 @@ public class Profile
 			getMendixObject().setValue(context, MemberNames.Profile_ProfileImage.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.Profile_ProfileImage.toString(), profile_profileimage.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of Profile_Organization
+	 */
+	public final ugs.proxies.Organization getProfile_Organization() throws com.mendix.core.CoreException
+	{
+		return getProfile_Organization(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Profile_Organization
+	 */
+	public final ugs.proxies.Organization getProfile_Organization(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.Organization result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Profile_Organization.toString());
+		if (identifier != null)
+			result = ugs.proxies.Organization.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of Profile_Organization
+	 * @param profile_organization
+	 */
+	public final void setProfile_Organization(ugs.proxies.Organization profile_organization)
+	{
+		setProfile_Organization(getContext(), profile_organization);
+	}
+
+	/**
+	 * Set value of Profile_Organization
+	 * @param context
+	 * @param profile_organization
+	 */
+	public final void setProfile_Organization(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Organization profile_organization)
+	{
+		if (profile_organization == null)
+			getMendixObject().setValue(context, MemberNames.Profile_Organization.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.Profile_Organization.toString(), profile_organization.getMendixObject().getId());
 	}
 
 	/**

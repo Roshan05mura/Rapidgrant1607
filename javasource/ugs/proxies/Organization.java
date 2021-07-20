@@ -21,7 +21,14 @@ public class Organization
 	public enum MemberNames
 	{
 		OrgName("OrgName"),
-		OrgID("OrgID");
+		OrgID("OrgID"),
+		KeyPeople("KeyPeople"),
+		Coordinator("Coordinator"),
+		ContactNumber("ContactNumber"),
+		PrimaryEmail("PrimaryEmail"),
+		PrimaryAddress("PrimaryAddress"),
+		BankAccount("BankAccount"),
+		Profile_Organization("UGS.Profile_Organization");
 
 		private java.lang.String metaName;
 
@@ -186,6 +193,265 @@ public class Organization
 	public final void setOrgID(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Long orgid)
 	{
 		getMendixObject().setValue(context, MemberNames.OrgID.toString(), orgid);
+	}
+
+	/**
+	 * @return value of KeyPeople
+	 */
+	public final java.lang.String getKeyPeople()
+	{
+		return getKeyPeople(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of KeyPeople
+	 */
+	public final java.lang.String getKeyPeople(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.KeyPeople.toString());
+	}
+
+	/**
+	 * Set value of KeyPeople
+	 * @param keypeople
+	 */
+	public final void setKeyPeople(java.lang.String keypeople)
+	{
+		setKeyPeople(getContext(), keypeople);
+	}
+
+	/**
+	 * Set value of KeyPeople
+	 * @param context
+	 * @param keypeople
+	 */
+	public final void setKeyPeople(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String keypeople)
+	{
+		getMendixObject().setValue(context, MemberNames.KeyPeople.toString(), keypeople);
+	}
+
+	/**
+	 * @return value of Coordinator
+	 */
+	public final java.lang.String getCoordinator()
+	{
+		return getCoordinator(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Coordinator
+	 */
+	public final java.lang.String getCoordinator(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Coordinator.toString());
+	}
+
+	/**
+	 * Set value of Coordinator
+	 * @param coordinator
+	 */
+	public final void setCoordinator(java.lang.String coordinator)
+	{
+		setCoordinator(getContext(), coordinator);
+	}
+
+	/**
+	 * Set value of Coordinator
+	 * @param context
+	 * @param coordinator
+	 */
+	public final void setCoordinator(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String coordinator)
+	{
+		getMendixObject().setValue(context, MemberNames.Coordinator.toString(), coordinator);
+	}
+
+	/**
+	 * @return value of ContactNumber
+	 */
+	public final java.lang.String getContactNumber()
+	{
+		return getContactNumber(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ContactNumber
+	 */
+	public final java.lang.String getContactNumber(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.ContactNumber.toString());
+	}
+
+	/**
+	 * Set value of ContactNumber
+	 * @param contactnumber
+	 */
+	public final void setContactNumber(java.lang.String contactnumber)
+	{
+		setContactNumber(getContext(), contactnumber);
+	}
+
+	/**
+	 * Set value of ContactNumber
+	 * @param context
+	 * @param contactnumber
+	 */
+	public final void setContactNumber(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String contactnumber)
+	{
+		getMendixObject().setValue(context, MemberNames.ContactNumber.toString(), contactnumber);
+	}
+
+	/**
+	 * @return value of PrimaryEmail
+	 */
+	public final java.lang.String getPrimaryEmail()
+	{
+		return getPrimaryEmail(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of PrimaryEmail
+	 */
+	public final java.lang.String getPrimaryEmail(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.PrimaryEmail.toString());
+	}
+
+	/**
+	 * Set value of PrimaryEmail
+	 * @param primaryemail
+	 */
+	public final void setPrimaryEmail(java.lang.String primaryemail)
+	{
+		setPrimaryEmail(getContext(), primaryemail);
+	}
+
+	/**
+	 * Set value of PrimaryEmail
+	 * @param context
+	 * @param primaryemail
+	 */
+	public final void setPrimaryEmail(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String primaryemail)
+	{
+		getMendixObject().setValue(context, MemberNames.PrimaryEmail.toString(), primaryemail);
+	}
+
+	/**
+	 * @return value of PrimaryAddress
+	 */
+	public final java.lang.String getPrimaryAddress()
+	{
+		return getPrimaryAddress(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of PrimaryAddress
+	 */
+	public final java.lang.String getPrimaryAddress(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.PrimaryAddress.toString());
+	}
+
+	/**
+	 * Set value of PrimaryAddress
+	 * @param primaryaddress
+	 */
+	public final void setPrimaryAddress(java.lang.String primaryaddress)
+	{
+		setPrimaryAddress(getContext(), primaryaddress);
+	}
+
+	/**
+	 * Set value of PrimaryAddress
+	 * @param context
+	 * @param primaryaddress
+	 */
+	public final void setPrimaryAddress(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String primaryaddress)
+	{
+		getMendixObject().setValue(context, MemberNames.PrimaryAddress.toString(), primaryaddress);
+	}
+
+	/**
+	 * @return value of BankAccount
+	 */
+	public final java.lang.String getBankAccount()
+	{
+		return getBankAccount(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of BankAccount
+	 */
+	public final java.lang.String getBankAccount(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.BankAccount.toString());
+	}
+
+	/**
+	 * Set value of BankAccount
+	 * @param bankaccount
+	 */
+	public final void setBankAccount(java.lang.String bankaccount)
+	{
+		setBankAccount(getContext(), bankaccount);
+	}
+
+	/**
+	 * Set value of BankAccount
+	 * @param context
+	 * @param bankaccount
+	 */
+	public final void setBankAccount(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String bankaccount)
+	{
+		getMendixObject().setValue(context, MemberNames.BankAccount.toString(), bankaccount);
+	}
+
+	/**
+	 * @return value of Profile_Organization
+	 */
+	public final ugs.proxies.Profile getProfile_Organization() throws com.mendix.core.CoreException
+	{
+		return getProfile_Organization(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Profile_Organization
+	 */
+	public final ugs.proxies.Profile getProfile_Organization(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.Profile result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.Profile_Organization.toString());
+		if (identifier != null)
+			result = ugs.proxies.Profile.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of Profile_Organization
+	 * @param profile_organization
+	 */
+	public final void setProfile_Organization(ugs.proxies.Profile profile_organization)
+	{
+		setProfile_Organization(getContext(), profile_organization);
+	}
+
+	/**
+	 * Set value of Profile_Organization
+	 * @param context
+	 * @param profile_organization
+	 */
+	public final void setProfile_Organization(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Profile profile_organization)
+	{
+		if (profile_organization == null)
+			getMendixObject().setValue(context, MemberNames.Profile_Organization.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.Profile_Organization.toString(), profile_organization.getMendixObject().getId());
 	}
 
 	/**

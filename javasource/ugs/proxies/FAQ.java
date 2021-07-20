@@ -18,6 +18,7 @@ public class FAQ extends system.proxies.FileDocument
 	{
 		Questions("Questions"),
 		Answers("Answers"),
+		link("link"),
 		FileID("FileID"),
 		Name("Name"),
 		DeleteAfterDownload("DeleteAfterDownload"),
@@ -154,6 +155,42 @@ public class FAQ extends system.proxies.FileDocument
 	public final void setAnswers(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String answers)
 	{
 		getMendixObject().setValue(context, MemberNames.Answers.toString(), answers);
+	}
+
+	/**
+	 * @return value of link
+	 */
+	public final java.lang.String getlink()
+	{
+		return getlink(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of link
+	 */
+	public final java.lang.String getlink(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.link.toString());
+	}
+
+	/**
+	 * Set value of link
+	 * @param link
+	 */
+	public final void setlink(java.lang.String link)
+	{
+		setlink(getContext(), link);
+	}
+
+	/**
+	 * Set value of link
+	 * @param context
+	 * @param link
+	 */
+	public final void setlink(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String link)
+	{
+		getMendixObject().setValue(context, MemberNames.link.toString(), link);
 	}
 
 	/**

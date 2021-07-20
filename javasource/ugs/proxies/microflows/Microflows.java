@@ -394,6 +394,18 @@ public class Microflows
 		params.put("Grant", _grant == null ? null : _grant.getMendixObject());
 		Core.microflowCall("UGS.Act_GrantWorkflowsubmit").withParams(params).execute(context);
 	}
+	public static void aCT_inlineView(IContext context, ugs.proxies.GrantSystem _grantSystem)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
+		Core.microflowCall("UGS.ACT_inlineView").withParams(params).execute(context);
+	}
+	public static void aCT_IOReturn(IContext context, ugs.proxies.CaseMangement _caseMangement)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("CaseMangement", _caseMangement == null ? null : _caseMangement.getMendixObject());
+		Core.microflowCall("UGS.ACT_IOReturn").withParams(params).execute(context);
+	}
 	public static void aCT_IsDynamic(IContext context, ugs.proxies.CaseMangement _caseMangement)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -411,6 +423,13 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("ReviewForm", _reviewForm == null ? null : _reviewForm.getMendixObject());
 		Core.microflowCall("UGS.Act_MainReviewForm").withParams(params).execute(context);
+	}
+	public static void aCT_Movetopage(IContext context, dynamicform.proxies.Template _template, ugs.proxies.GrantSystem _grantSystem)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Template", _template == null ? null : _template.getMendixObject());
+		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
+		Core.microflowCall("UGS.ACT_Movetopage").withParams(params).execute(context);
 	}
 	public static void aCT_NextPage(IContext context, dynamicform.proxies.Template _template, ugs.proxies.GrantSystem _grantSystem)
 	{
@@ -430,6 +449,12 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("AF", _aF == null ? null : _aF.getMendixObject());
 		Core.microflowCall("UGS.ACT_OpenExistingFormPopupAF").withParams(params).execute(context);
+	}
+	public static void aCT_OpenLink(IContext context, ugs.proxies.GrantSystem _grantSystem)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
+		Core.microflowCall("UGS.ACT_OpenLink").withParams(params).execute(context);
 	}
 	public static void aCT_OpenOrgPopup(IContext context, ugs.proxies.Eligibility _eligibility, ugs.proxies.GrantSystem _grantSystem)
 	{
@@ -795,6 +820,11 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		Core.microflowCall("UGS.AfterStartUp_Fund").withParams(params).execute(context);
 	}
+	public static boolean application_status(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		return (java.lang.Boolean) Core.microflowCall("UGS.Application_status").withParams(params).execute(context);
+	}
 	public static ugs.proxies.Eligibility apply_Button_Visible(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -826,32 +856,6 @@ public class Microflows
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.case_count_applicant").withParams(params).execute(context);
-		java.util.List<ugs.proxies.count> result = null;
-		if (objs != null)
-		{
-			result = new java.util.ArrayList<>();
-			for (IMendixObject obj : objs)
-				result.add(ugs.proxies.count.initialize(context, obj));
-		}
-		return result;
-	}
-	public static java.util.List<ugs.proxies.count> case_count_applicant_2_2(IContext context)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.case_count_applicant_2_2").withParams(params).execute(context);
-		java.util.List<ugs.proxies.count> result = null;
-		if (objs != null)
-		{
-			result = new java.util.ArrayList<>();
-			for (IMendixObject obj : objs)
-				result.add(ugs.proxies.count.initialize(context, obj));
-		}
-		return result;
-	}
-	public static java.util.List<ugs.proxies.count> case_count_applicant_2_2_2(IContext context)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.case_count_applicant_2_2_2").withParams(params).execute(context);
 		java.util.List<ugs.proxies.count> result = null;
 		if (objs != null)
 		{
@@ -900,6 +904,11 @@ public class Microflows
 		}
 		return result;
 	}
+	public static boolean case_Management_Report(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		return (java.lang.Boolean) Core.microflowCall("UGS.Case_Management_Report").withParams(params).execute(context);
+	}
 	public static void change_To_Status(IContext context, dynamicform.proxies.WorkflowRoles _workflowRoles)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -919,12 +928,30 @@ public class Microflows
 		IMendixObject result = (IMendixObject)Core.microflowCall("UGS.Clone_Template_Cloneobject").withParams(params).execute(context);
 		return result == null ? null : dynamicform.proxies.Template.initialize(context, result);
 	}
+	public static void commit_Apllicant(IContext context, ugs.proxies.ProgressUpdate _progressUpdate)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("ProgressUpdate", _progressUpdate == null ? null : _progressUpdate.getMendixObject());
+		Core.microflowCall("UGS.Commit_Apllicant").withParams(params).execute(context);
+	}
 	public static void common_History_2(IContext context, ugs.proxies.History _history, ugs.proxies.GrantSystem _grantSystem)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("History", _history == null ? null : _history.getMendixObject());
 		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
 		Core.microflowCall("UGS.Common_History_2").withParams(params).execute(context);
+	}
+	public static void create_ProgressUpdate(IContext context, ugs.proxies.ProgressUpdate _progressUpdate)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("ProgressUpdate", _progressUpdate == null ? null : _progressUpdate.getMendixObject());
+		Core.microflowCall("UGS.Create_ProgressUpdate").withParams(params).execute(context);
+	}
+	public static void createNewRequest(IContext context, ugs.proxies.GrantSystem _grantSystem)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
+		Core.microflowCall("UGS.CreateNewRequest").withParams(params).execute(context);
 	}
 	public static java.util.List<ugs.proxies.CaseHistory> currentHistory(IContext context)
 	{
@@ -982,6 +1009,32 @@ public class Microflows
 		}
 		return result;
 	}
+	public static java.util.List<ugs.proxies.count> dS_ApprovedCount_FA(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.DS_ApprovedCount_FA").withParams(params).execute(context);
+		java.util.List<ugs.proxies.count> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(ugs.proxies.count.initialize(context, obj));
+		}
+		return result;
+	}
+	public static java.util.List<ugs.proxies.count> dS_ApprovedCount_FA_2(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.DS_ApprovedCount_FA_2").withParams(params).execute(context);
+		java.util.List<ugs.proxies.count> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(ugs.proxies.count.initialize(context, obj));
+		}
+		return result;
+	}
 	public static ugs.proxies.Interview dS_AssignInterviewObject(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -1003,12 +1056,33 @@ public class Microflows
 		}
 		return result;
 	}
+	public static dynamicform.proxies.Count dS_CountDocCheck(IContext context, ugs.proxies.GrantSystem _grantSystem)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
+		IMendixObject result = (IMendixObject)Core.microflowCall("UGS.DS_CountDocCheck").withParams(params).execute(context);
+		return result == null ? null : dynamicform.proxies.Count.initialize(context, result);
+	}
 	public static dynamicform.proxies.Template dS_FirstForm(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
 		IMendixObject result = (IMendixObject)Core.microflowCall("UGS.DS_FirstForm").withParams(params).execute(context);
 		return result == null ? null : dynamicform.proxies.Template.initialize(context, result);
+	}
+	public static java.util.List<administration.proxies.Account> ds_GetAllInterviewers(IContext context, ugs.proxies.Interview _interview)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Interview", _interview == null ? null : _interview.getMendixObject());
+		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.Ds_GetAllInterviewers").withParams(params).execute(context);
+		java.util.List<administration.proxies.Account> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(administration.proxies.Account.initialize(context, obj));
+		}
+		return result;
 	}
 	public static java.util.List<ugs.proxies.Interview> ds_GetAllInterviews(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
@@ -1138,6 +1212,20 @@ public class Microflows
 		}
 		return result;
 	}
+	public static java.util.List<ugs.proxies.ReviewForm> dS_RetrievePastForms(IContext context, ugs.proxies.GrantSystem _grantSystem)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
+		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.DS_RetrievePastForms").withParams(params).execute(context);
+		java.util.List<ugs.proxies.ReviewForm> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(ugs.proxies.ReviewForm.initialize(context, obj));
+		}
+		return result;
+	}
 	public static ugs.proxies.count dS_SLA_Count(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -1164,6 +1252,12 @@ public class Microflows
 		}
 		return result;
 	}
+	public static void editProgress(IContext context, ugs.proxies.ProgressUpdate _progressUpdate)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("ProgressUpdate", _progressUpdate == null ? null : _progressUpdate.getMendixObject());
+		Core.microflowCall("UGS.EditProgress").withParams(params).execute(context);
+	}
 	public static void eligibilityQuestion(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -1184,11 +1278,6 @@ public class Microflows
 		}
 		return result;
 	}
-	public static boolean embedToken(IContext context)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		return (java.lang.Boolean) Core.microflowCall("UGS.EmbedToken").withParams(params).execute(context);
-	}
 	public static void emoji_rating_2(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -1200,6 +1289,20 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("ReviewForm", _reviewForm == null ? null : _reviewForm.getMendixObject());
 		Core.microflowCall("UGS.emoji_rating_true").withParams(params).execute(context);
+	}
+	public static java.util.List<ugs.proxies.GrantSystem> faq_retr(IContext context, ugs.proxies.FAQ _fAQ)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("FAQ", _fAQ == null ? null : _fAQ.getMendixObject());
+		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.Faq_retr").withParams(params).execute(context);
+		java.util.List<ugs.proxies.GrantSystem> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(ugs.proxies.GrantSystem.initialize(context, obj));
+		}
+		return result;
 	}
 	public static java.util.List<ugs.proxies.FAQ> fAQ_view(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
@@ -1214,6 +1317,11 @@ public class Microflows
 				result.add(ugs.proxies.FAQ.initialize(context, obj));
 		}
 		return result;
+	}
+	public static boolean fundingsReport(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		return (java.lang.Boolean) Core.microflowCall("UGS.FundingsReport").withParams(params).execute(context);
 	}
 	public static java.util.List<ugs.proxies.History> gET_Current_History(IContext context)
 	{
@@ -1533,6 +1641,11 @@ public class Microflows
 		IMendixObject result = (IMendixObject)Core.microflowCall("UGS.PopUpCaseManagementGM").withParams(params).execute(context);
 		return result == null ? null : ugs.proxies.CaseMangement.initialize(context, result);
 	}
+	public static boolean rapidGrantReport(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		return (java.lang.Boolean) Core.microflowCall("UGS.RapidGrantReport").withParams(params).execute(context);
+	}
 	public static java.util.List<ugs.proxies.Test> rET_AllTests(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -1565,6 +1678,20 @@ public class Microflows
 			result = new java.util.ArrayList<>();
 			for (IMendixObject obj : objs)
 				result.add(administration.proxies.Account.initialize(context, obj));
+		}
+		return result;
+	}
+	public static java.util.List<ugs.proxies.GrantSystem> ret_Applicants(IContext context, ugs.proxies.CaseMangement _caseMangement)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("CaseMangement", _caseMangement == null ? null : _caseMangement.getMendixObject());
+		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.Ret_Applicants").withParams(params).execute(context);
+		java.util.List<ugs.proxies.GrantSystem> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(ugs.proxies.GrantSystem.initialize(context, obj));
 		}
 		return result;
 	}
@@ -1645,6 +1772,20 @@ public class Microflows
 		}
 		return result;
 	}
+	public static java.util.List<dynamicform.proxies.WorkflowRoles> rET_Staticvalues(IContext context, ugs.proxies.GrantSystem _grantSystem)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
+		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.RET_Staticvalues").withParams(params).execute(context);
+		java.util.List<dynamicform.proxies.WorkflowRoles> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(dynamicform.proxies.WorkflowRoles.initialize(context, obj));
+		}
+		return result;
+	}
 	public static void retrieve_CountryCode(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -1682,7 +1823,7 @@ public class Microflows
 		}
 		return result;
 	}
-	public static java.util.List<ugs.proxies.History> retrieve_Multilevel_History(IContext context, ugs.proxies.History _history)
+	public static java.util.List<ugs.proxies.History> retrieve_Multilevel_History(IContext context, ugs.proxies.GrantSystem _history)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("History", _history == null ? null : _history.getMendixObject());
@@ -1710,6 +1851,32 @@ public class Microflows
 		}
 		return result;
 	}
+	public static java.util.List<ugs.proxies.GrantSystem> retrieveApplicantGrants(IContext context, ugs.proxies.ProgressUpdate _progressUpdate)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("ProgressUpdate", _progressUpdate == null ? null : _progressUpdate.getMendixObject());
+		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.RetrieveApplicantGrants").withParams(params).execute(context);
+		java.util.List<ugs.proxies.GrantSystem> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(ugs.proxies.GrantSystem.initialize(context, obj));
+		}
+		return result;
+	}
+	public static void rollback_Cancel(IContext context, ugs.proxies.GrantSystem _grantSystem)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
+		Core.microflowCall("UGS.Rollback_Cancel").withParams(params).execute(context);
+	}
+	public static void rollback_Progress(IContext context, ugs.proxies.ProgressUpdate _progressUpdate)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("ProgressUpdate", _progressUpdate == null ? null : _progressUpdate.getMendixObject());
+		Core.microflowCall("UGS.Rollback_Progress").withParams(params).execute(context);
+	}
 	public static void rollBack_Score(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -1720,6 +1887,20 @@ public class Microflows
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		Core.microflowCall("UGS.SE_Microflow").withParams(params).execute(context);
+	}
+	public static java.util.List<administration.proxies.Account> search_Applicants(IContext context, ugs.proxies.ProgressUpdate _progressUpdate)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("ProgressUpdate", _progressUpdate == null ? null : _progressUpdate.getMendixObject());
+		java.util.List<IMendixObject> objs = Core.microflowCall("UGS.Search_Applicants").withParams(params).execute(context);
+		java.util.List<administration.proxies.Account> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(administration.proxies.Account.initialize(context, obj));
+		}
+		return result;
 	}
 	public static void send_Contract_ForProvider(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
@@ -1732,13 +1913,13 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		Core.microflowCall("UGS.Send_Remider").withParams(params).execute(context);
 	}
-	public static void show_Multilevel_History(IContext context, ugs.proxies.History _history)
+	public static void show_Multilevel_History(IContext context, ugs.proxies.GrantSystem _history)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("History", _history == null ? null : _history.getMendixObject());
 		Core.microflowCall("UGS.Show_Multilevel_History").withParams(params).execute(context);
 	}
-	public static void single_History_Overview(IContext context, ugs.proxies.History _history)
+	public static void single_History_Overview(IContext context, ugs.proxies.GrantSystem _history)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("History", _history == null ? null : _history.getMendixObject());
@@ -1749,6 +1930,12 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("CaseMangement", _caseMangement == null ? null : _caseMangement.getMendixObject());
 		Core.microflowCall("UGS.SplitScreen").withParams(params).execute(context);
+	}
+	public static void splitScreen_2(IContext context, ugs.proxies.CaseMangement _caseMangement)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("CaseMangement", _caseMangement == null ? null : _caseMangement.getMendixObject());
+		Core.microflowCall("UGS.SplitScreen_2").withParams(params).execute(context);
 	}
 	public static void sub_AdjustStringLength(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{
@@ -1892,6 +2079,18 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("GrantSystem", _grantSystem == null ? null : _grantSystem.getMendixObject());
 		Core.microflowCall("UGS.Test_Assoc_reviewForm").withParams(params).execute(context);
+	}
+	public static void test2(IContext context, system.proxies.UserRole _userRole)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("UserRole", _userRole == null ? null : _userRole.getMendixObject());
+		Core.microflowCall("UGS.Test2").withParams(params).execute(context);
+	}
+	public static boolean tIMER_ShowlandingPage(IContext context, ugs.proxies.Url_redirect _url_redirect)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Url_redirect", _url_redirect == null ? null : _url_redirect.getMendixObject());
+		return (java.lang.Boolean) Core.microflowCall("UGS.TIMER_ShowlandingPage").withParams(params).execute(context);
 	}
 	public static void view_ContractPage(IContext context, ugs.proxies.GrantSystem _grantSystem)
 	{

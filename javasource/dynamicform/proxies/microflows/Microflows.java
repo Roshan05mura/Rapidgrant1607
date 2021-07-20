@@ -594,6 +594,20 @@ public class Microflows
 		}
 		return result;
 	}
+	public static java.util.List<dynamicform.proxies.WorkflowRoles> rET_AllUserRolesGrant_2(IContext context, ugs.proxies.GrantSystem _grant)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Grant", _grant == null ? null : _grant.getMendixObject());
+		java.util.List<IMendixObject> objs = Core.microflowCall("DynamicForm.RET_AllUserRolesGrant_2").withParams(params).execute(context);
+		java.util.List<dynamicform.proxies.WorkflowRoles> result = null;
+		if (objs != null)
+		{
+			result = new java.util.ArrayList<>();
+			for (IMendixObject obj : objs)
+				result.add(dynamicform.proxies.WorkflowRoles.initialize(context, obj));
+		}
+		return result;
+	}
 	public static java.util.List<dynamicform.proxies.Enum_Values> retrieve_assoc_Obj(IContext context, dynamicform.proxies.Enumeration _enumeration)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();

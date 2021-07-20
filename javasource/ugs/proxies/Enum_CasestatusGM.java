@@ -6,7 +6,7 @@ package ugs.proxies;
 
 public enum Enum_CasestatusGM
 {
-	Forward_To_GM2(new java.lang.String[][] { new java.lang.String[] { "en_US", "GranteeManger" } }),
+	Forward_To_GM2(new java.lang.String[][] { new java.lang.String[] { "en_US", "GrantAppManger" } }),
 	Forward_To_Investigating_Officer(new java.lang.String[][] { new java.lang.String[] { "en_US", "Investigating Officer" } }),
 	Forward_TO_GM_HQ_(new java.lang.String[][] { new java.lang.String[] { "en_US", "GranteeManager(HQ)" } });
 

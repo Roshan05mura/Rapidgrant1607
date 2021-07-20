@@ -23,8 +23,13 @@ public class ProgressUpdate
 		ApplicantName("ApplicantName"),
 		StartDate("StartDate"),
 		EndDate("EndDate"),
-		GrantID("GrantID"),
-		GrantName("GrantName");
+		Reference_No("Reference_No"),
+		GrantName("GrantName"),
+		Subject("Subject"),
+		Remarks("Remarks"),
+		Grade("Grade"),
+		ProgressUpdate_GrantSystem("UGS.ProgressUpdate_GrantSystem"),
+		ProgressUpdate_Account("UGS.ProgressUpdate_Account");
 
 		private java.lang.String metaName;
 
@@ -228,39 +233,39 @@ public class ProgressUpdate
 	}
 
 	/**
-	 * @return value of GrantID
+	 * @return value of Reference_No
 	 */
-	public final java.lang.Integer getGrantID()
+	public final java.lang.Integer getReference_No()
 	{
-		return getGrantID(getContext());
+		return getReference_No(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of GrantID
+	 * @return value of Reference_No
 	 */
-	public final java.lang.Integer getGrantID(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.lang.Integer getReference_No(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.GrantID.toString());
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.Reference_No.toString());
 	}
 
 	/**
-	 * Set value of GrantID
-	 * @param grantid
+	 * Set value of Reference_No
+	 * @param reference_no
 	 */
-	public final void setGrantID(java.lang.Integer grantid)
+	public final void setReference_No(java.lang.Integer reference_no)
 	{
-		setGrantID(getContext(), grantid);
+		setReference_No(getContext(), reference_no);
 	}
 
 	/**
-	 * Set value of GrantID
+	 * Set value of Reference_No
 	 * @param context
-	 * @param grantid
+	 * @param reference_no
 	 */
-	public final void setGrantID(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer grantid)
+	public final void setReference_No(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer reference_no)
 	{
-		getMendixObject().setValue(context, MemberNames.GrantID.toString(), grantid);
+		getMendixObject().setValue(context, MemberNames.Reference_No.toString(), reference_no);
 	}
 
 	/**
@@ -297,6 +302,200 @@ public class ProgressUpdate
 	public final void setGrantName(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String grantname)
 	{
 		getMendixObject().setValue(context, MemberNames.GrantName.toString(), grantname);
+	}
+
+	/**
+	 * @return value of Subject
+	 */
+	public final java.lang.String getSubject()
+	{
+		return getSubject(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Subject
+	 */
+	public final java.lang.String getSubject(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Subject.toString());
+	}
+
+	/**
+	 * Set value of Subject
+	 * @param subject
+	 */
+	public final void setSubject(java.lang.String subject)
+	{
+		setSubject(getContext(), subject);
+	}
+
+	/**
+	 * Set value of Subject
+	 * @param context
+	 * @param subject
+	 */
+	public final void setSubject(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String subject)
+	{
+		getMendixObject().setValue(context, MemberNames.Subject.toString(), subject);
+	}
+
+	/**
+	 * @return value of Remarks
+	 */
+	public final java.lang.String getRemarks()
+	{
+		return getRemarks(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Remarks
+	 */
+	public final java.lang.String getRemarks(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Remarks.toString());
+	}
+
+	/**
+	 * Set value of Remarks
+	 * @param remarks
+	 */
+	public final void setRemarks(java.lang.String remarks)
+	{
+		setRemarks(getContext(), remarks);
+	}
+
+	/**
+	 * Set value of Remarks
+	 * @param context
+	 * @param remarks
+	 */
+	public final void setRemarks(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String remarks)
+	{
+		getMendixObject().setValue(context, MemberNames.Remarks.toString(), remarks);
+	}
+
+	/**
+	 * @return value of Grade
+	 */
+	public final java.lang.String getGrade()
+	{
+		return getGrade(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Grade
+	 */
+	public final java.lang.String getGrade(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Grade.toString());
+	}
+
+	/**
+	 * Set value of Grade
+	 * @param grade
+	 */
+	public final void setGrade(java.lang.String grade)
+	{
+		setGrade(getContext(), grade);
+	}
+
+	/**
+	 * Set value of Grade
+	 * @param context
+	 * @param grade
+	 */
+	public final void setGrade(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String grade)
+	{
+		getMendixObject().setValue(context, MemberNames.Grade.toString(), grade);
+	}
+
+	/**
+	 * @return value of ProgressUpdate_GrantSystem
+	 */
+	public final ugs.proxies.GrantSystem getProgressUpdate_GrantSystem() throws com.mendix.core.CoreException
+	{
+		return getProgressUpdate_GrantSystem(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ProgressUpdate_GrantSystem
+	 */
+	public final ugs.proxies.GrantSystem getProgressUpdate_GrantSystem(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.GrantSystem result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.ProgressUpdate_GrantSystem.toString());
+		if (identifier != null)
+			result = ugs.proxies.GrantSystem.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of ProgressUpdate_GrantSystem
+	 * @param progressupdate_grantsystem
+	 */
+	public final void setProgressUpdate_GrantSystem(ugs.proxies.GrantSystem progressupdate_grantsystem)
+	{
+		setProgressUpdate_GrantSystem(getContext(), progressupdate_grantsystem);
+	}
+
+	/**
+	 * Set value of ProgressUpdate_GrantSystem
+	 * @param context
+	 * @param progressupdate_grantsystem
+	 */
+	public final void setProgressUpdate_GrantSystem(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.GrantSystem progressupdate_grantsystem)
+	{
+		if (progressupdate_grantsystem == null)
+			getMendixObject().setValue(context, MemberNames.ProgressUpdate_GrantSystem.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.ProgressUpdate_GrantSystem.toString(), progressupdate_grantsystem.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of ProgressUpdate_Account
+	 */
+	public final administration.proxies.Account getProgressUpdate_Account() throws com.mendix.core.CoreException
+	{
+		return getProgressUpdate_Account(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ProgressUpdate_Account
+	 */
+	public final administration.proxies.Account getProgressUpdate_Account(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		administration.proxies.Account result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.ProgressUpdate_Account.toString());
+		if (identifier != null)
+			result = administration.proxies.Account.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of ProgressUpdate_Account
+	 * @param progressupdate_account
+	 */
+	public final void setProgressUpdate_Account(administration.proxies.Account progressupdate_account)
+	{
+		setProgressUpdate_Account(getContext(), progressupdate_account);
+	}
+
+	/**
+	 * Set value of ProgressUpdate_Account
+	 * @param context
+	 * @param progressupdate_account
+	 */
+	public final void setProgressUpdate_Account(com.mendix.systemwideinterfaces.core.IContext context, administration.proxies.Account progressupdate_account)
+	{
+		if (progressupdate_account == null)
+			getMendixObject().setValue(context, MemberNames.ProgressUpdate_Account.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.ProgressUpdate_Account.toString(), progressupdate_account.getMendixObject().getId());
 	}
 
 	/**

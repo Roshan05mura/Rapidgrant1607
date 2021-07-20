@@ -34,11 +34,12 @@
     justify-content: flex-end;
     
     .login-button{
-        button{
+        button {
             background-color: #0f1b6d;
-            padding: 15px 15px 15px 0px;
+            padding: 13px 15px 13px 0px;
             border-radius: 10px;
             font-weight: bold;
+            width: 125px;
         }
         .fa-arrow-right{
             font-size: 20px;
@@ -353,21 +354,21 @@
 .review-left-pane {
     .mx-groupbox{
         h4{
-            color: #00008b;
-            
+            color: #ffffff;
+            font-size: 16px;
             .glyphicon-minus{
                 margin-top:none ;
-                font-size: 20px;
+                font-size: 16px;
                 padding: 6px 6px 6px 5px;
-                background: #00008b;
+                // background: #00008b;
                 color: #fff;
                 border-radius: 50%;
             
             }
             .glyphicon-plus{
-                font-size: 20px;
+                font-size: 16px;
                 padding: 4px 8px 9px 9px;
-                background: #00008b;
+                // background: #00008b;
                 color: #fff;
                 border-radius: 50%;
             }
@@ -385,23 +386,23 @@
 .review-right-pane{
     .mx-groupbox{
         h4{
-            color: #00008b;
-            
+            color: #ffffff;
+            font-size: 16px;
             .glyphicon-minus{
                 margin-top:none ;
-                font-size: 20px;
-                padding: 6px 6px 6px 5px;
-                background: #00008b;
+                // font-size: 20px;
+                // padding: 6px 6px 6px 5px;
+                // background: #00008b;
                 color: #fff;
-                border-radius: 50%;
+                // border-radius: 50%;
             
             }
             .glyphicon-plus{
-                font-size: 20px;
-                padding: 4px 8px 9px 9px;
-                background: #00008b;
+                // font-size: 20px;
+                // padding: 4px 8px 9px 9px;
+                // background: #00008b;
                 color: #fff;
-                border-radius: 50%;
+                // border-radius: 50%;
             }
         }
     }

@@ -1,9 +1,9 @@
-import * as style0 from "C:/Users/girid/Documents/Mendix/RapidGrant-main/themesource/atlas_core/native/main";
-import * as style1 from "C:/Users/girid/Documents/Mendix/RapidGrant-main/themesource/bizzomatetokenreplacer/native/main";
-import * as style2 from "C:/Users/girid/Documents/Mendix/RapidGrant-main/themesource/ugs/native/main";
-import * as style3 from "C:/Users/girid/Documents/Mendix/RapidGrant-main/themesource/dynamicform/native/main";
-import * as style4 from "C:/Users/girid/Documents/Mendix/RapidGrant-main/themesource/draganddrop/native/main";
-import * as style5 from "C:/Users/girid/Documents/Mendix/RapidGrant-main/theme/native/main";
+import * as style0 from "D:/Projects/RapidGrant-main/themesource/atlas_core/native/main";
+import * as style1 from "D:/Projects/RapidGrant-main/themesource/bizzomatetokenreplacer/native/main";
+import * as style2 from "D:/Projects/RapidGrant-main/themesource/ugs/native/main";
+import * as style3 from "D:/Projects/RapidGrant-main/themesource/dynamicform/native/main";
+import * as style4 from "D:/Projects/RapidGrant-main/themesource/draganddrop/native/main";
+import * as style5 from "D:/Projects/RapidGrant-main/theme/native/main";
 
 import { flatten } from "mendix/native";
 

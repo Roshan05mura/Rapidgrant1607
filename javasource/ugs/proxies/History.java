@@ -33,6 +33,7 @@ public class History
 		Review("Review"),
 		Rfund_B("Rfund_B"),
 		Frequency("Frequency"),
+		CurrentUser_("CurrentUser_"),
 		History_GrantSystem("UGS.History_GrantSystem"),
 		Review_History("UGS.Review_History");
 
@@ -611,6 +612,42 @@ public class History
 	public final void setFrequency(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer frequency)
 	{
 		getMendixObject().setValue(context, MemberNames.Frequency.toString(), frequency);
+	}
+
+	/**
+	 * @return value of CurrentUser_
+	 */
+	public final java.lang.String getCurrentUser_()
+	{
+		return getCurrentUser_(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of CurrentUser_
+	 */
+	public final java.lang.String getCurrentUser_(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.CurrentUser_.toString());
+	}
+
+	/**
+	 * Set value of CurrentUser_
+	 * @param currentuser_
+	 */
+	public final void setCurrentUser_(java.lang.String currentuser_)
+	{
+		setCurrentUser_(getContext(), currentuser_);
+	}
+
+	/**
+	 * Set value of CurrentUser_
+	 * @param context
+	 * @param currentuser_
+	 */
+	public final void setCurrentUser_(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String currentuser_)
+	{
+		getMendixObject().setValue(context, MemberNames.CurrentUser_.toString(), currentuser_);
 	}
 
 	/**

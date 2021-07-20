@@ -231,9 +231,13 @@
 }
 .heading_all{
   color: rgb(0, 0, 139);
-    margin-left: 10px;
-    font-size: 35px;
-    margin-bottom: 20px;
+    font-size: 18pt;
+    margin-bottom: 10px;
+}
+.mx-groupbox>.mx-groupbox-header {
+  background-color: #3b90e7;
+  color: #fff;
+  border:1px solid #3b90e7;
 }
 //template grid
 
@@ -266,7 +270,6 @@
 .review-left-pane{
   .mx-groupbox-body{
     padding: 20px;
-    border-radius: 10px;
     background-color: #eee;
     border: 1px solid gray;
 
@@ -301,9 +304,18 @@
    border-radius:0px !important; 
   border-bottom: 1px solid #006293!important;
 }
-.create_box{
+.widget-rich-text{
+  border:1px solid #cccccc;
+}
 @media only screen and (min-device-width: 950px) and (min-device-width: 1024px) {
-
+.create_box {
   height:620px !important;
+}
+}
+
+//list faq
+.faq-list{
+  .mx-listview .mx-table th, .mx-listview .mx-table td {
+   padding: 7px !important;
 }
 }

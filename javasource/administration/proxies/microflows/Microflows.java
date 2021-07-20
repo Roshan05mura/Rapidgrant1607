@@ -78,6 +78,12 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		Core.microflowCall("Administration.NewWebServiceAccount").withParams(params).execute(context);
 	}
+	public static void oCH_OrganizationChange(IContext context, administration.proxies.Account _account)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Account", _account == null ? null : _account.getMendixObject());
+		Core.microflowCall("Administration.OCH_OrganizationChange").withParams(params).execute(context);
+	}
 	public static java.util.List<system.proxies.TimeZone> retrieveTimeZones(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
