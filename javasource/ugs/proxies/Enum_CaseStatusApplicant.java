@@ -6,10 +6,10 @@ package ugs.proxies;
 
 public enum Enum_CaseStatusApplicant
 {
-	Forward_To_GM(new java.lang.String[][] { new java.lang.String[] { "en_US", "Forward To GM" } }),
+	Forward_To_GM(new java.lang.String[][] { new java.lang.String[] { "en_US", "Forward To GAM" } }),
 	Forward_To_FA(new java.lang.String[][] { new java.lang.String[] { "en_US", "Forward To FA" } }),
 	Return_To_Applicant(new java.lang.String[][] { new java.lang.String[] { "en_US", "Return To Applicant" } }),
-	Return_To_GM(new java.lang.String[][] { new java.lang.String[] { "en_US", "Return To GM" } }),
+	Return_To_GM(new java.lang.String[][] { new java.lang.String[] { "en_US", "Return To GAM" } }),
 	Approved_By_FA(new java.lang.String[][] { new java.lang.String[] { "en_US", "Resolved By FA" } });
 
 	private java.util.Map<java.lang.String, java.lang.String> captions;

@@ -725,6 +725,24 @@ public class Microflows
 		params.put("Element", _element == null ? null : _element.getMendixObject());
 		return (java.lang.Boolean) Core.microflowCall("DynamicForm.Sub_ObjectCasting").withParams(params).execute(context);
 	}
+	public static boolean sub_ObjectCasting_SaveCheck(IContext context, dynamicform.proxies.Element _element)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Element", _element == null ? null : _element.getMendixObject());
+		return (java.lang.Boolean) Core.microflowCall("DynamicForm.Sub_ObjectCasting_SaveCheck").withParams(params).execute(context);
+	}
+	public static boolean sub_ObjectCasting_withdocs(IContext context, dynamicform.proxies.Element _element)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Element", _element == null ? null : _element.getMendixObject());
+		return (java.lang.Boolean) Core.microflowCall("DynamicForm.Sub_ObjectCasting_withdocs").withParams(params).execute(context);
+	}
+	public static void sub_StaticOrderAssign(IContext context, dynamicform.proxies.WorkflowRoles _workflowRoles)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("WorkflowRoles", _workflowRoles == null ? null : _workflowRoles.getMendixObject());
+		Core.microflowCall("DynamicForm.Sub_StaticOrderAssign").withParams(params).execute(context);
+	}
 	public static boolean sUB_ValidateDocs(IContext context, java.util.List<dynamicform.proxies.Element> _elementList)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -756,5 +774,11 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("Template", _template == null ? null : _template.getMendixObject());
 		return (java.lang.Boolean) Core.microflowCall("DynamicForm.Val_Template").withParams(params).execute(context);
+	}
+	public static boolean val_Template_SaveCheck(IContext context, dynamicform.proxies.Template _template)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Template", _template == null ? null : _template.getMendixObject());
+		return (java.lang.Boolean) Core.microflowCall("DynamicForm.Val_Template_SaveCheck").withParams(params).execute(context);
 	}
 }

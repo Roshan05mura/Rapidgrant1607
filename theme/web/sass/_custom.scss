@@ -1,0 +1,197 @@
+ .control-label {
+    color: black !important;
+    
+}
+.Customtable table{
+    border-collapse: collapse !important;
+    border-spacing: 0;
+    overflow: hidden;
+    // border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.dt-buttons span {
+    color: white;
+}
+.Customtable .dataTables_info {
+    display: none;
+}
+
+.Customtable .dataTables_length{
+    // margin-left: 800px;
+    margin-left: 85%;
+    // margin-top: -60px;
+    padding-bottom: 10px;
+    
+}
+.Customtable label{
+    font-weight: 700 !important;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+
+.sorting_disabled{
+ height: 30px;
+
+vertical-align: middle !important;
+    background-color: rgb(134, 134, 134);
+    // border-top-left-radius: 15px;
+}
+.sorting_asc, .sorting {
+    background-color: rgb(134, 134, 134);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.Customtable tbody {
+    border: solid 2px #868686;
+}
+
+.dataTables_info{
+    color: rgba(255, 255, 255, 0);
+}
+.custombuttons{
+    position: absolute;
+   margin-left: 22%;
+   font-size: 13px;
+}
+.custombuttons1{
+    position: absolute;
+   margin-left: 34%;
+   font-size: 13px;
+}
+
+.custombuttons3{
+    position: absolute;
+   margin-left: 46%;
+   font-size: 13px;
+}
+
+.custombuttons2{
+    position: absolute;
+   left: 10%;
+   font-size: 13px;
+}
+.customsearch .control-label {
+    font-weight: bold !important;
+    font-size: 15px !important;
+    
+
+}
+.custombold{
+    width: 55%;
+}
+.custombold .control-label{
+    font-weight: bold !important;
+}
+
+.custombold label .form-control{
+    font-size: 12px !important;
+}
+
+.Customtable label .form-control {
+    margin-top: -10px;
+    padding-left: 10%;
+}
+
+.dropdown-menu > .active > a::before , .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+content: '\f14a';
+font-family: "Font Awesome 5 pro";
+font-size: 15px;
+margin-right: 5px;
+
+}
+
+.dropdown-menu > li > a::before{
+    content: '\f0c8';
+  font-family: "Font Awesome 5 pro";
+  font-size: 15px;
+  margin-right: 5px;
+  
+}
+.dropdown-menu li{
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .Customsize{
+      font-size: 14px !important;
+    }
+   .fa-2x{
+        font-size: 1.6em !important;
+    }
+    .form_title {
+        font-size: 17px !important;
+    }
+  }
+@media (max-width: 768px) {
+    .Customsize{
+      font-size: 12px !important;
+    }
+   .fa-2x{
+        font-size: 1.3em !important;
+    }
+    .form_title {
+        font-size: 14px !important;
+    }
+  }
+    .Custombutton4{
+        margin-left: 45% !important;
+        position: absolute;
+        
+        font-size: 13px;
+    }
+    .Custombutton5{
+        margin-left: 56.5% !important;
+        position: absolute;
+        padding: -8% !important;
+        font-size: 13px;
+    }
+    .Custombutton6{
+        margin-left: 68% !important;
+        position: absolute;
+        padding: -8% !important;
+        font-size: 13px;
+    }
+    .Custombutton7{
+        margin-left: 79.5% !important;
+        position: absolute;
+        padding: -8% !important;
+        font-size: 13px;
+    }
+    .Custombutton8{
+        margin-left: 91% !important;
+        position: absolute;
+        padding: -8% !important;
+        font-size: 13px;
+        
+       
+    }
+    .Custombutton9{
+        font-size: 13px;
+    }
+
+    @media (max-width: 1344px) {
+.Customcard {
+    height: 80px !important;
+}
+.Customcount .mx-text{
+    font-size: 14px !important;
+    vertical-align: top;
+    
+    
+}
+.card .pull-right {
+    font-size: 14px !important;
+}
+.Customfal{
+    margin-top: -10px;
+}
+
+    }
+    
+    
+
+

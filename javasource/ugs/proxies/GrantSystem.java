@@ -91,6 +91,20 @@ public class GrantSystem extends system.proxies.WorkflowContext
 		Review_view_type("Review_view_type"),
 		ContractSigned("ContractSigned"),
 		FromFunds("FromFunds"),
+		CommentsContractVerfied("CommentsContractVerfied"),
+		Nationality("Nationality"),
+		ApplicantName("ApplicantName"),
+		Gender("Gender"),
+		AppliedDate("AppliedDate"),
+		ReportMail_count("ReportMail_count"),
+		Search("Search"),
+		Xpath("Xpath"),
+		DataTable("DataTable"),
+		Clone("Clone"),
+		Main_Dropdown("Main_Dropdown"),
+		GrantDetails_searchEnum("GrantDetails_searchEnum"),
+		FilterType("FilterType"),
+		DynamicSave("DynamicSave"),
 		Signature_GrantSystem_Clone("UGS.Signature_GrantSystem_Clone"),
 		GrantSystem_Aggrement_("UGS.GrantSystem_Aggrement_"),
 		GrantSystem_Printout("UGS.GrantSystem_Printout"),
@@ -103,6 +117,9 @@ public class GrantSystem extends system.proxies.WorkflowContext
 		ReviewForm_GrantSystem_CurrentReviewForm("UGS.ReviewForm_GrantSystem_CurrentReviewForm"),
 		Voucher_GrantSystem("UGS.Voucher_GrantSystem"),
 		ProgressUpdate_GrantSystem("UGS.ProgressUpdate_GrantSystem"),
+		GrantSystem_ExcelExport("UGS.GrantSystem_ExcelExport"),
+		GrantSystem_SaveSearchResult("UGS.GrantSystem_SaveSearchResult"),
+		GrantSystem_Header_2("UGS.GrantSystem_Header_2"),
 		GrantSystem_WorkflowUserTask("UGS.GrantSystem_WorkflowUserTask"),
 		GrantSystem_AllWorkflowUserTask("UGS.GrantSystem_AllWorkflowUserTask"),
 		GrantSystem_EmailTemplate("UGS.GrantSystem_EmailTemplate"),
@@ -113,6 +130,7 @@ public class GrantSystem extends system.proxies.WorkflowContext
 		GrantSystem_TemplateDummy("UGS.GrantSystem_TemplateDummy"),
 		GrantSystem_UserRole("UGS.GrantSystem_UserRole"),
 		GrantSystem_Count("UGS.GrantSystem_Count"),
+		GrantSystem_Intermediate("UGS.GrantSystem_Intermediate"),
 		ApplicationForm_GrantSystem("DynamicForm.ApplicationForm_GrantSystem"),
 		WorkflowInstance_WorkflowContext("System.WorkflowInstance_WorkflowContext");
 
@@ -2947,6 +2965,542 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	}
 
 	/**
+	 * @return value of CommentsContractVerfied
+	 */
+	public final java.lang.String getCommentsContractVerfied()
+	{
+		return getCommentsContractVerfied(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of CommentsContractVerfied
+	 */
+	public final java.lang.String getCommentsContractVerfied(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.CommentsContractVerfied.toString());
+	}
+
+	/**
+	 * Set value of CommentsContractVerfied
+	 * @param commentscontractverfied
+	 */
+	public final void setCommentsContractVerfied(java.lang.String commentscontractverfied)
+	{
+		setCommentsContractVerfied(getContext(), commentscontractverfied);
+	}
+
+	/**
+	 * Set value of CommentsContractVerfied
+	 * @param context
+	 * @param commentscontractverfied
+	 */
+	public final void setCommentsContractVerfied(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String commentscontractverfied)
+	{
+		getMendixObject().setValue(context, MemberNames.CommentsContractVerfied.toString(), commentscontractverfied);
+	}
+
+	/**
+	 * @return value of Nationality
+	 */
+	public final java.lang.String getNationality()
+	{
+		return getNationality(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Nationality
+	 */
+	public final java.lang.String getNationality(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Nationality.toString());
+	}
+
+	/**
+	 * Set value of Nationality
+	 * @param nationality
+	 */
+	public final void setNationality(java.lang.String nationality)
+	{
+		setNationality(getContext(), nationality);
+	}
+
+	/**
+	 * Set value of Nationality
+	 * @param context
+	 * @param nationality
+	 */
+	public final void setNationality(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String nationality)
+	{
+		getMendixObject().setValue(context, MemberNames.Nationality.toString(), nationality);
+	}
+
+	/**
+	 * @return value of ApplicantName
+	 */
+	public final java.lang.String getApplicantName()
+	{
+		return getApplicantName(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ApplicantName
+	 */
+	public final java.lang.String getApplicantName(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.ApplicantName.toString());
+	}
+
+	/**
+	 * Set value of ApplicantName
+	 * @param applicantname
+	 */
+	public final void setApplicantName(java.lang.String applicantname)
+	{
+		setApplicantName(getContext(), applicantname);
+	}
+
+	/**
+	 * Set value of ApplicantName
+	 * @param context
+	 * @param applicantname
+	 */
+	public final void setApplicantName(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String applicantname)
+	{
+		getMendixObject().setValue(context, MemberNames.ApplicantName.toString(), applicantname);
+	}
+
+	/**
+	 * Set value of Gender
+	 * @param gender
+	 */
+	public final ugs.proxies.Enum_Gender getGender()
+	{
+		return getGender(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Gender
+	 */
+	public final ugs.proxies.Enum_Gender getGender(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.Gender.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_Gender.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of Gender
+	 * @param gender
+	 */
+	public final void setGender(ugs.proxies.Enum_Gender gender)
+	{
+		setGender(getContext(), gender);
+	}
+
+	/**
+	 * Set value of Gender
+	 * @param context
+	 * @param gender
+	 */
+	public final void setGender(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_Gender gender)
+	{
+		if (gender != null)
+			getMendixObject().setValue(context, MemberNames.Gender.toString(), gender.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.Gender.toString(), null);
+	}
+
+	/**
+	 * @return value of AppliedDate
+	 */
+	public final java.util.Date getAppliedDate()
+	{
+		return getAppliedDate(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of AppliedDate
+	 */
+	public final java.util.Date getAppliedDate(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.AppliedDate.toString());
+	}
+
+	/**
+	 * Set value of AppliedDate
+	 * @param applieddate
+	 */
+	public final void setAppliedDate(java.util.Date applieddate)
+	{
+		setAppliedDate(getContext(), applieddate);
+	}
+
+	/**
+	 * Set value of AppliedDate
+	 * @param context
+	 * @param applieddate
+	 */
+	public final void setAppliedDate(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date applieddate)
+	{
+		getMendixObject().setValue(context, MemberNames.AppliedDate.toString(), applieddate);
+	}
+
+	/**
+	 * @return value of ReportMail_count
+	 */
+	public final java.lang.Integer getReportMail_count()
+	{
+		return getReportMail_count(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ReportMail_count
+	 */
+	public final java.lang.Integer getReportMail_count(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Integer) getMendixObject().getValue(context, MemberNames.ReportMail_count.toString());
+	}
+
+	/**
+	 * Set value of ReportMail_count
+	 * @param reportmail_count
+	 */
+	public final void setReportMail_count(java.lang.Integer reportmail_count)
+	{
+		setReportMail_count(getContext(), reportmail_count);
+	}
+
+	/**
+	 * Set value of ReportMail_count
+	 * @param context
+	 * @param reportmail_count
+	 */
+	public final void setReportMail_count(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Integer reportmail_count)
+	{
+		getMendixObject().setValue(context, MemberNames.ReportMail_count.toString(), reportmail_count);
+	}
+
+	/**
+	 * @return value of Search
+	 */
+	public final java.lang.Boolean getSearch()
+	{
+		return getSearch(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Search
+	 */
+	public final java.lang.Boolean getSearch(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.Search.toString());
+	}
+
+	/**
+	 * Set value of Search
+	 * @param search
+	 */
+	public final void setSearch(java.lang.Boolean search)
+	{
+		setSearch(getContext(), search);
+	}
+
+	/**
+	 * Set value of Search
+	 * @param context
+	 * @param search
+	 */
+	public final void setSearch(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean search)
+	{
+		getMendixObject().setValue(context, MemberNames.Search.toString(), search);
+	}
+
+	/**
+	 * @return value of Xpath
+	 */
+	public final java.lang.String getXpath()
+	{
+		return getXpath(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Xpath
+	 */
+	public final java.lang.String getXpath(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Xpath.toString());
+	}
+
+	/**
+	 * Set value of Xpath
+	 * @param xpath
+	 */
+	public final void setXpath(java.lang.String xpath)
+	{
+		setXpath(getContext(), xpath);
+	}
+
+	/**
+	 * Set value of Xpath
+	 * @param context
+	 * @param xpath
+	 */
+	public final void setXpath(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpath)
+	{
+		getMendixObject().setValue(context, MemberNames.Xpath.toString(), xpath);
+	}
+
+	/**
+	 * @return value of DataTable
+	 */
+	public final java.lang.Boolean getDataTable()
+	{
+		return getDataTable(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of DataTable
+	 */
+	public final java.lang.Boolean getDataTable(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.DataTable.toString());
+	}
+
+	/**
+	 * Set value of DataTable
+	 * @param datatable
+	 */
+	public final void setDataTable(java.lang.Boolean datatable)
+	{
+		setDataTable(getContext(), datatable);
+	}
+
+	/**
+	 * Set value of DataTable
+	 * @param context
+	 * @param datatable
+	 */
+	public final void setDataTable(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean datatable)
+	{
+		getMendixObject().setValue(context, MemberNames.DataTable.toString(), datatable);
+	}
+
+	/**
+	 * @return value of Clone
+	 */
+	public final java.lang.Boolean getClone()
+	{
+		return getClone(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Clone
+	 */
+	public final java.lang.Boolean getClone(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.Clone.toString());
+	}
+
+	/**
+	 * Set value of Clone
+	 * @param clone
+	 */
+	public final void setClone(java.lang.Boolean clone)
+	{
+		setClone(getContext(), clone);
+	}
+
+	/**
+	 * Set value of Clone
+	 * @param context
+	 * @param clone
+	 */
+	public final void setClone(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean clone)
+	{
+		getMendixObject().setValue(context, MemberNames.Clone.toString(), clone);
+	}
+
+	/**
+	 * Set value of Main_Dropdown
+	 * @param main_dropdown
+	 */
+	public final ugs.proxies.Enum_MainDropdown getMain_Dropdown()
+	{
+		return getMain_Dropdown(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Main_Dropdown
+	 */
+	public final ugs.proxies.Enum_MainDropdown getMain_Dropdown(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.Main_Dropdown.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_MainDropdown.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of Main_Dropdown
+	 * @param main_dropdown
+	 */
+	public final void setMain_Dropdown(ugs.proxies.Enum_MainDropdown main_dropdown)
+	{
+		setMain_Dropdown(getContext(), main_dropdown);
+	}
+
+	/**
+	 * Set value of Main_Dropdown
+	 * @param context
+	 * @param main_dropdown
+	 */
+	public final void setMain_Dropdown(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_MainDropdown main_dropdown)
+	{
+		if (main_dropdown != null)
+			getMendixObject().setValue(context, MemberNames.Main_Dropdown.toString(), main_dropdown.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.Main_Dropdown.toString(), null);
+	}
+
+	/**
+	 * Set value of GrantDetails_searchEnum
+	 * @param grantdetails_searchenum
+	 */
+	public final ugs.proxies.Enum_GrantSearch getGrantDetails_searchEnum()
+	{
+		return getGrantDetails_searchEnum(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of GrantDetails_searchEnum
+	 */
+	public final ugs.proxies.Enum_GrantSearch getGrantDetails_searchEnum(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.GrantDetails_searchEnum.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_GrantSearch.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of GrantDetails_searchEnum
+	 * @param grantdetails_searchenum
+	 */
+	public final void setGrantDetails_searchEnum(ugs.proxies.Enum_GrantSearch grantdetails_searchenum)
+	{
+		setGrantDetails_searchEnum(getContext(), grantdetails_searchenum);
+	}
+
+	/**
+	 * Set value of GrantDetails_searchEnum
+	 * @param context
+	 * @param grantdetails_searchenum
+	 */
+	public final void setGrantDetails_searchEnum(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_GrantSearch grantdetails_searchenum)
+	{
+		if (grantdetails_searchenum != null)
+			getMendixObject().setValue(context, MemberNames.GrantDetails_searchEnum.toString(), grantdetails_searchenum.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.GrantDetails_searchEnum.toString(), null);
+	}
+
+	/**
+	 * Set value of FilterType
+	 * @param filtertype
+	 */
+	public final ugs.proxies.Enum_FilterType getFilterType()
+	{
+		return getFilterType(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of FilterType
+	 */
+	public final ugs.proxies.Enum_FilterType getFilterType(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.FilterType.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_FilterType.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of FilterType
+	 * @param filtertype
+	 */
+	public final void setFilterType(ugs.proxies.Enum_FilterType filtertype)
+	{
+		setFilterType(getContext(), filtertype);
+	}
+
+	/**
+	 * Set value of FilterType
+	 * @param context
+	 * @param filtertype
+	 */
+	public final void setFilterType(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_FilterType filtertype)
+	{
+		if (filtertype != null)
+			getMendixObject().setValue(context, MemberNames.FilterType.toString(), filtertype.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.FilterType.toString(), null);
+	}
+
+	/**
+	 * @return value of DynamicSave
+	 */
+	public final java.lang.String getDynamicSave()
+	{
+		return getDynamicSave(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of DynamicSave
+	 */
+	public final java.lang.String getDynamicSave(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.DynamicSave.toString());
+	}
+
+	/**
+	 * Set value of DynamicSave
+	 * @param dynamicsave
+	 */
+	public final void setDynamicSave(java.lang.String dynamicsave)
+	{
+		setDynamicSave(getContext(), dynamicsave);
+	}
+
+	/**
+	 * Set value of DynamicSave
+	 * @param context
+	 * @param dynamicsave
+	 */
+	public final void setDynamicSave(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String dynamicsave)
+	{
+		getMendixObject().setValue(context, MemberNames.DynamicSave.toString(), dynamicsave);
+	}
+
+	/**
 	 * @return value of Signature_GrantSystem_Clone
 	 */
 	public final ugs.proxies.Signature getSignature_GrantSystem_Clone() throws com.mendix.core.CoreException
@@ -3463,6 +4017,135 @@ public class GrantSystem extends system.proxies.WorkflowContext
 	}
 
 	/**
+	 * @return value of GrantSystem_ExcelExport
+	 */
+	public final ugs.proxies.ExcelExport getGrantSystem_ExcelExport() throws com.mendix.core.CoreException
+	{
+		return getGrantSystem_ExcelExport(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of GrantSystem_ExcelExport
+	 */
+	public final ugs.proxies.ExcelExport getGrantSystem_ExcelExport(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.ExcelExport result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.GrantSystem_ExcelExport.toString());
+		if (identifier != null)
+			result = ugs.proxies.ExcelExport.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of GrantSystem_ExcelExport
+	 * @param grantsystem_excelexport
+	 */
+	public final void setGrantSystem_ExcelExport(ugs.proxies.ExcelExport grantsystem_excelexport)
+	{
+		setGrantSystem_ExcelExport(getContext(), grantsystem_excelexport);
+	}
+
+	/**
+	 * Set value of GrantSystem_ExcelExport
+	 * @param context
+	 * @param grantsystem_excelexport
+	 */
+	public final void setGrantSystem_ExcelExport(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.ExcelExport grantsystem_excelexport)
+	{
+		if (grantsystem_excelexport == null)
+			getMendixObject().setValue(context, MemberNames.GrantSystem_ExcelExport.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.GrantSystem_ExcelExport.toString(), grantsystem_excelexport.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of GrantSystem_SaveSearchResult
+	 */
+	public final ugs.proxies.SaveSearchResult getGrantSystem_SaveSearchResult() throws com.mendix.core.CoreException
+	{
+		return getGrantSystem_SaveSearchResult(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of GrantSystem_SaveSearchResult
+	 */
+	public final ugs.proxies.SaveSearchResult getGrantSystem_SaveSearchResult(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.SaveSearchResult result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.GrantSystem_SaveSearchResult.toString());
+		if (identifier != null)
+			result = ugs.proxies.SaveSearchResult.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of GrantSystem_SaveSearchResult
+	 * @param grantsystem_savesearchresult
+	 */
+	public final void setGrantSystem_SaveSearchResult(ugs.proxies.SaveSearchResult grantsystem_savesearchresult)
+	{
+		setGrantSystem_SaveSearchResult(getContext(), grantsystem_savesearchresult);
+	}
+
+	/**
+	 * Set value of GrantSystem_SaveSearchResult
+	 * @param context
+	 * @param grantsystem_savesearchresult
+	 */
+	public final void setGrantSystem_SaveSearchResult(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.SaveSearchResult grantsystem_savesearchresult)
+	{
+		if (grantsystem_savesearchresult == null)
+			getMendixObject().setValue(context, MemberNames.GrantSystem_SaveSearchResult.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.GrantSystem_SaveSearchResult.toString(), grantsystem_savesearchresult.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of GrantSystem_Header_2
+	 */
+	public final ugs.proxies.Header_2 getGrantSystem_Header_2() throws com.mendix.core.CoreException
+	{
+		return getGrantSystem_Header_2(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of GrantSystem_Header_2
+	 */
+	public final ugs.proxies.Header_2 getGrantSystem_Header_2(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.Header_2 result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.GrantSystem_Header_2.toString());
+		if (identifier != null)
+			result = ugs.proxies.Header_2.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of GrantSystem_Header_2
+	 * @param grantsystem_header_2
+	 */
+	public final void setGrantSystem_Header_2(ugs.proxies.Header_2 grantsystem_header_2)
+	{
+		setGrantSystem_Header_2(getContext(), grantsystem_header_2);
+	}
+
+	/**
+	 * Set value of GrantSystem_Header_2
+	 * @param context
+	 * @param grantsystem_header_2
+	 */
+	public final void setGrantSystem_Header_2(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Header_2 grantsystem_header_2)
+	{
+		if (grantsystem_header_2 == null)
+			getMendixObject().setValue(context, MemberNames.GrantSystem_Header_2.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.GrantSystem_Header_2.toString(), grantsystem_header_2.getMendixObject().getId());
+	}
+
+	/**
 	 * @return value of GrantSystem_WorkflowUserTask
 	 */
 	public final system.proxies.WorkflowUserTask getGrantSystem_WorkflowUserTask() throws com.mendix.core.CoreException
@@ -3899,6 +4582,49 @@ public class GrantSystem extends system.proxies.WorkflowContext
 			getMendixObject().setValue(context, MemberNames.GrantSystem_Count.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.GrantSystem_Count.toString(), grantsystem_count.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of GrantSystem_Intermediate
+	 */
+	public final dynamicform.proxies.Intermediate getGrantSystem_Intermediate() throws com.mendix.core.CoreException
+	{
+		return getGrantSystem_Intermediate(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of GrantSystem_Intermediate
+	 */
+	public final dynamicform.proxies.Intermediate getGrantSystem_Intermediate(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		dynamicform.proxies.Intermediate result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.GrantSystem_Intermediate.toString());
+		if (identifier != null)
+			result = dynamicform.proxies.Intermediate.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of GrantSystem_Intermediate
+	 * @param grantsystem_intermediate
+	 */
+	public final void setGrantSystem_Intermediate(dynamicform.proxies.Intermediate grantsystem_intermediate)
+	{
+		setGrantSystem_Intermediate(getContext(), grantsystem_intermediate);
+	}
+
+	/**
+	 * Set value of GrantSystem_Intermediate
+	 * @param context
+	 * @param grantsystem_intermediate
+	 */
+	public final void setGrantSystem_Intermediate(com.mendix.systemwideinterfaces.core.IContext context, dynamicform.proxies.Intermediate grantsystem_intermediate)
+	{
+		if (grantsystem_intermediate == null)
+			getMendixObject().setValue(context, MemberNames.GrantSystem_Intermediate.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.GrantSystem_Intermediate.toString(), grantsystem_intermediate.getMendixObject().getId());
 	}
 
 	/**

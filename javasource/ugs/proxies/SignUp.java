@@ -27,6 +27,8 @@ public class SignUp
 		MobileNumber("MobileNumber"),
 		Role("Role"),
 		OrganisationName("OrganisationName"),
+		Nationality("Nationality"),
+		Gender("Gender"),
 		SignUp_Organization("UGS.SignUp_Organization"),
 		SignUp_Account("UGS.SignUp_Account");
 
@@ -373,6 +375,94 @@ public class SignUp
 	public final void setOrganisationName(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String organisationname)
 	{
 		getMendixObject().setValue(context, MemberNames.OrganisationName.toString(), organisationname);
+	}
+
+	/**
+	 * Set value of Nationality
+	 * @param nationality
+	 */
+	public final countriesv5.proxies.Countries getNationality()
+	{
+		return getNationality(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Nationality
+	 */
+	public final countriesv5.proxies.Countries getNationality(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.Nationality.toString());
+		if (obj == null)
+			return null;
+
+		return countriesv5.proxies.Countries.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of Nationality
+	 * @param nationality
+	 */
+	public final void setNationality(countriesv5.proxies.Countries nationality)
+	{
+		setNationality(getContext(), nationality);
+	}
+
+	/**
+	 * Set value of Nationality
+	 * @param context
+	 * @param nationality
+	 */
+	public final void setNationality(com.mendix.systemwideinterfaces.core.IContext context, countriesv5.proxies.Countries nationality)
+	{
+		if (nationality != null)
+			getMendixObject().setValue(context, MemberNames.Nationality.toString(), nationality.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.Nationality.toString(), null);
+	}
+
+	/**
+	 * Set value of Gender
+	 * @param gender
+	 */
+	public final ugs.proxies.Enum_Gender getGender()
+	{
+		return getGender(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Gender
+	 */
+	public final ugs.proxies.Enum_Gender getGender(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.Gender.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_Gender.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of Gender
+	 * @param gender
+	 */
+	public final void setGender(ugs.proxies.Enum_Gender gender)
+	{
+		setGender(getContext(), gender);
+	}
+
+	/**
+	 * Set value of Gender
+	 * @param context
+	 * @param gender
+	 */
+	public final void setGender(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_Gender gender)
+	{
+		if (gender != null)
+			getMendixObject().setValue(context, MemberNames.Gender.toString(), gender.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.Gender.toString(), null);
 	}
 
 	/**

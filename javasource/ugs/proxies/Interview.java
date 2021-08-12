@@ -31,6 +31,7 @@ public class Interview
 		TypeOfMeeting("TypeOfMeeting"),
 		JsonString("JsonString"),
 		Interviewers("Interviewers"),
+		InterviewEndDate("InterviewEndDate"),
 		GrantSystem_Allinterviews("UGS.GrantSystem_Allinterviews"),
 		Activity_Interview("UGS.Activity_Interview"),
 		Interview_GrantSystem("UGS.Interview_GrantSystem"),
@@ -534,6 +535,42 @@ public class Interview
 	public final void setInterviewers(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String interviewers)
 	{
 		getMendixObject().setValue(context, MemberNames.Interviewers.toString(), interviewers);
+	}
+
+	/**
+	 * @return value of InterviewEndDate
+	 */
+	public final java.util.Date getInterviewEndDate()
+	{
+		return getInterviewEndDate(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of InterviewEndDate
+	 */
+	public final java.util.Date getInterviewEndDate(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.util.Date) getMendixObject().getValue(context, MemberNames.InterviewEndDate.toString());
+	}
+
+	/**
+	 * Set value of InterviewEndDate
+	 * @param interviewenddate
+	 */
+	public final void setInterviewEndDate(java.util.Date interviewenddate)
+	{
+		setInterviewEndDate(getContext(), interviewenddate);
+	}
+
+	/**
+	 * Set value of InterviewEndDate
+	 * @param context
+	 * @param interviewenddate
+	 */
+	public final void setInterviewEndDate(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date interviewenddate)
+	{
+		getMendixObject().setValue(context, MemberNames.InterviewEndDate.toString(), interviewenddate);
 	}
 
 	/**

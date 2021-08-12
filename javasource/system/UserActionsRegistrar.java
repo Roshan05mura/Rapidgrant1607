@@ -147,6 +147,7 @@ public class UserActionsRegistrar
     registrator.registerUserAction(mxmodelreflection.actions.TestThePattern.class);
     registrator.registerUserAction(mxmodelreflection.actions.ValidateTokensInMessage.class);
     registrator.registerUserAction(system.actions.VerifyPassword.class);
+    registrator.registerUserAction(ugs.actions.ExportData.class);
     registrator.registerUserAction(ugs.actions.Java_action_TimeCalculation.class);
     registrator.registerUserAction(ugs.actions.LondAns_WordCount.class);
     registrator.registerUserAction(ugs.actions.ShortAns_WordCount.class);

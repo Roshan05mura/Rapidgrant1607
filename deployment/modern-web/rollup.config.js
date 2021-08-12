@@ -1,10 +1,10 @@
 const {
     nodeResolve,
-} = require("D:/Software/9.3.0.22930/modeler/tools/node/node_modules/@rollup/plugin-node-resolve");
-const commonjs = require("D:/Software/9.3.0.22930/modeler/tools/node/node_modules/@rollup/plugin-commonjs");
-const clear = require("D:/Software/9.3.0.22930/modeler/tools/node/node_modules/rollup-plugin-clear");
-const esbuild = require("D:/Software/9.3.0.22930/modeler/tools/node/node_modules/rollup-plugin-esbuild");
-const alias = require("D:/Software/9.3.0.22930/modeler/tools/node/node_modules/@rollup/plugin-alias");
+} = require("C:/Program Files/Mendix/9.3.0.22930/modeler/tools/node/node_modules/@rollup/plugin-node-resolve");
+const commonjs = require("C:/Program Files/Mendix/9.3.0.22930/modeler/tools/node/node_modules/@rollup/plugin-commonjs");
+const clear = require("C:/Program Files/Mendix/9.3.0.22930/modeler/tools/node/node_modules/rollup-plugin-clear");
+const esbuild = require("C:/Program Files/Mendix/9.3.0.22930/modeler/tools/node/node_modules/rollup-plugin-esbuild");
+const alias = require("C:/Program Files/Mendix/9.3.0.22930/modeler/tools/node/node_modules/@rollup/plugin-alias");
 
 export default {
     input: "index.js",
@@ -43,9 +43,9 @@ export default {
         }),
         alias({
             entries: {
-                react: "D:/Software/9.3.0.22930/modeler/tools/node/node_modules/react",
-                "big.js": "D:/Software/9.3.0.22930/modeler/tools/node/node_modules/big.js",
-                "mendix-web": "D:/Software/9.3.0.22930/modeler/tools/node/node_modules/mendix-web",
+                react: "C:/Program Files/Mendix/9.3.0.22930/modeler/tools/node/node_modules/react",
+                "big.js": "C:/Program Files/Mendix/9.3.0.22930/modeler/tools/node/node_modules/big.js",
+                "mendix-web": "C:/Program Files/Mendix/9.3.0.22930/modeler/tools/node/node_modules/mendix-web",
             },
             customResolver: nodeResolve(),
         }),

@@ -45,6 +45,7 @@ public class CaseMangement
 		Phase("Phase"),
 		Remarks("Remarks"),
 		StatusApplicant("StatusApplicant"),
+		IsView("IsView"),
 		CaseMangement_GrantSystem("UGS.CaseMangement_GrantSystem"),
 		FileDocument_CaseMangement("UGS.FileDocument_CaseMangement"),
 		Applicant_Case("UGS.Applicant_Case"),
@@ -1105,6 +1106,42 @@ public class CaseMangement
 			getMendixObject().setValue(context, MemberNames.StatusApplicant.toString(), statusapplicant.toString());
 		else
 			getMendixObject().setValue(context, MemberNames.StatusApplicant.toString(), null);
+	}
+
+	/**
+	 * @return value of IsView
+	 */
+	public final java.lang.Boolean getIsView()
+	{
+		return getIsView(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of IsView
+	 */
+	public final java.lang.Boolean getIsView(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.IsView.toString());
+	}
+
+	/**
+	 * Set value of IsView
+	 * @param isview
+	 */
+	public final void setIsView(java.lang.Boolean isview)
+	{
+		setIsView(getContext(), isview);
+	}
+
+	/**
+	 * Set value of IsView
+	 * @param context
+	 * @param isview
+	 */
+	public final void setIsView(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean isview)
+	{
+		getMendixObject().setValue(context, MemberNames.IsView.toString(), isview);
 	}
 
 	/**

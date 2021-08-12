@@ -8,7 +8,8 @@ public enum Enum_CaseTypesGM
 {
 	Withdrawal_of_Grant_Terminate_Grantee(new java.lang.String[][] { new java.lang.String[] { "en_US", "Withdrawal of Grant/Terminate Grantee" } }),
 	Graduate_Tracking(new java.lang.String[][] { new java.lang.String[] { "en_US", "Graduate Tracking" } }),
-	Disciplinary_action(new java.lang.String[][] { new java.lang.String[] { "en_US", "Disciplinary action" } });
+	Disciplinary_action(new java.lang.String[][] { new java.lang.String[] { "en_US", "Disciplinary action" } }),
+	Adhoc_Request(new java.lang.String[][] { new java.lang.String[] { "en_US", "Adhoc Request" } });
 
 	private java.util.Map<java.lang.String, java.lang.String> captions;
 

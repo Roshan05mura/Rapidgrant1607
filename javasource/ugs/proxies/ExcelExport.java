@@ -21,8 +21,7 @@ public class ExcelExport extends system.proxies.FileDocument
 		DeleteAfterDownload("DeleteAfterDownload"),
 		Contents("Contents"),
 		HasContents("HasContents"),
-		Size("Size"),
-		ExcelExport_GrantSystem("UGS.ExcelExport_GrantSystem");
+		Size("Size");
 
 		private java.lang.String metaName;
 
@@ -80,49 +79,6 @@ public class ExcelExport extends system.proxies.FileDocument
 		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//UGS.ExcelExport" + xpathConstraint))
 			result.add(ugs.proxies.ExcelExport.initialize(context, obj));
 		return result;
-	}
-
-	/**
-	 * @return value of ExcelExport_GrantSystem
-	 */
-	public final ugs.proxies.GrantSystem getExcelExport_GrantSystem() throws com.mendix.core.CoreException
-	{
-		return getExcelExport_GrantSystem(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of ExcelExport_GrantSystem
-	 */
-	public final ugs.proxies.GrantSystem getExcelExport_GrantSystem(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		ugs.proxies.GrantSystem result = null;
-		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.ExcelExport_GrantSystem.toString());
-		if (identifier != null)
-			result = ugs.proxies.GrantSystem.load(context, identifier);
-		return result;
-	}
-
-	/**
-	 * Set value of ExcelExport_GrantSystem
-	 * @param excelexport_grantsystem
-	 */
-	public final void setExcelExport_GrantSystem(ugs.proxies.GrantSystem excelexport_grantsystem)
-	{
-		setExcelExport_GrantSystem(getContext(), excelexport_grantsystem);
-	}
-
-	/**
-	 * Set value of ExcelExport_GrantSystem
-	 * @param context
-	 * @param excelexport_grantsystem
-	 */
-	public final void setExcelExport_GrantSystem(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.GrantSystem excelexport_grantsystem)
-	{
-		if (excelexport_grantsystem == null)
-			getMendixObject().setValue(context, MemberNames.ExcelExport_GrantSystem.toString(), null);
-		else
-			getMendixObject().setValue(context, MemberNames.ExcelExport_GrantSystem.toString(), excelexport_grantsystem.getMendixObject().getId());
 	}
 
 	@java.lang.Override

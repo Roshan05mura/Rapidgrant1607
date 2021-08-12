@@ -29,6 +29,7 @@ public class Grant
 		_CreatedDate("_CreatedDate"),
 		Status("Status"),
 		OverallRating("OverallRating"),
+		OrganizationName("OrganizationName"),
 		AvailableGrants("UGS.AvailableGrants"),
 		SelectedGrant("UGS.SelectedGrant"),
 		AvailableGrants_Cases("UGS.AvailableGrants_Cases");
@@ -440,6 +441,42 @@ public class Grant
 	public final void setOverallRating(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String overallrating)
 	{
 		getMendixObject().setValue(context, MemberNames.OverallRating.toString(), overallrating);
+	}
+
+	/**
+	 * @return value of OrganizationName
+	 */
+	public final java.lang.String getOrganizationName()
+	{
+		return getOrganizationName(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of OrganizationName
+	 */
+	public final java.lang.String getOrganizationName(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.OrganizationName.toString());
+	}
+
+	/**
+	 * Set value of OrganizationName
+	 * @param organizationname
+	 */
+	public final void setOrganizationName(java.lang.String organizationname)
+	{
+		setOrganizationName(getContext(), organizationname);
+	}
+
+	/**
+	 * Set value of OrganizationName
+	 * @param context
+	 * @param organizationname
+	 */
+	public final void setOrganizationName(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String organizationname)
+	{
+		getMendixObject().setValue(context, MemberNames.OrganizationName.toString(), organizationname);
 	}
 
 	/**

@@ -10,6 +10,14 @@ public class Constants
 {
 	// These are the constants for the UGS module
 
+	/**
+	* Custom header to include in exported CSV data. Do not include a newline character.
+	*/
+	public static java.lang.String getCSV_EXPORT_HEADER()
+	{
+		return (java.lang.String)Core.getConfiguration().getConstantValue("UGS.CSV_EXPORT_HEADER");
+	}
+
 	public static java.lang.String getDatasetId()
 	{
 		return (java.lang.String)Core.getConfiguration().getConstantValue("UGS.DatasetId");
@@ -23,6 +31,11 @@ public class Constants
 	public static java.lang.String getGroupId()
 	{
 		return (java.lang.String)Core.getConfiguration().getConstantValue("UGS.GroupId");
+	}
+
+	public static java.lang.String getLOGNODE_DATATABLES_EXPORT()
+	{
+		return (java.lang.String)Core.getConfiguration().getConstantValue("UGS.LOGNODE_DATATABLES_EXPORT");
 	}
 
 	public static java.lang.String getReportId()

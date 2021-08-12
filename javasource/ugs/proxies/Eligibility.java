@@ -23,6 +23,7 @@ public class Eligibility
 		Question("Question"),
 		Answer("Answer"),
 		Eligibility("Eligibility"),
+		Editable("Editable"),
 		Officers_Eligibility_GrantSystem("UGS.Officers_Eligibility_GrantSystem"),
 		Anonymous_Eligibility_GrantSystem("UGS.Anonymous_Eligibility_GrantSystem"),
 		Eligibility_Account("UGS.Eligibility_Account");
@@ -226,6 +227,42 @@ public class Eligibility
 	public final void setEligibility(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean eligibility)
 	{
 		getMendixObject().setValue(context, MemberNames.Eligibility.toString(), eligibility);
+	}
+
+	/**
+	 * @return value of Editable
+	 */
+	public final java.lang.Boolean getEditable()
+	{
+		return getEditable(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Editable
+	 */
+	public final java.lang.Boolean getEditable(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.Editable.toString());
+	}
+
+	/**
+	 * Set value of Editable
+	 * @param editable
+	 */
+	public final void setEditable(java.lang.Boolean editable)
+	{
+		setEditable(getContext(), editable);
+	}
+
+	/**
+	 * Set value of Editable
+	 * @param context
+	 * @param editable
+	 */
+	public final void setEditable(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean editable)
+	{
+		getMendixObject().setValue(context, MemberNames.Editable.toString(), editable);
 	}
 
 	/**

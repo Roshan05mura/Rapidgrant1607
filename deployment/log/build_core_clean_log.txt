@@ -1,10 +1,10 @@
-Buildfile: D:\Projects\RapidGrant-main\deployment\build_core.xml
+Buildfile: D:\TECHNICAL_PART\Mendix\RapidGrant-main\deployment\build_core.xml
 
 clean:
-   [delete] Deleting directory D:\Projects\RapidGrant-main\deployment\model
-   [delete] Deleting directory D:\Projects\RapidGrant-main\deployment\run
+   [delete] Deleting directory D:\TECHNICAL_PART\Mendix\RapidGrant-main\deployment\model
+   [delete] Deleting directory D:\TECHNICAL_PART\Mendix\RapidGrant-main\deployment\run
 
 BUILD SUCCESSFUL
-Total time: 3 seconds
+Total time: 2 seconds
 
 

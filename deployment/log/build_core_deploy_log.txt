@@ -1,11 +1,11 @@
-Buildfile: D:\Projects\RapidGrant-main\deployment\build_core.xml
+Buildfile: D:\TECHNICAL_PART\Mendix\RapidGrant-main\deployment\build_core.xml
 
 deploy:
-     [copy] Copying 41 files to D:\Projects\RapidGrant-main\deployment
-     [copy] Copying 225 files to D:\Projects\RapidGrant-main\deployment\model\lib\userlib
-     [copy] Copying 47 files to D:\Projects\RapidGrant-main\deployment\model\resources
+     [copy] Copying 41 files to D:\TECHNICAL_PART\Mendix\RapidGrant-main\deployment
+     [copy] Copying 230 files to D:\TECHNICAL_PART\Mendix\RapidGrant-main\deployment\model\lib\userlib
+     [copy] Copying 47 files to D:\TECHNICAL_PART\Mendix\RapidGrant-main\deployment\model\resources
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 2 seconds
 
 

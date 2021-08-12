@@ -22,7 +22,8 @@ public class FileDocument extends system.proxies.FileDocument
 		Contents("Contents"),
 		HasContents("HasContents"),
 		Size("Size"),
-		FileDocument_CaseMangement("UGS.FileDocument_CaseMangement");
+		FileDocument_CaseMangement("UGS.FileDocument_CaseMangement"),
+		AdocRequest("UGS.AdocRequest");
 
 		private java.lang.String metaName;
 
@@ -123,6 +124,49 @@ public class FileDocument extends system.proxies.FileDocument
 			getMendixObject().setValue(context, MemberNames.FileDocument_CaseMangement.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.FileDocument_CaseMangement.toString(), filedocument_casemangement.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of AdocRequest
+	 */
+	public final ugs.proxies.CaseMangement getAdocRequest() throws com.mendix.core.CoreException
+	{
+		return getAdocRequest(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of AdocRequest
+	 */
+	public final ugs.proxies.CaseMangement getAdocRequest(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.CaseMangement result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.AdocRequest.toString());
+		if (identifier != null)
+			result = ugs.proxies.CaseMangement.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of AdocRequest
+	 * @param adocrequest
+	 */
+	public final void setAdocRequest(ugs.proxies.CaseMangement adocrequest)
+	{
+		setAdocRequest(getContext(), adocrequest);
+	}
+
+	/**
+	 * Set value of AdocRequest
+	 * @param context
+	 * @param adocrequest
+	 */
+	public final void setAdocRequest(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.CaseMangement adocrequest)
+	{
+		if (adocrequest == null)
+			getMendixObject().setValue(context, MemberNames.AdocRequest.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.AdocRequest.toString(), adocrequest.getMendixObject().getId());
 	}
 
 	@java.lang.Override

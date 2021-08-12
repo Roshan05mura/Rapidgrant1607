@@ -27,6 +27,12 @@ public class Microflows
 		params.put("MxSorting", _mxSorting == null ? null : _mxSorting.getMendixObject());
 		Core.microflowCall("XLSReport.ACr_Sorting").withParams(params).execute(context);
 	}
+	public static void aCT_SaveExcelTemplate(IContext context, xlsreport.proxies.MxTemplate _mxTemplate)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("MxTemplate", _mxTemplate == null ? null : _mxTemplate.getMendixObject());
+		Core.microflowCall("XLSReport.ACT_SaveExcelTemplate").withParams(params).execute(context);
+	}
 	public static boolean bCo_MxData(IContext context, xlsreport.proxies.MxData _mxData)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();

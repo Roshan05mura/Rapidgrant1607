@@ -20,6 +20,8 @@ public class Account extends system.proxies.User
 		Email("Email"),
 		IsLocalUser("IsLocalUser"),
 		OrganisationName("OrganisationName"),
+		Nationality("Nationality"),
+		Gender("Gender"),
 		Name("Name"),
 		Password("Password"),
 		LastLogin("LastLogin"),
@@ -34,6 +36,7 @@ public class Account extends system.proxies.User
 		Interview_applicant("UGS.Interview_applicant"),
 		Interview_ChiarPerson("UGS.Interview_ChiarPerson"),
 		Workflow_Account("UGS.Workflow_Account"),
+		FieldsName_Account("UGS.FieldsName_Account"),
 		Account_Organization("Administration.Account_Organization"),
 		Account_Profile_2("Administration.Account_Profile_2"),
 		Account_SelectInterviewers("Administration.Account_SelectInterviewers"),
@@ -242,6 +245,94 @@ public class Account extends system.proxies.User
 	public final void setOrganisationName(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String organisationname)
 	{
 		getMendixObject().setValue(context, MemberNames.OrganisationName.toString(), organisationname);
+	}
+
+	/**
+	 * Set value of Nationality
+	 * @param nationality
+	 */
+	public final countriesv5.proxies.Countries getNationality()
+	{
+		return getNationality(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Nationality
+	 */
+	public final countriesv5.proxies.Countries getNationality(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.Nationality.toString());
+		if (obj == null)
+			return null;
+
+		return countriesv5.proxies.Countries.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of Nationality
+	 * @param nationality
+	 */
+	public final void setNationality(countriesv5.proxies.Countries nationality)
+	{
+		setNationality(getContext(), nationality);
+	}
+
+	/**
+	 * Set value of Nationality
+	 * @param context
+	 * @param nationality
+	 */
+	public final void setNationality(com.mendix.systemwideinterfaces.core.IContext context, countriesv5.proxies.Countries nationality)
+	{
+		if (nationality != null)
+			getMendixObject().setValue(context, MemberNames.Nationality.toString(), nationality.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.Nationality.toString(), null);
+	}
+
+	/**
+	 * Set value of Gender
+	 * @param gender
+	 */
+	public final ugs.proxies.Enum_Gender getGender()
+	{
+		return getGender(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Gender
+	 */
+	public final ugs.proxies.Enum_Gender getGender(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.Gender.toString());
+		if (obj == null)
+			return null;
+
+		return ugs.proxies.Enum_Gender.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of Gender
+	 * @param gender
+	 */
+	public final void setGender(ugs.proxies.Enum_Gender gender)
+	{
+		setGender(getContext(), gender);
+	}
+
+	/**
+	 * Set value of Gender
+	 * @param context
+	 * @param gender
+	 */
+	public final void setGender(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.Enum_Gender gender)
+	{
+		if (gender != null)
+			getMendixObject().setValue(context, MemberNames.Gender.toString(), gender.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.Gender.toString(), null);
 	}
 
 	/**
@@ -506,6 +597,49 @@ public class Account extends system.proxies.User
 			getMendixObject().setValue(context, MemberNames.Workflow_Account.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.Workflow_Account.toString(), workflow_account.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of FieldsName_Account
+	 */
+	public final ugs.proxies.FieldsName getFieldsName_Account() throws com.mendix.core.CoreException
+	{
+		return getFieldsName_Account(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of FieldsName_Account
+	 */
+	public final ugs.proxies.FieldsName getFieldsName_Account(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		ugs.proxies.FieldsName result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.FieldsName_Account.toString());
+		if (identifier != null)
+			result = ugs.proxies.FieldsName.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of FieldsName_Account
+	 * @param fieldsname_account
+	 */
+	public final void setFieldsName_Account(ugs.proxies.FieldsName fieldsname_account)
+	{
+		setFieldsName_Account(getContext(), fieldsname_account);
+	}
+
+	/**
+	 * Set value of FieldsName_Account
+	 * @param context
+	 * @param fieldsname_account
+	 */
+	public final void setFieldsName_Account(com.mendix.systemwideinterfaces.core.IContext context, ugs.proxies.FieldsName fieldsname_account)
+	{
+		if (fieldsname_account == null)
+			getMendixObject().setValue(context, MemberNames.FieldsName_Account.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.FieldsName_Account.toString(), fieldsname_account.getMendixObject().getId());
 	}
 
 	/**

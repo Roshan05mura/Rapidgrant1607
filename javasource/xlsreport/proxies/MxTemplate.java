@@ -28,6 +28,7 @@ public class MxTemplate
 		DateTimePresentation("DateTimePresentation"),
 		CustomeDateFormat("CustomeDateFormat"),
 		MxTemplate_CustomExcel("XLSReport.MxTemplate_CustomExcel"),
+		MxTemplate_Excel("XLSReport.MxTemplate_Excel"),
 		MxTemplate_InputObject("XLSReport.MxTemplate_InputObject");
 
 		private java.lang.String metaName;
@@ -440,6 +441,49 @@ public class MxTemplate
 			getMendixObject().setValue(context, MemberNames.MxTemplate_CustomExcel.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.MxTemplate_CustomExcel.toString(), mxtemplate_customexcel.getMendixObject().getId());
+	}
+
+	/**
+	 * @return value of MxTemplate_Excel
+	 */
+	public final xlsreport.proxies.Excel getMxTemplate_Excel() throws com.mendix.core.CoreException
+	{
+		return getMxTemplate_Excel(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of MxTemplate_Excel
+	 */
+	public final xlsreport.proxies.Excel getMxTemplate_Excel(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	{
+		xlsreport.proxies.Excel result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.MxTemplate_Excel.toString());
+		if (identifier != null)
+			result = xlsreport.proxies.Excel.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of MxTemplate_Excel
+	 * @param mxtemplate_excel
+	 */
+	public final void setMxTemplate_Excel(xlsreport.proxies.Excel mxtemplate_excel)
+	{
+		setMxTemplate_Excel(getContext(), mxtemplate_excel);
+	}
+
+	/**
+	 * Set value of MxTemplate_Excel
+	 * @param context
+	 * @param mxtemplate_excel
+	 */
+	public final void setMxTemplate_Excel(com.mendix.systemwideinterfaces.core.IContext context, xlsreport.proxies.Excel mxtemplate_excel)
+	{
+		if (mxtemplate_excel == null)
+			getMendixObject().setValue(context, MemberNames.MxTemplate_Excel.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.MxTemplate_Excel.toString(), mxtemplate_excel.getMendixObject().getId());
 	}
 
 	/**

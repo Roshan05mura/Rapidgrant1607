@@ -7,7 +7,6 @@ package dynamicform.proxies;
 public enum Enum_ReviewType
 {
 	Rating(new java.lang.String[][] { new java.lang.String[] { "en_US", "Rate the Application" } }),
-	Interview(new java.lang.String[][] { new java.lang.String[] { "en_US", "Schedule Interview" } }),
 	Test(new java.lang.String[][] { new java.lang.String[] { "en_US", "Assign Evaluation Test" } }),
 	Contract_Generation(new java.lang.String[][] { new java.lang.String[] { "en_US", "Generate the Contract" } });
 

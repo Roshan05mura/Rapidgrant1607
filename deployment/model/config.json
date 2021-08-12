@@ -6,11 +6,13 @@
     "DatabaseHost": "",
     "DatabaseUserName": "",
     "DatabaseUseIntegratedSecurity": "False",
-    "ApplicationRootUrl": "http://localhost",
+    "ApplicationRootUrl": "http://localhost:8081/",
     "ScheduledEventExecution": "Specified",
     "MyScheduledEvents": "UGS.Scheduled_event_Remainder,DeepLink.CleanUp,EmailTemplate.Cleanup,MendixSSO.DeleteExpiredTokens,MendixSSO.SE_CleanupAuthRequest"
   },
   "Constants": {
+    "UGS.CSV_EXPORT_HEADER": "SEP=;",
+    "UGS.LOGNODE_DATATABLES_EXPORT": "DataTablesExport",
     "UGS.GroupId": "de269c15-9734-4c19-9f22-197daa76a74e",
     "UGS.EmbedUrl": "https://app.powerbi.com/reportEmbed?reportId=7af06b49-9a57-4417-a70d-5cd45bf27025&groupId=de269c15-9734-4c19-9f22-197daa76a74e&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLUlORElBLUNFTlRSQUwtQS1QUklNQVJZLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJtb2Rlcm5FbWJlZCI6dHJ1ZSwiY2VydGlmaWVkVGVsZW1ldHJ5RW1iZWQiOnRydWUsInVzYWdlTWV0cmljc1ZOZXh0Ijp0cnVlfX0%3d",
     "UGS.ReportId": "7af06b49-9a57-4417-a70d-5cd45bf27025",

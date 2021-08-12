@@ -28,6 +28,7 @@ public class ReviewForm
 		ReviewType("ReviewType"),
 		NumericalScoreAsEnum("NumericalScoreAsEnum"),
 		EmptyC("EmptyC"),
+		ReviewedBy("ReviewedBy"),
 		ReviewForm_GrantSystem_CurrentReviewForm("UGS.ReviewForm_GrantSystem_CurrentReviewForm"),
 		ReviewForm_GrantSystem_PastReviewForms("UGS.ReviewForm_GrantSystem_PastReviewForms"),
 		ReviewForm_WorkflowRoles("UGS.ReviewForm_WorkflowRoles"),
@@ -436,6 +437,42 @@ public class ReviewForm
 	public final void setEmptyC(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String emptyc)
 	{
 		getMendixObject().setValue(context, MemberNames.EmptyC.toString(), emptyc);
+	}
+
+	/**
+	 * @return value of ReviewedBy
+	 */
+	public final java.lang.String getReviewedBy()
+	{
+		return getReviewedBy(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of ReviewedBy
+	 */
+	public final java.lang.String getReviewedBy(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.ReviewedBy.toString());
+	}
+
+	/**
+	 * Set value of ReviewedBy
+	 * @param reviewedby
+	 */
+	public final void setReviewedBy(java.lang.String reviewedby)
+	{
+		setReviewedBy(getContext(), reviewedby);
+	}
+
+	/**
+	 * Set value of ReviewedBy
+	 * @param context
+	 * @param reviewedby
+	 */
+	public final void setReviewedBy(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String reviewedby)
+	{
+		getMendixObject().setValue(context, MemberNames.ReviewedBy.toString(), reviewedby);
 	}
 
 	/**

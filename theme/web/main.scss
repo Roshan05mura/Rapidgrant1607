@@ -1,6 +1,7 @@
 
 //  landing page import starts here
 @import "sass/landingPage";
+@import "sass/custom";
 //  landing page import ends here
 
 
@@ -1478,3 +1479,15 @@ h2.mx-groupbox-header{
         font-size: 16px;
     }
 }
+.review input[type=radio]:before {
+    background-color: none !important;
+    border: 1px solid gray !important;
+}
+.hidden{
+ visibility:hidden;
+ width:0px;
+}
+
+
+
+

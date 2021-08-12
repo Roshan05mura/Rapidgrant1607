@@ -36,6 +36,8 @@ public class WorkflowRoles
 		UseStatusChnageAction("UseStatusChnageAction"),
 		RatingType("RatingType"),
 		ReviewType("ReviewType"),
+		StaticValue("StaticValue"),
+		InterviewSchdule("InterviewSchdule"),
 		WorkflowRoles_Template("DynamicForm.WorkflowRoles_Template"),
 		WorkflowRoles_Grant("DynamicForm.WorkflowRoles_Grant"),
 		Status_WorkflowRoles("DynamicForm.Status_WorkflowRoles"),
@@ -753,6 +755,78 @@ public class WorkflowRoles
 			getMendixObject().setValue(context, MemberNames.ReviewType.toString(), reviewtype.toString());
 		else
 			getMendixObject().setValue(context, MemberNames.ReviewType.toString(), null);
+	}
+
+	/**
+	 * @return value of StaticValue
+	 */
+	public final java.lang.Boolean getStaticValue()
+	{
+		return getStaticValue(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of StaticValue
+	 */
+	public final java.lang.Boolean getStaticValue(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.StaticValue.toString());
+	}
+
+	/**
+	 * Set value of StaticValue
+	 * @param staticvalue
+	 */
+	public final void setStaticValue(java.lang.Boolean staticvalue)
+	{
+		setStaticValue(getContext(), staticvalue);
+	}
+
+	/**
+	 * Set value of StaticValue
+	 * @param context
+	 * @param staticvalue
+	 */
+	public final void setStaticValue(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean staticvalue)
+	{
+		getMendixObject().setValue(context, MemberNames.StaticValue.toString(), staticvalue);
+	}
+
+	/**
+	 * @return value of InterviewSchdule
+	 */
+	public final java.lang.Boolean getInterviewSchdule()
+	{
+		return getInterviewSchdule(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of InterviewSchdule
+	 */
+	public final java.lang.Boolean getInterviewSchdule(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.InterviewSchdule.toString());
+	}
+
+	/**
+	 * Set value of InterviewSchdule
+	 * @param interviewschdule
+	 */
+	public final void setInterviewSchdule(java.lang.Boolean interviewschdule)
+	{
+		setInterviewSchdule(getContext(), interviewschdule);
+	}
+
+	/**
+	 * Set value of InterviewSchdule
+	 * @param context
+	 * @param interviewschdule
+	 */
+	public final void setInterviewSchdule(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean interviewschdule)
+	{
+		getMendixObject().setValue(context, MemberNames.InterviewSchdule.toString(), interviewschdule);
 	}
 
 	/**
